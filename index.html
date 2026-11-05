@@ -38,8 +38,8 @@
 <div class="container">
 <header class="topbar"><div class="brand"><div class="brandMark" aria-hidden="true">🍚</div><div>今晚煮什麼？<div class="mini" style="font-weight:500">YOUR DAILY DINNER IDEA</div></div></div><button id="topAction" class="quiet hidden" type="button">更換學校</button></header>
 <main>
-<section id="welcome" class="welcome hidden"><div class="eyebrow">HELLO, DINNER TIME</div><h1>孩子午餐吃什麼，<br>今晚就<span style="color:var(--green)">換個口味。</span></h1><p class="intro">只要設定一次學校，每天打開就能查看午餐，輕鬆找到晚餐的好點子。</p><div class="heroIllustration" id="heroArt" aria-label="餐盤料理示意插畫"></div>
-<div class="setupCard"><h2 class="cardTitle">先告訴我孩子念哪所學校</h2><p>之後會記住，不用每天重新選擇。</p><div class="formLine"><select class="selectCity" id="city" aria-label="選擇縣市"><option>臺南市</option><option>高雄市</option><option>臺北市</option><option>新北市</option><option>臺中市</option><option>桃園市</option><option>其他縣市</option></select><input id="school" class="schoolInput" type="text" placeholder="搜尋學校，例如：永康" aria-label="搜尋學校" maxlength="60" autocomplete="off"></div><div id="schoolMatches" class="schoolMatches hidden" role="listbox" aria-label="學校搜尋結果"></div><div id="registryStatus" class="hintTiny" role="status">正在讀取教育部國小名錄…</div><div id="formError" class="error" role="alert"></div><button class="primary" id="saveSchool" type="button">查看今日午餐 <span class="arrow">→</span></button><div class="hintTiny">學校搜尋使用教育部公開國小名錄（114 學年度）。午餐即時資料尚待介接，不會顯示假資料冒充今日菜單。</div></div></section>
+<section id="welcome" class="welcome hidden"><div class="eyebrow">HELLO, DINNER TIME</div><h1>孩子午餐吃什麼，<br>今晚就<span style="color:var(--green)">換個口味。</span></h1><p class="intro">選擇一次學校，下次打開就會直接顯示午餐區，幫你找到不同的晚餐靈感。</p><div class="heroIllustration" id="heroArt" aria-label="餐盤料理示意插畫"></div>
+<div class="setupCard"><h2 class="cardTitle">先告訴我孩子念哪所學校</h2><p>之後會記住，不用每天重新選擇。</p><div class="formLine"><select class="selectCity" id="city" aria-label="選擇縣市"><option>臺南市</option><option>高雄市</option><option>臺北市</option><option>新北市</option><option>臺中市</option><option>桃園市</option><option>其他縣市</option></select><select id="school" class="schoolInput" aria-label="選擇學校" disabled><option value="">學校名錄載入中…</option></select></div><div id="registryStatus" class="hintTiny" role="status">正在讀取教育部國小名錄…</div><div id="formError" class="error" role="alert"></div><button class="primary" id="saveSchool" type="button">查看今日午餐 <span class="arrow">→</span></button><div class="hintTiny">先選縣市，再從下拉選單挑學校。學校名錄來自教育部（114 學年度）；午餐即時資料仍在介接中。</div></div></section>
 <section id="dashboard" class="hidden">
 <div class="hello"><div class="eyebrow">TODAY'S SCHOOL LUNCH</div><div class="date" id="todayDate"></div><h1 class="welcomeTitle">今天中午，<br>孩子<span>吃了什麼？</span></h1><div class="schoolPill"><span aria-hidden="true">⌂</span><span id="schoolText"></span><button type="button" id="changeSchool">更換</button></div></div>
 <section class="section" aria-labelledby="lunchTitle"><div class="sectionHead"><div><div class="eyebrow">LUNCH MENU</div><h2 id="lunchTitle">今日午餐清單</h2></div><span class="softLabel" id="dishCount"></span></div><p class="helptext" id="lunchNotice">正在檢查今日午餐資料…</p><div class="menuGrid hidden" id="menuGrid"></div><div id="noLunch" class="emptyLunch hidden"><div class="emptyIcon">🥗</div><strong>今天的菜單還沒有取得</strong><p>已從 GitHub 伺服器測試官方查詢頁與舊版 API，均回傳 403；目前無法取得當日菜單，因此不會拿示範菜單冒充真正供餐。</p><a class="sourceButton" href="https://fatraceschool.k12ea.gov.tw/frontend/search.html" target="_blank" rel="noopener noreferrer">前往教育部查詢今日午餐 ↗</a><details class="manualDetails"><summary>我知道午餐菜色，先輸入讓網站推薦</summary><p>把今天的午餐菜名用逗號隔開。這是家長手動輸入，並非官方資料。</p><textarea id="manualDishes" placeholder="例如：白飯、滷雞腿、炒高麗菜、番茄炒蛋"></textarea><button id="useManual" class="secondary" type="button">使用這份午餐清單</button></details><button id="tryDemo" class="demoButton" type="button">只想試試介面？載入明確標示的示範菜單</button></div><div class="summary hidden" id="lunchSummary"><div class="summaryIcon">💡</div><div><strong>今晚可以換個主菜</strong><p id="mealTip"></p></div></div></section>
@@ -84,7 +84,7 @@ return '<svg viewBox="0 0 320 210" role="img" aria-label="餐點插畫示意" xm
 }
 const colors={chicken:'#f8ebd9',rice:'#f3eee7',greens:'#e9f0dd',egg:'#f9eddc',soup:'#e5ece8',fish:'#e4f0eb',tofu:'#f2eee3',pork:'#f5e6db',broccoli:'#e7f0df'};
 let current=null,lunch=[],rotation=0;
-function readState(){try{const v=JSON.parse(localStorage.getItem(KEY)||'null');if(v&&typeof v.school==='string'&&v.school.trim()&&typeof v.city==='string')return {school:v.school.trim(),city:v.city}}catch(e){}return null}
+function readState(){try{const v=JSON.parse(localStorage.getItem(KEY)||'null');if(v&&typeof v.school==='string'&&v.school.trim()&&typeof v.city==='string')return {school:v.school.trim(),city:v.city,code:typeof v.code==='string'?v.code:undefined}}catch(e){}return null}
 function saveState(v){try{localStorage.setItem(KEY,JSON.stringify(v))}catch(e){}}
 function taiwanParts(){const f=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit'});const parts=f.formatToParts(new Date());return Object.fromEntries(parts.map(p=>[p.type,p.value]))}
 function menuIndex(){const p=taiwanParts();return (Number(p.year)+Number(p.month)*31+Number(p.day))%menus.length}
@@ -111,12 +111,76 @@ const norm=s=>String(s||'').replace(/[臺]/g,'台').replace(/\s+/g,'').toLowerCa
 function toDateKey(){let p=taiwanParts();return p.year+'-'+p.month+'-'+p.day}
 function schoolMemoKey(){return LUNCH_DATE_KEY+':'+(current?.code||norm(current?.school||''))+':'+toDateKey()}
 function citySelect(cities){const previous=$('city').value;let unique=[...new Set(cities)].sort((a,b)=>a.localeCompare(b,'zh-TW'));if(unique.some(c=>norm(c)===norm(previous))){$('city').replaceChildren(...unique.map(c=>new Option(c,c)));$('city').value=unique.find(c=>norm(c)===norm(previous));}else{$('city').replaceChildren(...unique.map(c=>new Option(c,c)));$('city').value=unique.find(c=>norm(c)==='台南市')||unique[0]||''}}
-async function loadDirectory(){try{const r=await fetch(DIRECTORY_URL+'?v=114',{cache:'no-cache'});if(!r.ok)throw new Error('尚未同步學校名錄');const data=await r.json();if(!Array.isArray(data.schools)||data.schools.length<1000)throw new Error('學校名錄內容不完整');directory=data.schools.filter(x=>x&&x.code&&x.name&&x.city);directoryLoaded=true;citySelect(directory.map(s=>s.city));$('registryStatus').textContent='✓ 教育部公開國小名錄已載入（'+directory.length+' 所，114 學年度）';if(current){let found=directory.find(s=>s.code===current.code)||directory.find(s=>norm(s.name)===norm(current.school)&&norm(s.city)===norm(current.city));if(found){current={city:found.city,school:found.name,code:found.code};saveState(current)}}renderMatches()}catch(e){directoryLoaded=false;$('registryStatus').textContent='學校名錄正在同步，暫可輸入校名保存；未經官方名錄比對。';} }
-function renderMatches(){let box=$('schoolMatches');box.replaceChildren();if(!directoryLoaded){box.classList.add('hidden');return}let q=norm($('school').value),city=$('city').value;if(q.length<1){box.classList.add('hidden');return}let matches=directory.filter(s=>norm(s.city)===norm(city)&&(norm(s.name).includes(q)||norm(s.address||'').includes(q))).slice(0,12);if(!matches.length){box.classList.add('hidden');$('formError').textContent='找不到符合的學校，請試試其他關鍵字';return}$('formError').textContent='';for(let s of matches){let b=document.createElement('button');b.type='button';b.className='schoolOpt';b.setAttribute('role','option');let name=document.createElement('strong');name.textContent=s.name;let info=document.createElement('small');info.textContent=s.address||s.city;b.append(name,info);b.addEventListener('click',()=>{selectedSchool=s;$('city').value=s.city;$('school').value=s.name;box.classList.add('hidden');$('formError').textContent='✓ 已選擇 '+s.name});box.append(b)}box.classList.remove('hidden')}
-$('school').addEventListener('input',()=>{selectedSchool=null;renderMatches()});
-$('city').addEventListener('change',()=>{selectedSchool=null;renderMatches()});
-function saveSchool(){let city=$('city').value,name=$('school').value.trim();if(!name){$('formError').textContent='請先輸入學校名稱';return}if(directoryLoaded){let s=selectedSchool&&norm(selectedSchool.city)===norm(city)&&selectedSchool.name===name?selectedSchool:directory.find(s=>norm(s.city)===norm(city)&&norm(s.name)===norm(name));if(!s){$('formError').textContent='請點選搜尋結果中的學校，才能保存';return}current={city:s.city,school:s.name,code:s.code}}else{current={city,school:name};}$('schoolMatches').classList.add('hidden');saveState(current);showDashboard()}
-function showSchool(){if(current){$('school').value=current.school;let cityOption=[...$('city').options].find(o=>norm(o.value)===norm(current.city));if(cityOption)$('city').value=cityOption.value;selectedSchool=directory.find(s=>s.code===current.code)||null}setScreen('welcome');renderMatches();window.scrollTo({top:0,behavior:'instant'})}
+function fillSchoolDropdown(preferredCode=null){
+ const select=$('school');
+ const city=$('city').value;
+ const matches=directory.filter(s=>norm(s.city)===norm(city))
+   .sort((a,b)=>a.name.localeCompare(b.name,'zh-TW')||a.code.localeCompare(b.code));
+ select.replaceChildren(new Option(directoryLoaded?'選擇學校（共 '+matches.length+' 所）':'學校名錄載入中…',''));
+ if(!directoryLoaded){select.disabled=true;return}
+ for(const s of matches){
+   let region=s.address?.match(/(?:市|縣)([^\\s]{1,5}(?:區|鄉|鎮|市))/)?.[1]||'';
+   select.add(new Option(s.name+(region?' · '+region:''),s.code));
+ }
+ select.disabled=matches.length===0;
+ if(preferredCode&&matches.some(s=>s.code===preferredCode))select.value=preferredCode;
+ else if(current&&norm(current.city)===norm(city)){
+   const saved=matches.find(s=>s.code===current.code)||matches.find(s=>norm(s.name)===norm(current.school));
+   if(saved)select.value=saved.code;
+ }
+ selectedSchool=matches.find(s=>s.code===select.value)||null;
+}
+async function loadDirectory(){
+ try{
+   const res=await fetch(DIRECTORY_URL+'?v=114',{cache:'no-cache'});
+   if(!res.ok)throw new Error('學校名錄尚未同步');
+   const data=await res.json();
+   if(!Array.isArray(data.schools)||data.schools.length<1000)throw new Error('學校名錄不完整');
+   directory=data.schools.filter(s=>s&&s.code&&s.name&&s.city);
+   directoryLoaded=true;
+   citySelect(directory.map(s=>s.city));
+   if(current){
+     let found=directory.find(s=>s.code===current.code)||
+       directory.find(s=>norm(s.city)===norm(current.city)&&norm(s.name)===norm(current.school));
+     if(found){current={city:found.city,school:found.name,code:found.code};saveState(current)}
+     const matchedCity=[...$('city').options].find(o=>norm(o.value)===norm(current.city));
+     if(matchedCity)$('city').value=matchedCity.value;
+   }
+   fillSchoolDropdown(current?.code||null);
+   $('registryStatus').textContent='✓ 已載入教育部國小名錄（'+directory.length+' 所）';
+ }catch(e){
+   directoryLoaded=false;fillSchoolDropdown();
+   $('registryStatus').textContent='學校名錄暫時無法載入，請重新整理網頁再試。已儲存的學校仍會保留。';
+ }
+}
+$('city').addEventListener('change',()=>{
+  selectedSchool=null;
+  $('formError').textContent='';
+  fillSchoolDropdown();
+});
+$('school').addEventListener('change',()=>{
+  selectedSchool=directory.find(s=>s.code===$('school').value)||null;
+  $('formError').textContent='';
+});
+function saveSchool(){
+ const code=$('school').value;
+ const chosen=directoryLoaded?directory.find(s=>s.code===code&&norm(s.city)===norm($('city').value)):null;
+ if(!chosen){$('formError').textContent='請先從下拉選單選擇一所學校';return}
+ current={city:chosen.city,school:chosen.name,code:chosen.code};
+ selectedSchool=chosen;
+ saveState(current);
+ $('formError').textContent='';
+ showDashboard();
+}
+function showSchool(){
+ if(current){
+   const cityOption=[...$('city').options].find(o=>norm(o.value)===norm(current.city));
+   if(cityOption)$('city').value=cityOption.value;
+ }
+ fillSchoolDropdown(current?.code||null);
+ setScreen('welcome');
+ window.scrollTo({top:0,behavior:'instant'});
+}
 function showLunch(source,records,remark){menuOrigin=source;lunch=records;$('recommendationBlock').classList.add('hidden');rotation=0;const has=records.length>0;$('noLunch').classList.toggle('hidden',has);$('menuGrid').classList.toggle('hidden',!has);$('lunchSummary').classList.toggle('hidden',!has);$('makeRecommendation').disabled=!has;$('dishCount').textContent=has?records.length+' 道 · '+(source==='official'?'官方資料':source==='manual'?'手動輸入':'示範'):'尚無資料';$('lunchNotice').textContent=remark;if(!has){$('menuGrid').replaceChildren();return}buildLunchLive(records,source)}
 function inferType(name){let n=String(name);if(/魚|鮭|鯖|鱸|海鮮/.test(n))return {type:'fish',group:'魚肉'};if(/雞|鴨|鵝/.test(n))return {type:'chicken',group:'雞肉'};if(/豬|肉燥|肉末|排骨/.test(n))return {type:'pork',group:'豬肉'};if(/牛肉/.test(n))return {type:'pork',group:'牛肉'};if(/豆腐|豆干|豆皮/.test(n))return {type:'tofu',group:'豆腐'};if(/蛋/.test(n))return {type:'egg',group:'雞蛋'};if(/花椰|青花/.test(n))return {type:'broccoli',group:'花椰菜'};if(/菜|菠菜|空心菜|筍/.test(n))return {type:'greens',group:'葉菜'};if(/飯|米|粥|麵|冬粉/.test(n))return {type:'rice',group:'米飯'};if(/湯|羹/.test(n))return {type:'soup',group:'湯品'};return {type:'soup',group:'其他'}}
 function buildLunchLive(records,source){$('menuGrid').replaceChildren();records.forEach((d,i)=>{let card=document.createElement('article');card.className='menuItem'+(i===0?' featured':'');let art=document.createElement('div');art.className='dishArt';art.style.background=colors[d.type]||'#eff2e8';art.innerHTML=svgFood(d.type);if(source==='official'&&d.photo_url){try{let u=new URL(d.photo_url);if(u.protocol==='https:'&&u.hostname==='fatraceschool.k12ea.gov.tw'){let img=document.createElement('img');img.alt=d.name+' 官方提供的午餐照片';img.src=u.href;img.loading='lazy';img.style.cssText='width:100%;height:100%;object-fit:cover';img.onerror=()=>img.remove();art.prepend(img)}}catch(e){}}let body=document.createElement('div');body.className='menuContent';let category=document.createElement('div');category.className='type';category.textContent=d.category||'午餐菜色';let title=document.createElement('h3');title.textContent=d.name;let note=document.createElement('p');note.textContent=(source==='official'&&d.photo_url)?'官方照片／載入失敗時為示意插畫':'餐點插畫示意';body.append(category,title,note);card.append(art,body);$('menuGrid').append(card)});const main=records.find(r=>['魚肉','雞肉','豬肉','牛肉','豆腐'].includes(r.group))||records[0];$('mealTip').textContent=source==='demo'?'以下分析基於示範菜單，不是這所學校實際供餐。':'午餐菜色含「'+main.name+'」。晚餐可優先考慮不同的主要食材；但供餐不代表孩子實際全部吃下。'}
