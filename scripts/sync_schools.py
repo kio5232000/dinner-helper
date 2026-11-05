@@ -54,6 +54,9 @@ def main():
         for row in rows:
             if not isinstance(row, dict):
                 continue
+            # Junior-high URL contains MANY academic years; keep only 114.
+            if level == "國中" and not re.search(r"(?<!\\d)114(?!\\d)", str(row.get("學年度", ""))):
+                continue
             name = str(row.get("學校名稱", "")).strip()
             code = str(row.get("代碼", "")).strip()
             city = re.sub(r"^\[\d+\]", "", str(row.get("縣市名稱", ""))).strip()
@@ -72,6 +75,9 @@ def main():
         if count < minimum:
             raise ValueError(f"Insufficient valid records for {level}: {count}")
         counts[level] = count
+    # Deduplicate by level and official school code within this academic year.
+    records = list({(row["level"], row["code"]): row for row in records}.values())
+    counts = {level: sum(row["level"] == level for row in records) for level, _, _ in SOURCES}
     records.sort(key=lambda s: (
         canonical(s["city"]), canonical(s["district"]),
         0 if s["level"] == "國小" else 1, s["name"], s["code"]
