@@ -25,14 +25,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Import MOE public elementary-school registry
-        run: python scripts/sync_schools.py
+      - name: Import MOE public elementary and junior-high school registries
+        run: |
+          python scripts/sync_schools.py
+          python scripts/summarize_schools.py
       - name: Commit refreshed directory if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/schools.json
+          git add data/schools.json data/school-stats.json
           if ! git diff --cached --quiet; then
-            git commit -m "data: refresh MOE elementary schools registry"
+            git commit -m "data: refresh MOE elementary and junior-high school registry"
             git push
           fi
