@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-05T06:39:16.666950+00:00",
+  "checked_at": "2026-11-05T06:42:10.717032+00:00",
   "pilot_only": true,
   "results": [
     {
@@ -79,9 +79,30 @@
     {
       "name": "進學國小",
       "date": "2026-11-05",
-      "source_url": "https://www.chps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
+      "source_url": "https://www.chps.tn.edu.tw/index.php?period=2026-11-05",
       "status": "unavailable",
-      "reason": "ValueError: School/date identity not present in public lunch page"
+      "reason": "ValueError: Incomplete menu: no main dish or fewer than three courses"
+    },
+    {
+      "name": "佳興國小",
+      "date": "2026-11-05",
+      "source_url": "https://www.jsps.tn.edu.tw/index.php?period=2026-11-05",
+      "status": "unavailable",
+      "reason": "ValueError: Incomplete menu: no main dish or fewer than three courses"
+    },
+    {
+      "name": "崇明國中",
+      "date": "2026-11-05",
+      "source_url": "https://www.cmjh.tn.edu.tw/index.php?period=2026-11-05",
+      "status": "unavailable",
+      "reason": "ValueError: Incomplete menu: no main dish or fewer than three courses"
+    },
+    {
+      "name": "紅瓦厝國小",
+      "date": "2026-11-05",
+      "source_url": "https://www.hwces.tn.edu.tw/index.php?period=2026-11-05",
+      "status": "unavailable",
+      "reason": "ValueError: Incomplete menu: no main dish or fewer than three courses"
     }
   ]
 }
