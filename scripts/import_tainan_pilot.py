@@ -29,7 +29,13 @@ PILOTS = [
     {"name": "崇明國小", "level": "國小", "district": "東區",
      "url": "https://old.cmes.tn.edu.tw/modules/tad_lunch3/index.php"},
     {"name": "進學國小", "level": "國小", "district": "中西區",
-     "url": "https://www.chps.tn.edu.tw/modules/tad_lunch3/index.php"},
+     "url": "https://www.chps.tn.edu.tw/index.php"},
+    {"name": "佳興國小", "level": "國小", "district": "佳里區",
+     "url": "https://www.jsps.tn.edu.tw/index.php"},
+    {"name": "崇明國中", "level": "國中", "district": "東區",
+     "url": "https://www.cmjh.tn.edu.tw/index.php"},
+    {"name": "紅瓦厝國小", "level": "國小", "district": "歸仁區",
+     "url": "https://www.hwces.tn.edu.tw/index.php"},
 ]
 CATEGORIES = ("主食", "主菜", "副菜", "蔬菜", "湯品", "附餐")
 
