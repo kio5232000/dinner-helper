@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-05T06:25:17.730444+00:00",
+  "checked_at": "2026-11-05T06:26:32.847262+00:00",
   "pilot_only": true,
   "results": [
     {
@@ -21,8 +21,19 @@
       "name": "勝利國小",
       "date": "2026-11-05",
       "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
-      "status": "unavailable",
-      "reason": "ValueError: School/date identity not present in public lunch page"
+      "status": "ok",
+      "school_code": "213601",
+      "dishes": [
+        "糙米飯",
+        "高昇排骨",
+        "水蓮銀芽",
+        "有機蔬菜",
+        "玉米蛋花湯",
+        "義美保久乳",
+        "酸辣湯",
+        "脆皮芝麻烤饅頭",
+        "柳丁"
+      ]
     }
   ]
 }
