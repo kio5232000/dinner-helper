@@ -1,9 +1,9 @@
 {
-  "total": 11483,
+  "total": 3345,
   "by_level": {
     "國小": 2608,
-    "國中": 8875
+    "國中": 737
   },
-  "with_district": 11483,
-  "tainan_yongkang": 41
+  "with_district": 3345,
+  "tainan_yongkang": 14
 }
