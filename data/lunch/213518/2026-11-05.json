@@ -1,0 +1,35 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.cmjh.tn.edu.tw/index.php?period=2026-11-05",
+  "retrieved_at": "2026-11-05T06:45:02.913128+00:00",
+  "date": "2026-11-05",
+  "school_code": "213518",
+  "school_name": "市立崇明國中",
+  "dishes": [
+    {
+      "name": "糙米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "蒲燒鱸魚",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "黑胡椒毛豆莢",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "高麗菜炒紅蘿蔔",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "紫菜豆腐蛋花湯",
+      "category": "湯品",
+      "photo_url": null
+    }
+  ]
+}

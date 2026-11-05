@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-05T06:42:10.717032+00:00",
+  "checked_at": "2026-11-05T06:45:07.074118+00:00",
   "pilot_only": true,
   "results": [
     {
@@ -80,29 +80,57 @@
       "name": "進學國小",
       "date": "2026-11-05",
       "source_url": "https://www.chps.tn.edu.tw/index.php?period=2026-11-05",
-      "status": "unavailable",
-      "reason": "ValueError: Incomplete menu: no main dish or fewer than three courses"
+      "status": "ok",
+      "school_code": "213623",
+      "dishes": [
+        "米飯",
+        "烤蒲燒鯛",
+        "海帶豆乾",
+        "香菇高麗菜",
+        "冬瓜檸檬愛玉甜湯"
+      ]
     },
     {
       "name": "佳興國小",
       "date": "2026-11-05",
       "source_url": "https://www.jsps.tn.edu.tw/index.php?period=2026-11-05",
-      "status": "unavailable",
-      "reason": "ValueError: Incomplete menu: no main dish or fewer than three courses"
+      "status": "ok",
+      "school_code": "114669",
+      "dishes": [
+        "燕麥飯",
+        "栗子燒雞",
+        "蠔油冬粉",
+        "蒜香空心菜",
+        "紫菜豆腐湯"
+      ]
     },
     {
       "name": "崇明國中",
       "date": "2026-11-05",
       "source_url": "https://www.cmjh.tn.edu.tw/index.php?period=2026-11-05",
-      "status": "unavailable",
-      "reason": "ValueError: Incomplete menu: no main dish or fewer than three courses"
+      "status": "ok",
+      "school_code": "213518",
+      "dishes": [
+        "糙米飯",
+        "蒲燒鱸魚",
+        "黑胡椒毛豆莢",
+        "高麗菜炒紅蘿蔔",
+        "紫菜豆腐蛋花湯"
+      ]
     },
     {
       "name": "紅瓦厝國小",
       "date": "2026-11-05",
       "source_url": "https://www.hwces.tn.edu.tw/index.php?period=2026-11-05",
-      "status": "unavailable",
-      "reason": "ValueError: Incomplete menu: no main dish or fewer than three courses"
+      "status": "ok",
+      "school_code": "114785",
+      "dishes": [
+        "芝麻飯",
+        "咖哩雞丁",
+        "綜合時蔬炒百頁",
+        "三色高麗菜",
+        "薑絲刺瓜魚丸湯"
+      ]
     }
   ]
 }
