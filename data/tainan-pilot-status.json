@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-05T06:28:07.542651+00:00",
+  "checked_at": "2026-11-05T06:39:16.666950+00:00",
   "pilot_only": true,
   "results": [
     {
@@ -31,6 +31,57 @@
         "玉米蛋花湯",
         "義美保久乳"
       ]
+    },
+    {
+      "name": "新嘉國小",
+      "date": "2026-11-05",
+      "source_url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
+      "status": "ok",
+      "school_code": "114768",
+      "dishes": [
+        "燕麥飯",
+        "三杯雞",
+        "絲瓜麵線",
+        "什錦青江菜",
+        "南瓜鮮菇湯",
+        "甜柿"
+      ]
+    },
+    {
+      "name": "新生國小",
+      "date": "2026-11-05",
+      "source_url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
+      "status": "ok",
+      "school_code": "114734",
+      "dishes": [
+        "小米飯",
+        "秋刀魚",
+        "大黃瓜炒菇",
+        "有機蔬菜",
+        "絲瓜蛋花湯",
+        "時令水果"
+      ]
+    },
+    {
+      "name": "崇明國小",
+      "date": "2026-11-05",
+      "source_url": "https://old.cmes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
+      "status": "ok",
+      "school_code": "213640",
+      "dishes": [
+        "糙米飯",
+        "蒲燒鱸魚",
+        "黑胡椒毛豆莢",
+        "高麗菜炒紅蘿蔔",
+        "紫菜豆腐蛋花湯"
+      ]
+    },
+    {
+      "name": "進學國小",
+      "date": "2026-11-05",
+      "source_url": "https://www.chps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
+      "status": "unavailable",
+      "reason": "ValueError: School/date identity not present in public lunch page"
     }
   ]
 }
