@@ -63,7 +63,7 @@ def parse_menu(source_html, school, day):
     # A homepage may IGNORE ?period and display a different day's lunch.
     # Only accept a same-school, same-date lunch heading, not date text
     # elsewhere in the site or a menu for the previous day.
-    heading = re.escape(school) + r"\\s*" + re.escape(day) + r"\\s*午餐\\s*資訊"
+    heading = re.escape(school) + r"\s*" + re.escape(day) + r"\s*午餐\s*資訊"
     if not re.search(heading, visible):
         raise ValueError("No matching school/date lunch heading on this page")
     dishes = []
