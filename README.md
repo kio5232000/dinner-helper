@@ -6,14 +6,16 @@
 
 ### 實際午餐資料路線
 
+**最新驗證（2026-11-05）：** 柳營國小與東區勝利國小的真實當日六道午餐菜色已成功同步入 `data/lunch/`；兩校匯入與 GitHub Actions 均通過。
+
 中央 [校園食材登錄平臺](https://fatraceschool.k12ea.gov.tw/frontend/search.html) 的搜尋頁／舊版 API 在 GitHub runner 回應 HTTP 403，尚無可行的直接公開 API 介接。
 
-但是部分臺南學校透過 [Tad Lunch3](https://github.com/tad0616/tad_lunch3) 模組公開學校當日午餐。2026-11-05 的 GitHub Runner 小規模測試，柳營國小、東區勝利國小、昭明國中三校公開頁面皆回 HTTP 200，並讀到當日實際菜名，詳見 `data/tainan-source-probe.json`。
+但是部分臺南學校透過 [Tad Lunch3](https://github.com/tad0616/tad_lunch3) 模組公開學校當日午餐。2026-11-05 的 GitHub Runner 小規模存取測試，柳營國小、東區勝利國小、昭明國中三校公開頁面皆回 HTTP 200，並讀到當日實際菜名，詳見 `data/tainan-source-probe.json`。
 
 - 試點抓取器：`scripts/import_tainan_pilot.py`
 - 每週一至週五 14:35 台北時間同步：`.github/workflows/import-tainan-pilot.yml`
 - 使用**學校網站**作為菜單來源（`source: school_website`），而不是假稱直接取得中央 API
-- 只支援三所已核對校名、地址／行政區及網址的試點學校。其他學校不顯示假的當日菜單。
+- **已完成菜單 JSON 轉換的試點為兩所**：柳營國小（代碼 114758）、東區勝利國小（代碼 213601）。昭明國中僅通過公開頁面可讀性測試，尚未建立正確的學校名錄對照。其他學校不顯示假的當日菜單。
 - 成功後：`data/lunch/{school_code}/{YYYY-MM-DD}.json`；失敗時有 `data/tainan-pilot-status.json` 提示；網站只讀同校、同日的檔案。
 - 若圖片的原始網站拒絕跨站載入，介面會回退 SVG 菜色示意圖。
 - 資料與圖片使用權、更新頻率、批次供餐及多供應商異常處理尚待正式確認，試點不代表已取得所有臺南學校的午餐資料。
