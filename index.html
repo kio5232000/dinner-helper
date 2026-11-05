@@ -110,7 +110,7 @@ function showDashboard(){if(!current){setScreen('welcome');return}let p=taiwanPa
 function showSchool(){if(current){$('city').value=current.city;$('school').value=current.school}setScreen('welcome');window.scrollTo({top:0,behavior:'instant'})}
 function saveSchool(){let city=$('city').value,school=$('school').value.trim();if(!school){$('formError').textContent='請先輸入學校名稱';$('school').focus();return}current={city,school};saveState(current);$('formError').textContent='';showDashboard()}
 $('saveSchool').addEventListener('click',saveSchool);
-$('school').addEventListener('keydown',e=>{if(e.key==='Enter')saveSchool()});
+
 $('changeSchool').addEventListener('click',showSchool);
 $('topAction').addEventListener('click',showSchool);
 function dinnerResults(){const group=lunch[0]?.group;const otherGroups=new Set(lunch.map(x=>x.group));const ranked=ideas.map((x,i)=>({...x,rank:(x.protein===group?5:0)+(otherGroups.has(x.protein)?1:0),order:i})).sort((a,b)=>a.rank-b.rank||a.order-b.order);const choices=ranked.filter(x=>x.rank===0);const pool=choices.length>=3?choices:ranked;let results=[];for(let i=0;i<pool.length&&results.length<3;i++){const r=pool[(i+rotation*3)%pool.length];if(!results.some(x=>x.name===r.name))results.push(r)}$('recommendationList').replaceChildren();for(let r of results){let card=document.createElement('article');card.className='recipe fadein';let thumb=document.createElement('div');thumb.className='thumb';thumb.style.background=colors[r.type]||'#eee';thumb.innerHTML=svgFood(r.type);let body=document.createElement('div');body.className='recipeBody';let tag=document.createElement('div');tag.className='eyebrow';tag.style.fontSize='10px';tag.textContent='換個主菜 · '+r.protein;let title=document.createElement('div');title.className='recipeName';title.textContent=r.name;let description=document.createElement('p');description.className='recipeDescription';description.textContent=r.subtitle;let details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='看食材與作法';let material=document.createElement('p');material.textContent='示範食材：'+r.ingredients;let steps=document.createElement('ol');for(let s of r.steps){let li=document.createElement('li');li.textContent=s;steps.append(li)}details.append(summary,material,steps);body.append(tag,title,description,details);card.append(thumb,body);$('recommendationList').append(card)}$('recommendationBlock').classList.remove('hidden')}
@@ -149,7 +149,7 @@ function fillDistricts(preferred){
  const districts=[...new Set(directory.filter(s=>norm(s.city)===norm(city)).map(s=>s.district).filter(Boolean))]
    .sort((a,b)=>a.localeCompare(b,'zh-TW'));
  const select=$('district');
- const previous=preferred||select.value;
+ const previous=preferred||'';
  select.replaceChildren(new Option('請選擇行政區',''));
  for(const district of districts)select.add(new Option(district,district));
  select.disabled=!directoryLoaded||districts.length===0;
