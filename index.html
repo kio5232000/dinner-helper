@@ -123,6 +123,7 @@ $('heroArt').innerHTML=svgFood('chicken');
 const DIRECTORY_URL='./data/schools.json';
 const LUNCH_DATE_KEY='dinner-helper-manual-lunch-v1';
 let directory=[],directoryLoaded=false,selectedSchool=null,dashboardSerial=0,menuOrigin='none';
+let currentLunchCodes=new Set();
 const norm=s=>String(s||'').replace(/[臺]/g,'台').replace(/\s+/g,'').toLowerCase();
 function toDateKey(){let p=taiwanParts();return p.year+'-'+p.month+'-'+p.day}
 function schoolMemoKey(){return LUNCH_DATE_KEY+':'+(current?.code||norm(current?.school||''))+':'+toDateKey()}
@@ -164,7 +165,7 @@ function fillSchoolDropdown(preferredCode){
  let prompt='請先選擇行政區';
  if(district)prompt='請選學校（'+filtered.length+' 所）';
  select.replaceChildren(new Option(prompt,''));
- for(const s of filtered)select.add(new Option(s.name,s.code));
+ for(const s of filtered)select.add(new Option(s.name+(currentLunchCodes.has(s.code)?' · ✓ 今日已同步':''),s.code));
  select.disabled=!directoryLoaded||!district||filtered.length===0;
  const selected=filtered.find(s=>s.code===preferredCode);
  if(selected)select.value=selected.code;
@@ -172,6 +173,20 @@ function fillSchoolDropdown(preferredCode){
  if(directoryLoaded&&district&&!filtered.length){
    $('registryStatus').textContent='此行政區目前沒有「'+level+'」名錄資料，請切換階段或選其他行政區。';
  }
+}
+async function loadAvailableLunches(){
+ try{
+  const response=await fetch('./data/tainan-pilot-status.json?day='+toDateKey(),{cache:'no-store'});
+  if(!response.ok) return;
+  const summary=await response.json();
+  const codes=(summary.results||[]).filter(r=>r.date===toDateKey()&&r.status==='ok'&&r.school_code).map(r=>String(r.school_code));
+  currentLunchCodes=new Set(codes);
+  const previous=$('school').value;
+  fillSchoolDropdown(previous||current?.code);
+  if(codes.length){
+   $('registryStatus').textContent+='；今日已同步 '+codes.length+' 所試點學校（選單有 ✓ 標記）';
+  }
+ }catch(e){}
 }
 async function loadDirectory(){
  try{
@@ -194,7 +209,8 @@ async function loadDirectory(){
    fillDistricts(current?.district||saved?.district);
    fillSchoolDropdown(current?.code);
    const counts={國小:directory.filter(s=>s.level==='國小').length,國中:directory.filter(s=>s.level==='國中').length};
-   $('registryStatus').textContent='✓ 教育部學校名錄已載入：國小 '+(counts['國小']||0)+' 所、國中 '+(counts['國中']||0)+' 所';
+   $('registryStatus').textContent='✓ 臺南市學校名錄：國小 '+(counts['國小']||0)+' 所、國中 '+(counts['國中']||0)+' 所';
+   await loadAvailableLunches();
  }catch(e){
    directoryLoaded=false;
    $('district').disabled=true;$('school').disabled=true;
