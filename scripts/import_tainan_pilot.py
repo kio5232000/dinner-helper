@@ -59,6 +59,10 @@ def parse_menu(source_html, school, day):
             category = next((c for c in CATEGORIES if c in description), None)
         if not category:
             continue
+        # Public pages can append an affiliated kindergarten snack menu.
+        # For primary/junior-high pilots, keep only the first complete lunch set.
+        if category == "主食" and any(x["category"] in ("湯品", "附餐") for x in dishes):
+            break
         key = (category, alt)
         if key in seen:
             continue
