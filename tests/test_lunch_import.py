@@ -46,5 +46,38 @@ class LunchParsingTests(unittest.TestCase):
         meals = parse_menu(html, "柳營國小", DATE)
         self.assertEqual(len(meals),5)
 
+
+    def test_alt_heading_with_nearby_date(self):
+        page = ('<div><img alt="臺南市東區勝利國小午餐資訊" src="/title.png">'
+                '<p>2026-11-05 午餐資訊</p></div>')
+        page += dishes_html([
+            ("主食","糙米飯"),("主菜","高昇排骨"),
+            ("蔬菜","有機蔬菜"),("湯品","玉米蛋花湯")
+        ])
+        result = parse_menu(page, "勝利國小", DATE)
+        self.assertEqual(result[1]["name"], "高昇排骨")
+
+    def test_future_date_only_in_other_news_rejected(self):
+        page = '<h2>柳營國小2026-11-05午餐資訊</h2>'
+        page += '<article>明天 2026-11-06 校外教學</article>'
+        page += dishes_html([
+            ("主食","小米飯"),("主菜","蒜香翅小腿"),
+            ("蔬菜","青花菜")
+        ])
+        with self.assertRaises(ValueError):
+            parse_menu(page, "柳營國小", "2026-11-06")
+
+    def test_menu_fingerprint_and_schedule_targets(self):
+        from scripts.import_tainan_pilot import fingerprint, choose_dates
+        dishes=[{"name":"白飯","category":"主食"},{"name":"三杯雞","category":"主菜"}]
+        self.assertEqual(fingerprint(dishes), fingerprint(list(dishes)))
+        changed=[dict(d) for d in dishes]
+        changed[1]["name"]="咖哩雞"
+        self.assertNotEqual(fingerprint(dishes), fingerprint(changed))
+        self.assertEqual(len(choose_dates("auto", 7)), 2)
+        self.assertEqual(len(choose_dates("auto", 9)), 1)
+        self.assertEqual(len(choose_dates("auto", 19)), 1)
+        self.assertEqual(len(choose_dates("both", 22)), 2)
+
 if __name__=="__main__":
     unittest.main()
