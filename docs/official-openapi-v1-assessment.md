@@ -2,6 +2,67 @@
 
 研究日期：2026-11-05
 
+## 2026-11-05：已取得並解析使用者提供的完整 openapi.json（Swagger 2.0）
+
+**這一節優先於以下先前「尚未取得完整 schema」的描述。** 已根據實際 JSON 全部 356 行核對 `paths` 與 `definitions`，不再依賴搜尋引擎推測。
+
+### 基本資訊
+
+- `swagger`：`2.0`
+- `info.version`：`v1`
+- `host`：`fatraceschool.k12ea.gov.tw/`（原始檔帶尾隨斜線；組合 URL 時需移除重複斜線）
+- `basePath`：`/cateringservice/openapi`
+- `schemes`：`https`
+- **四個接口都是 POST**。
+- `security` / `securityDefinitions`：未定義；授權是透過**請求 body 裡的 `accesscode`**，不是文件所定義的 Bearer header。
+- `produces` 列出 `application/json`，但每個操作的 `consumes` 是空陣列。這份檔案**未明確聲明請求 Content-Type**，必須等實際合法存取測試才可確認是否接受 JSON body。
+- 每一個操作只有 HTTP 200 回應的 schema；沒有標示錯誤代碼、速率限制、有效期限或 3.0 相容性。
+
+### 四個確切端點與結構（已核對 JSON）
+
+基底 URL：`https://fatraceschool.k12ea.gov.tw/cateringservice/openapi`
+
+| 方法與路徑 | request model | request 欄位（全部標成 string） | response model 與主要欄位 |
+|---|---|---|---|
+| `POST /accountReg/` | `accountRegReq` | `account` 電子郵件 | `accountRegResp`：`message` |
+| `POST /county/` | `countyReq` | `accesscode` | `countyResp`：`message`, `countyList: string[]` |
+| `POST /opendatadataset/` | `opendatadatasetReq` | `accesscode`, `year`, `month`, `county` | `opendatadatasetResp`：`message`, `datasetList` |
+| `POST /opendatadownload/` | `opendatadownloadReq` | `accesscode`, `year`, `month`, `county`, `grade`, `datasetname` | `opendatadownloadResp`：`message`, `year`, `month`, `county`, `grade`, `datasetname`, `link` |
+
+`datasetList[]` 物件欄位：`year`, `month`, `county`, `grade`, `datasetname`, `createdate`。
+
+`opendatadatasetReq` 與 `opendatadownloadReq` 的 `year`, `month`, `county`, `grade`, `datasetname` 都是**字串**；範例 `"2018"`, `"02"`, `"臺南市"`, `"國中小"`。不要將 `year` 當民國年傳入。資料集名稱必須從前一步 `datasetList` 取回真實值，而不是直接硬編。
+
+`opendatadownloadReq` 的 `county`、`grade` 說明：若下載**調味料或團膳業者資料集**，兩欄請填空字串。其他種類依 `datasetList` 返回內容為準。
+
+**範例請求 body（尚未通過線上授權測試，僅展示 schema）：**
+
+```json
+{"accesscode":"<自行申請的存取碼>","year":"2026","month":"11","county":"臺南市"}
+```
+
+**取得資料集下載 URL 時的範例 body：**
+
+```json
+{"accesscode":"<自行申請的存取碼>","year":"2026","month":"11","county":"臺南市","grade":"國中小","datasetname":"<由 datasetList 取得的名稱>"}
+```
+
+這些請求只按 schema 設計，**沒有成功執行資料 API**。也不保證 2026 年 11 月份資料集已可下載。
+
+### 對「今晚煮什麼？」實際意義
+
+1. 這四個 API **沒有** `school_id`、`SchoolId`、`date`、`period`、`BatchDataId` 等單校每日菜單查詢參數；不能直接用它當今天／明天查詢來源。
+2. `opendatadataset` / `opendatadownload` 適合取得**年、月、縣市**粒度資料集，後續研究其 CSV 欄位後才能建立歷史菜單／食材對照。Swagger 本身不含 CSV 資料欄位的完整格式。
+3. `accountReg` 的回應只定義 `message`，並明確說存取碼會由**電子郵件寄送**，不是直接包含在 JSON 回應。
+4. OpenAPI JSON 的 `accesscode` 範例只是文件展示值，**不應視為已獲授權的有效金鑰**。
+5. 需向官方確認 v1 是否仍可用、網域存取限制、申請流程、授權條件及實際 Content-Type。存取碼**只保存在後端秘密設定，不進 GitHub Pages**。
+
+### 離線檢查／授權後試用
+
+程式 `scripts/official_monthly_openapi.py` 可依此 schema 組成安全的請求草稿；預設只預覽、不發送，且不會印出存取碼。正式呼叫須由使用者自己先申請存取碼並置於伺服器環境變數，且有 API 可用性及服務條款的確認。
+
+---
+
 ## 核心結論
 
 使用者提供的
