@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-11-05T05:48:10.056611+00:00",
+  "note": "Access tests from GitHub-hosted runner; results may differ for visitors.",
+  "results": {
+    "search_page": {
+      "status": 403,
+      "content_type": "text/html; charset=UTF-8",
+      "access_control_allow_origin": null,
+      "browser_cors_ok": false
+    },
+    "openapi": {
+      "status": 403,
+      "content_type": "text/html; charset=UTF-8",
+      "access_control_allow_origin": null,
+      "browser_cors_ok": false
+    },
+    "historical_meal_example": {
+      "status": 403,
+      "content_type": "text/html; charset=UTF-8",
+      "access_control_allow_origin": null,
+      "browser_cors_ok": false
+    }
+  }
+}
