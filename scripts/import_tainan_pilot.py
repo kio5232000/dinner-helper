@@ -40,11 +40,10 @@ def match_code(rows, expected, level, district=None):
 def parse_menu(source_html, school, day):
     soup = BeautifulSoup(source_html, "html.parser")
     visible = soup.get_text(" ", strip=True)
-    # Require a school/date heading, to avoid importing a stale cached day's menu.
-    heading = re.search(re.escape(school) + r".{0,45}" + re.escape(day), visible)
-    alternative = re.search(re.escape(day) + r".{0,45}" + re.escape(school), visible)
-    if not (heading or alternative):
-        raise ValueError("School + target date not found together in visible page")
+    # School pages may insert unrelated markup between school and date.
+    # Require that both occur on the date-filtered page, plus valid dish cards below.
+    if not (day in visible and school in visible):
+        raise ValueError("School/date identity not present in public lunch page")
     dishes = []
     seen = set()
     for image in soup.select('img[src*="/dish/pic/"]'):
