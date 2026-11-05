@@ -5,10 +5,14 @@ This uses each school's publicly displayed Tad Lunch3 HTML; it does not bypass
 the central platform's 403 restrictions. A small list of registry-matched public schools
 are used for this pilot. Photos are linked, never copied to our repository.
 """
+import argparse
 import datetime
+import hashlib
 import json
 import pathlib
 import re
+import time
+import urllib.error
 import urllib.request
 from bs4 import BeautifulSoup
 
@@ -36,6 +40,8 @@ PILOTS = [
      "url": "https://www.cmjh.tn.edu.tw/index.php"},
     {"name": "紅瓦厝國小", "level": "國小", "district": "歸仁區",
      "url": "https://www.hwces.tn.edu.tw/index.php"},
+    {"name": "新南國小", "level": "國小", "district": "安平區",
+     "url": "https://www.hnps.tn.edu.tw/index.php"},
 ]
 CATEGORIES = ("主食", "主菜", "副菜", "蔬菜", "湯品", "附餐")
 
@@ -54,10 +60,12 @@ def match_code(rows, expected, level, district=None):
 def parse_menu(source_html, school, day):
     soup = BeautifulSoup(source_html, "html.parser")
     visible = soup.get_text(" ", strip=True)
-    # School pages may insert unrelated markup between school and date.
-    # Require that both occur on the date-filtered page, plus valid dish cards below.
-    if not (day in source_html and school in source_html):
-        raise ValueError("School/date identity not present in public lunch page")
+    # A homepage may IGNORE ?period and display a different day's lunch.
+    # Only accept a same-school, same-date lunch heading, not date text
+    # elsewhere in the site or a menu for the previous day.
+    heading = re.escape(school) + r"\\s*" + re.escape(day) + r"\\s*午餐\\s*資訊"
+    if not re.search(heading, visible):
+        raise ValueError("No matching school/date lunch heading on this page")
     dishes = []
     seen = set()
     for image in soup.select('img[src*="/dish/pic/"]'):
@@ -124,49 +132,183 @@ def parse_menu(source_html, school, day):
             return extracted[:20]
     raise ValueError("Incomplete menu: neither image cards nor dated text lunch block were valid")
 
-def main():
-    registry = json.loads(SCHOOL_REGISTRY.read_text(encoding="utf-8"))["schools"]
-    summary = []
-    for entry in PILOTS:
-        school = match_code(registry, entry["name"], entry["level"], entry.get("district"))
-        url = entry["url"] + "?period=" + TODAY
+MONITOR = pathlib.Path("data/lunch-monitor.json")
+REPORT = pathlib.Path("data/tainan-pilot-status.json")
+
+def read_json(path, default=None):
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return default
+
+def iso_utc():
+    return datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
+
+def utc_day(offset=0):
+    return (datetime.datetime.now(TZ).date() + datetime.timedelta(days=offset)).isoformat()
+
+def choose_dates(scope, local_hour):
+    if scope == "today":
+        return [utc_day()]
+    if scope == "tomorrow":
+        return [utc_day(1)]
+    if scope == "both":
+        return [utc_day(), utc_day(1)]
+    if local_hour >= 18:
+        return [utc_day(1)]
+    if local_hour < 8:
+        return [utc_day(), utc_day(1)]
+    return [utc_day()]
+
+def fingerprint(dishes):
+    normalized = [(d["category"], d["name"]) for d in dishes]
+    return hashlib.sha256(
+        json.dumps(normalized, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    ).hexdigest()
+
+def validated_saved(school, day):
+    path = ROOT / school["code"] / (day + ".json")
+    value = read_json(path, {}) or {}
+    if (value.get("source") == "school_website"
+        and value.get("date") == day
+        and value.get("school_code") == school["code"]
+        and isinstance(value.get("dishes"), list)
+        and len(value["dishes"]) >= 3):
+        return value
+    return None
+
+def sync_school_day(school, entry, day, monitor):
+    now = iso_utc()
+    code = school["code"]
+    key = code + ":" + day
+    status = monitor.setdefault(key, {
+        "school_code": code, "school_name": school["name"], "date": day,
+        "first_checked_at": now, "change_count": 0,
+    })
+    status["last_checked_at"] = now
+    url = entry["url"] + "?period=" + day
+    result = {"name": entry["name"], "date": day, "source_url": url,
+              "school_code": code}
+    old = validated_saved(school, day)
+    try:
         request = urllib.request.Request(url, headers={
-            "User-Agent": "DinnerHelper-Pilot/1.0 (public school lunch page)",
+            "User-Agent": "DinnerHelper-TainanPilot/1.1 (+public informational use)",
             "Accept": "text/html",
         })
-        result = {"name": entry["name"], "date": TODAY, "source_url": url}
-        try:
-            with urllib.request.urlopen(request, timeout=20) as response:
-                if response.status != 200:
-                    raise ValueError(f"HTTP {response.status}")
-                markup = response.read(1_000_000).decode("utf-8", errors="replace")
-            dishes = parse_menu(markup, entry["name"], TODAY)
+        with urllib.request.urlopen(request, timeout=18) as response:
+            if response.status != 200:
+                raise ValueError(f"HTTP {response.status}")
+            markup = response.read(900_000).decode("utf-8", errors="replace")
+        dishes = parse_menu(markup, entry["name"], day)
+        digest = fingerprint(dishes)
+        old_digest = fingerprint(old["dishes"]) if old else None
+        first_seen = status.get("first_seen_at") or (
+            old.get("first_seen_at") or old.get("retrieved_at") if old else None
+        ) or now
+        changed = old_digest != digest
+        status["first_seen_at"] = first_seen
+        if changed:
+            status["last_changed_at"] = now
+            status["change_count"] = int(status.get("change_count", 0)) + (1 if old else 0)
+        if old and not changed:
+            result["change"] = "unchanged"
+        else:
             output = {
                 "source": "school_website",
                 "source_url": url,
-                "retrieved_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-                "date": TODAY,
-                "school_code": school["code"],
-                "school_name": school["name"],
-                "dishes": dishes,
+                "retrieved_at": now,
+                "first_seen_at": first_seen,
+                "last_changed_at": status.get("last_changed_at", now),
+                "revision_count": status["change_count"],
+                "menu_fingerprint": digest,
+                "date": day, "school_code": code,
+                "school_name": school["name"], "dishes": dishes,
             }
-            dest = ROOT / school["code"] / (TODAY + ".json")
+            dest = ROOT / code / (day + ".json")
             dest.parent.mkdir(parents=True, exist_ok=True)
             dest.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-            result["status"] = "ok"
-            result["school_code"] = school["code"]
-            result["dishes"] = [x["name"] for x in dishes]
-        except Exception as error:
-            result["status"] = "unavailable"
-            result["reason"] = f"{type(error).__name__}: {str(error)[:100]}"
-        summary.append(result)
-    report = pathlib.Path("data/tainan-pilot-status.json")
-    report.write_text(json.dumps({
-        "checked_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-        "pilot_only": True,
-        "results": summary
-    }, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-    print(json.dumps(summary, ensure_ascii=False, indent=2))
+            result["change"] = "updated" if old else "first_seen"
+        status["last_status"] = "ok"
+        status.pop("last_error", None)
+        result["status"] = "ok"
+        result["dishes"] = [x["name"] for x in dishes]
+        result["first_seen_at"] = first_seen
+        result["last_changed_at"] = status.get("last_changed_at")
+    except Exception as error:
+        status["last_status"] = "unavailable"
+        status["last_error"] = f"{type(error).__name__}: {str(error)[:120]}"
+        result["status"] = "unavailable"
+        result["reason"] = status["last_error"]
+        if old:
+            result["has_previous_valid_snapshot"] = True
+    return result
 
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--scope", choices=["auto","today","tomorrow","both"], default="auto")
+    args = parser.parse_args()
+    current = datetime.datetime.now(TZ)
+    selected_days = choose_dates(args.scope, current.hour)
+    registry = read_json(SCHOOL_REGISTRY, {})["schools"]
+    schools = [(entry, match_code(
+        registry, entry["name"], entry["level"], entry.get("district")
+    )) for entry in PILOTS]
+    previous = read_json(MONITOR, {}) or {}
+    observations = previous.get("observations", {})
+    if not isinstance(observations, dict):
+        observations = {}
+    attempt_results = []
+    for day in selected_days:
+        for entry, school in schools:
+            attempt_results.append(sync_school_day(school, entry, day, observations))
+            time.sleep(0.15)
+
+    # Keep monitor compact: only the most recent 21 days.
+    oldest = (current.date() - datetime.timedelta(days=21)).isoformat()
+    observations = {k:v for k,v in observations.items()
+                    if isinstance(v,dict) and v.get("date","") >= oldest}
+    MONITOR.write_text(json.dumps({
+        "timezone": "Asia/Taipei", "checked_at": iso_utc(),
+        "note": "first_seen_at is earliest OUR SYSTEM observed; not the school's publication time",
+        "observations": observations
+    }, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
+
+    # Compatibility with existing school-selector UI: today's "results".
+    # Also expose tomorrow for the future preview selector.
+    days = [utc_day(), utc_day(1)]
+    by_date = {}
+    for day in days:
+        records = []
+        for entry, school in schools:
+            snapshot = validated_saved(school, day)
+            found = next((r for r in attempt_results if r["school_code"] == school["code"]
+                          and r["date"] == day), None)
+            record = {
+                "name": entry["name"], "date": day, "school_code": school["code"],
+                "status": "ok" if snapshot else "unavailable",
+                "source_url": snapshot.get("source_url") if snapshot else entry["url"] + "?period=" + day,
+            }
+            if found and found.get("reason"):
+                record["last_check_note"] = found["reason"]
+            if snapshot:
+                record["dishes"] = [x["name"] for x in snapshot["dishes"]]
+                record["first_seen_at"] = (
+                    observations.get(school["code"]+":"+day, {}).get("first_seen_at")
+                    or snapshot.get("first_seen_at") or snapshot.get("retrieved_at"))
+            records.append(record)
+        by_date[day] = records
+    REPORT.write_text(json.dumps({
+        "checked_at": iso_utc(), "pilot_only": True,
+        "checked_dates": selected_days,
+        "results": by_date[utc_day()],
+        "by_date": by_date,
+        "note": "A published menu is not a guarantee the child ate every dish"
+    }, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
+    print(json.dumps({
+        "checked_dates": selected_days,
+        "results": [{"school": r["name"], "date":r["date"], "status":r["status"],
+                     "change":r.get("change"), "reason":r.get("reason")}
+                    for r in attempt_results],
+    }, ensure_ascii=False, indent=2))
 if __name__ == "__main__":
     main()
