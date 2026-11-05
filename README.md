@@ -1,5 +1,24 @@
 # 🍚 今晚煮什麼？ Dinner Helper
 
+## V1.4：依行政區及學制篩選學校
+
+首次設定按順序選：
+1. 縣市
+2. 行政區（縣市下的區／鄉／鎮／市）
+3. 國小或國中
+4. 學校
+
+教育部官方名錄來源：
+- 國小：https://stats.moe.gov.tw/files/school/114/e1_new.json
+- 國中：https://stats.moe.gov.tw/files/opendata/j1_new.json
+
+資料同步腳本：`scripts/sync_schools.py`；工作流程：`.github/workflows/sync-schools.yml`。
+同步會產生 `data/schools.json`（新增 `district`、`level` 欄位），以及 `data/school-stats.json`（學校數量摘要）。
+
+原本使用者已儲存的學校仍會保留，系統會嘗試補上行政區與學制。正式午餐 API 仍尚未取得，選擇學校並不代表已連接到該校午餐。
+
+
+
 孩子中午在學校吃了什麼，晚上就換個口味。手機優先、無須註冊。
 
 ## V1.3：學校下拉選單（已更新）
