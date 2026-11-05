@@ -86,9 +86,43 @@ def parse_menu(source_html, school, day):
         # Store only source references; our UI will fall back to SVG when needed.
         photo_url = image_url if image_url.startswith("https://fatraceschool.k12ea.gov.tw/dish/pic/") else None
         dishes.append({"name": alt, "category": category, "photo_url": photo_url})
-    if len(dishes) < 3 or not any(x["category"] == "主菜" for x in dishes):
-        raise ValueError("Incomplete menu: no main dish or fewer than three courses")
-    return dishes[:20]
+    if len(dishes) >= 3 and any(x["category"] == "主菜" for x in dishes):
+        return dishes[:20]
+    # Homepage lunch blocks often render text but do not include a /dish/pic/
+    # image. Only parse a same-school, same-day lunch heading, never generic
+    # page text (which could be news, archives or another school's menu).
+    lines = [str(t).strip() for t in soup.stripped_strings if str(t).strip()]
+    starts = [
+        i for i, line in enumerate(lines)
+        if day in line and "午餐" in line and "資訊" in line and school in line
+    ]
+    if not starts:
+        raise ValueError("Incomplete menu and no matching dated lunch heading")
+    # At most the first lunch section: do not merge attached preschool snacks.
+    for start in starts:
+        extracted = []
+        for i in range(start + 1, min(start + 90, len(lines))):
+            line = lines[i]
+            if ("校園食材登錄平臺" in line or "重新擷取資料" in line) and extracted:
+                break
+            if "午餐資訊" in line and day in line and extracted:
+                break
+            category = next((c for c in CATEGORIES if line == c), None)
+            if category is None:
+                continue
+            if category == "主食" and any(x["category"] in ("湯品", "附餐") for x in extracted):
+                break
+            if i + 1 >= len(lines):
+                continue
+            name = lines[i + 1].strip()
+            if not name or name in CATEGORIES or len(name) > 65:
+                continue
+            if any(x["name"] == name and x["category"] == category for x in extracted):
+                continue
+            extracted.append({"name": name, "category": category, "photo_url": None})
+        if len(extracted) >= 3 and any(x["category"] == "主菜" for x in extracted):
+            return extracted[:20]
+    raise ValueError("Incomplete menu: neither image cards nor dated text lunch block were valid")
 
 def main():
     registry = json.loads(SCHOOL_REGISTRY.read_text(encoding="utf-8"))["schools"]
