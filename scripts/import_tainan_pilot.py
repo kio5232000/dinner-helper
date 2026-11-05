@@ -2,7 +2,7 @@
 """Import a small allowlisted pilot of public Tainan school lunch pages.
 
 This uses each school's publicly displayed Tad Lunch3 HTML; it does not bypass
-the central platform's 403 restrictions. Only two registry-matched public schools
+the central platform's 403 restrictions. A small list of registry-matched public schools
 are used for this pilot. Photos are linked, never copied to our repository.
 """
 import datetime
@@ -22,6 +22,14 @@ PILOTS = [
      "url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php"},
     {"name": "勝利國小", "level": "國小", "district": "東區", "domain": "web.slps.tn.edu.tw",
      "url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php"},
+    {"name": "新嘉國小", "level": "國小", "district": "後壁區",
+     "url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php"},
+    {"name": "新生國小", "level": "國小", "district": "新營區",
+     "url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php"},
+    {"name": "崇明國小", "level": "國小", "district": "東區",
+     "url": "https://old.cmes.tn.edu.tw/modules/tad_lunch3/index.php"},
+    {"name": "進學國小", "level": "國小", "district": "中西區",
+     "url": "https://www.chps.tn.edu.tw/modules/tad_lunch3/index.php"},
 ]
 CATEGORIES = ("主食", "主菜", "副菜", "蔬菜", "湯品", "附餐")
 
