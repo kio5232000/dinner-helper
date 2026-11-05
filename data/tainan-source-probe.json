@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-11-05T06:15:55.304686+00:00",
+  "description": "Limited public-page probe, not an API availability guarantee",
+  "results": [
+    {
+      "school": "柳營國小",
+      "url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
+      "date": "2026-11-05",
+      "status": 200,
+      "contains_date": true,
+      "menu_names_found": [
+        "蒜香翅小腿",
+        "蒜香青花菜"
+      ],
+      "looks_like_lunch_module": true,
+      "can_read_expected_meals": true
+    },
+    {
+      "school": "勝利國小",
+      "url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
+      "date": "2026-11-05",
+      "status": 200,
+      "contains_date": true,
+      "menu_names_found": [
+        "高昇排骨",
+        "玉米蛋花湯"
+      ],
+      "looks_like_lunch_module": true,
+      "can_read_expected_meals": true
+    },
+    {
+      "school": "昭明國中",
+      "url": "https://webold.jmjh.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
+      "date": "2026-11-05",
+      "status": 200,
+      "contains_date": true,
+      "menu_names_found": [
+        "蜂蜜檸檬醬燒豬",
+        "涼拌雲耳"
+      ],
+      "looks_like_lunch_module": true,
+      "can_read_expected_meals": true
+    }
+  ]
+}
