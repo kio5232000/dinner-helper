@@ -20,19 +20,20 @@ ROOT = pathlib.Path("data/lunch")
 PILOTS = [
     {"name": "柳營國小", "level": "國小", "domain": "new.lyes.tn.edu.tw",
      "url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php"},
-    {"name": "勝利國小", "level": "國小", "domain": "web.slps.tn.edu.tw",
+    {"name": "勝利國小", "level": "國小", "district": "東區", "domain": "web.slps.tn.edu.tw",
      "url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php"},
     {"name": "昭明國中", "level": "國中", "domain": "webold.jmjh.tn.edu.tw",
      "url": "https://webold.jmjh.tn.edu.tw/modules/tad_lunch3/index.php"},
 ]
 CATEGORIES = ("主食", "主菜", "副菜", "蔬菜", "湯品", "附餐")
 
-def match_code(rows, expected, level):
+def match_code(rows, expected, level, district=None):
     matches = [
         x for x in rows
         if x.get("city") == "臺南市"
         and x.get("level") == level
         and x.get("name", "").endswith(expected)
+        and (not district or x.get("district") == district)
     ]
     if len(matches) != 1:
         raise ValueError(f"Ambiguous pilot school {expected}/{level}: {[x['name'] for x in matches]}")
@@ -78,7 +79,7 @@ def main():
     registry = json.loads(SCHOOL_REGISTRY.read_text(encoding="utf-8"))["schools"]
     summary = []
     for entry in PILOTS:
-        school = match_code(registry, entry["name"], entry["level"])
+        school = match_code(registry, entry["name"], entry["level"], entry.get("district"))
         url = entry["url"] + "?period=" + TODAY
         request = urllib.request.Request(url, headers={
             "User-Agent": "DinnerHelper-Pilot/1.0 (public school lunch page)",
