@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f8f7f2">
 <meta name="description" content="從孩子的學校午餐，找到今晚不同口味的料理靈感。">
-<title>今晚煮什麼？｜學校午餐與晚餐靈感</title>
+<title>今晚煮什麼？臺南版｜學校午餐與晚餐靈感</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap');
 :root{--ink:#26352b;--sub:#737e73;--green:#417a5c;--dark:#295b43;--sand:#f8f7f2;--line:#eceee5;--cream:#fdf8ec;--serif:Georgia,serif;font-family:'Noto Sans TC',system-ui,-apple-system,sans-serif}
@@ -45,17 +45,15 @@
 </style>
 </head><body>
 <div class="container">
-<header class="topbar"><div class="brand"><div class="brandMark" aria-hidden="true">🍚</div><div>今晚煮什麼？<div class="mini" style="font-weight:500">YOUR DAILY DINNER IDEA</div></div></div><button id="topAction" class="quiet hidden" type="button">更換學校</button></header>
+<header class="topbar"><div class="brand"><div class="brandMark" aria-hidden="true">🍚</div><div>今晚煮什麼？<div class="mini" style="font-weight:500">臺南親子晚餐靈感</div></div></div><button id="topAction" class="quiet hidden" type="button">更換學校</button></header>
 <main>
-<section id="welcome" class="welcome hidden"><div class="eyebrow">HELLO, DINNER TIME</div><h1>孩子午餐吃什麼，<br>今晚就<span style="color:var(--green)">換個口味。</span></h1><p class="intro">選擇一次學校，下次打開就會直接顯示午餐區，幫你找到不同的晚餐靈感。</p><div class="heroIllustration" id="heroArt" aria-label="餐盤料理示意插畫"></div>
+<section id="welcome" class="welcome hidden"><div class="eyebrow">HELLO, DINNER TIME</div><h1>臺南孩子午餐吃什麼，<br>今晚就<span style="color:var(--green)">換個口味。</span></h1><p class="intro">選擇一次學校，下次打開就會直接顯示午餐區，幫你找到不同的晚餐靈感。</p><div class="heroIllustration" id="heroArt" aria-label="餐盤料理示意插畫"></div>
 <div class="setupCard"><h2 class="cardTitle">先告訴我孩子念哪所學校</h2><p>之後會記住，不用每天重新選擇。</p><div class="schoolSteps">
-  <div class="schoolStepGrid">
-    <div class="selectField"><label for="city"><span>01</span> 縣市</label><select id="city" aria-label="選擇縣市"><option>臺南市</option><option>高雄市</option><option>臺北市</option><option>新北市</option></select></div>
-    <div class="selectField"><label for="district"><span>02</span> 行政區</label><select id="district" aria-label="選擇行政區" disabled><option value="">請先選縣市</option></select></div>
-  </div>
-  <div class="selectField"><label for="level"><span>03</span> 就讀階段</label><select id="level" aria-label="選擇國中或國小"><option value="國小">國小</option><option value="國中">國中</option></select></div>
-  <div class="selectField"><label for="school"><span>04</span> 學校名稱</label><select id="school" aria-label="選擇學校" disabled><option value="">請先選行政區及階段</option></select></div>
-</div><div id="registryStatus" class="hintTiny" role="status">正在讀取教育部國小名錄…</div><div id="formError" class="error" role="alert"></div><button class="primary" id="saveSchool" type="button">查看今日午餐 <span class="arrow">→</span></button><div class="hintTiny">依照縣市、行政區和國中／國小逐步篩選，最後選學校。學校名錄來自教育部；午餐資料仍在介接中。</div></div></section>
+  <select id="city" hidden aria-label="固定縣市"><option value="臺南市">臺南市</option></select>
+  <div class="selectField"><label for="district"><span>01</span> 臺南市・行政區</label><select id="district" aria-label="選擇行政區" disabled><option value="">學校名錄載入中…</option></select></div>
+  <div class="selectField"><label for="level"><span>02</span> 就讀階段</label><select id="level" aria-label="選擇國中或國小"><option value="國小">國小</option><option value="國中">國中</option></select></div>
+  <div class="selectField"><label for="school"><span>03</span> 學校名稱</label><select id="school" aria-label="選擇學校" disabled><option value="">請先選行政區及階段</option></select></div>
+</div><div id="registryStatus" class="hintTiny" role="status">正在讀取教育部國小名錄…</div><div id="formError" class="error" role="alert"></div><button class="primary" id="saveSchool" type="button">查看今日午餐 <span class="arrow">→</span></button><div class="hintTiny">此版限定臺南市，依序選擇行政區、國小／國中與學校。部分學校午餐來源已通過讀取測試，完整串接仍在開發中。</div></div></section>
 <section id="dashboard" class="hidden">
 <div class="hello"><div class="eyebrow">TODAY'S SCHOOL LUNCH</div><div class="date" id="todayDate"></div><h1 class="welcomeTitle">今天中午，<br>孩子<span>吃了什麼？</span></h1><div class="schoolPill"><span aria-hidden="true">⌂</span><span id="schoolText"></span><button type="button" id="changeSchool">更換</button></div></div>
 <section class="section" aria-labelledby="lunchTitle"><div class="sectionHead"><div><div class="eyebrow">LUNCH MENU</div><h2 id="lunchTitle">今日午餐清單</h2></div><span class="softLabel" id="dishCount"></span></div><p class="helptext" id="lunchNotice">正在檢查今日午餐資料…</p><div class="menuGrid hidden" id="menuGrid"></div><div id="noLunch" class="emptyLunch hidden"><div class="emptyIcon">🥗</div><strong>今天的菜單還沒有取得</strong><p>已從 GitHub 伺服器測試官方查詢頁與舊版 API，均回傳 403；目前無法取得當日菜單，因此不會拿示範菜單冒充真正供餐。</p><a class="sourceButton" href="https://fatraceschool.k12ea.gov.tw/frontend/search.html" target="_blank" rel="noopener noreferrer">前往教育部查詢今日午餐 ↗</a><details class="manualDetails"><summary>我知道午餐菜色，先輸入讓網站推薦</summary><p>把今天的午餐菜名用逗號隔開。這是家長手動輸入，並非官方資料。</p><textarea id="manualDishes" placeholder="例如：白飯、滷雞腿、炒高麗菜、番茄炒蛋"></textarea><button id="useManual" class="secondary" type="button">使用這份午餐清單</button></details><button id="tryDemo" class="demoButton" type="button">只想試試介面？載入明確標示的示範菜單</button></div><div class="summary hidden" id="lunchSummary"><div class="summaryIcon">💡</div><div><strong>今晚可以換個主菜</strong><p id="mealTip"></p></div></div></section>
@@ -126,7 +124,7 @@ let directory=[],directoryLoaded=false,selectedSchool=null,dashboardSerial=0,men
 const norm=s=>String(s||'').replace(/[臺]/g,'台').replace(/\s+/g,'').toLowerCase();
 function toDateKey(){let p=taiwanParts();return p.year+'-'+p.month+'-'+p.day}
 function schoolMemoKey(){return LUNCH_DATE_KEY+':'+(current?.code||norm(current?.school||''))+':'+toDateKey()}
-function citySelect(cities){const previous=$('city').value;let unique=[...new Set(cities)].sort((a,b)=>a.localeCompare(b,'zh-TW'));if(unique.some(c=>norm(c)===norm(previous))){$('city').replaceChildren(...unique.map(c=>new Option(c,c)));$('city').value=unique.find(c=>norm(c)===norm(previous));}else{$('city').replaceChildren(...unique.map(c=>new Option(c,c)));$('city').value=unique.find(c=>norm(c)==='台南市')||unique[0]||''}}
+function citySelect(){ $('city').value='臺南市'; }
 
 function extractDistrict(address,city){
  const normalized=norm(address);
@@ -179,7 +177,7 @@ async function loadDirectory(){
    if(!r.ok)throw new Error('學校名錄同步未完成');
    const data=await r.json();
    if(!Array.isArray(data.schools)||data.schools.length<1000)throw new Error('學校名錄不完整');
-   directory=data.schools.filter(s=>s&&s.code&&s.name&&s.city).map(normalizeSchool);
+   directory=data.schools.filter(s=>s&&s.code&&s.name&&s.city&&norm(s.city)==='台南市').map(normalizeSchool);
    directoryLoaded=true;
    citySelect(directory.map(s=>s.city));
    const saved=findSavedSchool();
@@ -188,13 +186,12 @@ async function loadDirectory(){
      saveState(current);
    }
    if(current){
-     let cityOption=[...$('city').options].find(o=>norm(o.value)===norm(current.city));
-     if(cityOption)$('city').value=cityOption.value;
+     $('city').value='臺南市';
      if(current.level&&['國中','國小'].includes(current.level))$('level').value=current.level;
    }
    fillDistricts(current?.district||saved?.district);
    fillSchoolDropdown(current?.code);
-   const counts=data.counts_by_level||{國小:directory.filter(s=>s.level==='國小').length,國中:directory.filter(s=>s.level==='國中').length};
+   const counts={國小:directory.filter(s=>s.level==='國小').length,國中:directory.filter(s=>s.level==='國中').length};
    $('registryStatus').textContent='✓ 教育部學校名錄已載入：國小 '+(counts['國小']||0)+' 所、國中 '+(counts['國中']||0)+' 所';
  }catch(e){
    directoryLoaded=false;
@@ -230,8 +227,7 @@ function saveSchool(){
 }
 function showSchool(){
  if(current&&directoryLoaded){
-  const cityOption=[...$('city').options].find(o=>norm(o.value)===norm(current.city));
-  if(cityOption)$('city').value=cityOption.value;
+  $('city').value='臺南市';
   $('level').value=current.level||'國小';
  }
  fillDistricts(current?.district||'');
@@ -245,6 +241,6 @@ function buildLunchLive(records,source){$('menuGrid').replaceChildren();records.
 async function showDashboard(){if(!current){setScreen('welcome');return}let id=++dashboardSerial;$('todayDate').textContent=new Intl.DateTimeFormat('zh-TW',{timeZone:'Asia/Taipei',year:'numeric',month:'long',day:'numeric',weekday:'long'}).format(new Date());$('schoolText').textContent=current.city+' · '+current.school;setScreen('dashboard');showLunch('none',[],'正在檢查已同步的午餐資料…');window.scrollTo({top:0,behavior:'instant'});let saved=null;try{saved=JSON.parse(localStorage.getItem(schoolMemoKey())||'null')}catch{}if(saved&&Array.isArray(saved.dishes)&&saved.dishes.length)showLunch('manual',saved.dishes,'這份午餐由你自行輸入並保存在此瀏覽器，非官方供餐紀錄。');if(!current.code){if(!saved)showLunch('none',[],'這所學校的午餐資料尚未連接。請使用下方官方連結查詢，或自行輸入菜單以測試推薦。');return}try{const link='./data/lunch/'+encodeURIComponent(current.code)+'/'+toDateKey()+'.json';const res=await fetch(link,{cache:'no-store'});if(!res.ok)throw new Error('尚未同步');const data=await res.json();if(id!==dashboardSerial)return;if(data.source!=='official'||data.school_code!==current.code||data.date!==toDateKey()||!Array.isArray(data.dishes)||!data.dishes.length)throw new Error('資料驗證未通過');let dishes=data.dishes.slice(0,20).map(d=>{let guess=inferType(d.name);return {...guess,name:String(d.name).slice(0,60),category:'學校午餐',photo_url:d.photo_url||null}}).filter(d=>d.name);if(!dishes.length)throw new Error('無菜色');showLunch('official',dishes,'資料來源：教育部校園食材登錄平臺（已同步）。照片僅在官方提供時顯示。')}catch(e){if(id===dashboardSerial&&!saved)showLunch('none',[],'目前尚未同步此校今日的官方菜單。網站不會用假菜單取代真實午餐。')}}
 $('useManual').addEventListener('click',()=>{const names=$('manualDishes').value.split(/[，,、;；\n]+/).map(s=>s.trim()).filter(Boolean).slice(0,15);if(!names.length){$('manualDishes').focus();return}const dishes=names.map(n=>({...inferType(n),name:n.slice(0,60),category:'手動菜單'}));try{localStorage.setItem(schoolMemoKey(),JSON.stringify({dishes}))}catch{}showLunch('manual',dishes,'你手動輸入的午餐清單（非官方資料）。菜名判斷僅供料理靈感參考。')});
 $('tryDemo').addEventListener('click',()=>{const dishes=menus[menuIndex()].map(d=>({...d,category:'示範菜色'}));showLunch('demo',dishes,'⚠ 這是示範菜單，與所選學校實際供餐無關。')});
-current=readState();if(current)showDashboard();else setScreen('welcome');loadDirectory();
+current=readState();if(current&&norm(current.city)!=='台南市')current=null;if(current)showDashboard();else setScreen('welcome');loadDirectory();
 
 </script></body></html>
