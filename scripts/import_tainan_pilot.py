@@ -64,7 +64,28 @@ def parse_menu(source_html, school, day):
     # Only accept a same-school, same-date lunch heading, not date text
     # elsewhere in the site or a menu for the previous day.
     heading = re.escape(school) + r"\s*" + re.escape(day) + r"\s*午餐\s*資訊"
-    if not re.search(heading, visible):
+    match_found = bool(re.search(heading, visible))
+    if not match_found:
+        # Some Tad Lunch3 templates render the heading SCHOOL NAME inside
+        # an <img alt>, with the date in adjacent textual markup.
+        # Require a bounded nearby DOM section; unrelated page dates
+        # and attached kindergarten sections must never match.
+        image_heading = re.compile(re.escape(school) + r"\s*午餐\s*資訊")
+        for title_image in soup.select("img[alt]"):
+            alt = title_image.get("alt", "")
+            if not image_heading.search(alt) or "附設幼兒園" in alt:
+                continue
+            if day in alt:
+                match_found = True
+                break
+            for ancestor in list(title_image.parents)[:5]:
+                local_text = ancestor.get_text(" ", strip=True)
+                if day in local_text and len(local_text) <= 1800:
+                    match_found = True
+                    break
+            if match_found:
+                break
+    if not match_found:
         raise ValueError("No matching school/date lunch heading on this page")
     dishes = []
     seen = set()
