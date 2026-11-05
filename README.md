@@ -1,5 +1,23 @@
 # 🍚 今晚煮什麼？ Dinner Helper
 
+## V1.5 臺南市先行（2026-11-05）
+
+介面只顯示「行政區 → 國小／國中 → 學校」，移除縣市選單。網站標示「臺南版」，**GitHub 專案名稱與 Pages 網址暫不變**。
+
+### 實際午餐資料路線
+
+中央 [校園食材登錄平臺](https://fatraceschool.k12ea.gov.tw/frontend/search.html) 的搜尋頁／舊版 API 在 GitHub runner 回應 HTTP 403，尚無可行的直接公開 API 介接。
+
+但是部分臺南學校透過 [Tad Lunch3](https://github.com/tad0616/tad_lunch3) 模組公開學校當日午餐。2026-11-05 的 GitHub Runner 小規模測試，柳營國小、東區勝利國小、昭明國中三校公開頁面皆回 HTTP 200，並讀到當日實際菜名，詳見 `data/tainan-source-probe.json`。
+
+- 試點抓取器：`scripts/import_tainan_pilot.py`
+- 每週一至週五 14:35 台北時間同步：`.github/workflows/import-tainan-pilot.yml`
+- 使用**學校網站**作為菜單來源（`source: school_website`），而不是假稱直接取得中央 API
+- 只支援三所已核對校名、地址／行政區及網址的試點學校。其他學校不顯示假的當日菜單。
+- 成功後：`data/lunch/{school_code}/{YYYY-MM-DD}.json`；失敗時有 `data/tainan-pilot-status.json` 提示；網站只讀同校、同日的檔案。
+- 若圖片的原始網站拒絕跨站載入，介面會回退 SVG 菜色示意圖。
+- 資料與圖片使用權、更新頻率、批次供餐及多供應商異常處理尚待正式確認，試點不代表已取得所有臺南學校的午餐資料。
+
 ## V1.4：依行政區及學制篩選學校
 
 首次設定按順序選：
