@@ -119,7 +119,7 @@ function fillSchoolDropdown(preferredCode=null){
  select.replaceChildren(new Option(directoryLoaded?'選擇學校（共 '+matches.length+' 所）':'學校名錄載入中…',''));
  if(!directoryLoaded){select.disabled=true;return}
  for(const s of matches){
-   let region=s.address?.match(/(?:市|縣)([^\\s]{1,5}(?:區|鄉|鎮|市))/)?.[1]||'';
+   let region=s.address?.match(/(?:市|縣)(.{1,5}?(?:區|鄉|鎮|市))/)?.[1]||'';
    select.add(new Option(s.name+(region?' · '+region:''),s.code));
  }
  select.disabled=matches.length===0;
