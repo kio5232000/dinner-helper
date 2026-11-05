@@ -1,8 +1,7 @@
 {
-  "checked_at": "2026-11-05T07:48:39+00:00",
+  "checked_at": "2026-11-05T12:03:30+00:00",
   "pilot_only": true,
   "checked_dates": [
-    "2026-11-05",
     "2026-11-06"
   ],
   "results": [
@@ -28,7 +27,6 @@
       "school_code": "213601",
       "status": "ok",
       "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
-      "last_check_note": "ValueError: No matching school/date lunch heading on this page",
       "dishes": [
         "糙米飯",
         "高昇排骨",
@@ -61,7 +59,6 @@
       "school_code": "114734",
       "status": "ok",
       "source_url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
-      "last_check_note": "ValueError: No matching school/date lunch heading on this page",
       "dishes": [
         "小米飯",
         "秋刀魚",
@@ -78,7 +75,6 @@
       "school_code": "213640",
       "status": "ok",
       "source_url": "https://old.cmes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
-      "last_check_note": "ValueError: No matching school/date lunch heading on this page",
       "dishes": [
         "糙米飯",
         "蒲燒鱸魚",
@@ -189,7 +185,6 @@
         "school_code": "213601",
         "status": "ok",
         "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
-        "last_check_note": "ValueError: No matching school/date lunch heading on this page",
         "dishes": [
           "糙米飯",
           "高昇排骨",
@@ -222,7 +217,6 @@
         "school_code": "114734",
         "status": "ok",
         "source_url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
-        "last_check_note": "ValueError: No matching school/date lunch heading on this page",
         "dishes": [
           "小米飯",
           "秋刀魚",
@@ -239,7 +233,6 @@
         "school_code": "213640",
         "status": "ok",
         "source_url": "https://old.cmes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-05",
-        "last_check_note": "ValueError: No matching school/date lunch heading on this page",
         "dishes": [
           "糙米飯",
           "蒲燒鱸魚",
