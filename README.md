@@ -17,7 +17,9 @@
 
 因此目前 **無法**把學校名錄代碼直接拿去呼叫官方午餐 API。正式介接需先確認新版 API、授權/存取方式、學校 ID 對照、CORS、供餐批次與菜單結構。
 
-目前尚未驗證每日午餐 API 回傳，請勿將此版本視為即時午餐資料服務。
+**2026-11-05 實測結果：** GitHub Actions 以一般 HTTP 請求測試官方查詢頁、OpenAPI 文件與歷史 offered/meal 介面，三者均回傳 HTTP 403，且未提供允許 GitHub Pages 的 CORS 標頭。結果記錄於 `data/source-diagnostics.json`，程式為 `scripts/check_lunch_access.py`，可由 `.github/workflows/check-lunch-source.yml` 手動重新測試。這不表示所有用戶在官方網站都會遇到 403，但我們尚無可確認的網站直接讀取方式。
+
+請勿將此版本視為即時午餐資料服務。正式介接需要向官方確認 API 允許的使用方式或改用具有授權的其他來源。
 
 ## 學校名錄同步
 
