@@ -42,7 +42,7 @@ def parse_menu(source_html, school, day):
     visible = soup.get_text(" ", strip=True)
     # School pages may insert unrelated markup between school and date.
     # Require that both occur on the date-filtered page, plus valid dish cards below.
-    if not (day in visible and school in visible):
+    if not (day in source_html and school in source_html):
         raise ValueError("School/date identity not present in public lunch page")
     dishes = []
     seen = set()
