@@ -7,7 +7,18 @@ on:
       - 'tests/test_lunch_import.py'
       - '.github/workflows/import-tainan-pilot.yml'
   schedule:
-    - cron: '35 6 * * 1-5'
+    # 06:45: early family planning, check today and tomorrow
+    - cron: '45 6 * * 1-5'
+      timezone: 'Asia/Taipei'
+    - cron: '45 8 * * 1-5'
+      timezone: 'Asia/Taipei'
+    - cron: '15 11 * * 1-5'
+      timezone: 'Asia/Taipei'
+    - cron: '35 13 * * 1-5'
+      timezone: 'Asia/Taipei'
+    # Sunday-Thursday evenings: next school day's preview
+    - cron: '15 19 * * 0-4'
+      timezone: 'Asia/Taipei'
 
 permissions:
   contents: write
@@ -28,15 +39,17 @@ jobs:
         run: python -m pip install beautifulsoup4
       - name: Check lunch parsing against test fixtures
         run: python -m unittest discover -s tests -v
-      - name: Fetch allowed school public meal pages
-        run: python scripts/import_tainan_pilot.py
+      - name: Fetch and compare publicly posted school menus
+        env:
+          IMPORT_SCOPE: ${{ github.event_name == 'schedule' && 'auto' || 'both' }}
+        run: python scripts/import_tainan_pilot.py --scope "$IMPORT_SCOPE"
       - name: Commit validated pilot files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/tainan-pilot-status.json
+          git add data/tainan-pilot-status.json data/lunch-monitor.json
           if [ -d data/lunch ]; then git add data/lunch; fi
           if ! git diff --cached --quiet; then
-            git commit -m "data: refresh public Tainan pilot school lunches"
+            git commit -m "data: track Tainan school menus and their observed updates"
             git push
           fi
