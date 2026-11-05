@@ -1,0 +1,212 @@
+{
+  "timezone": "Asia/Taipei",
+  "checked_at": "2026-11-05T07:43:45+00:00",
+  "note": "first_seen_at is earliest OUR SYSTEM observed; not the school's publication time",
+  "observations": {
+    "114758:2026-11-05": {
+      "school_code": "114758",
+      "school_name": "市立柳營國小",
+      "date": "2026-11-05",
+      "first_checked_at": "2026-11-05T07:42:36+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:42:36+00:00",
+      "first_seen_at": "2026-11-05T06:45:51.613793+00:00",
+      "last_status": "ok"
+    },
+    "213601:2026-11-05": {
+      "school_code": "213601",
+      "school_name": "市立東區勝利國小",
+      "date": "2026-11-05",
+      "first_checked_at": "2026-11-05T07:42:41+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:42:41+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: No matching school/date lunch heading on this page"
+    },
+    "114768:2026-11-05": {
+      "school_code": "114768",
+      "school_name": "市立新嘉國小",
+      "date": "2026-11-05",
+      "first_checked_at": "2026-11-05T07:42:45+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:42:45+00:00",
+      "first_seen_at": "2026-11-05T06:45:56.171211+00:00",
+      "last_status": "ok"
+    },
+    "114734:2026-11-05": {
+      "school_code": "114734",
+      "school_name": "市立新生國小",
+      "date": "2026-11-05",
+      "first_checked_at": "2026-11-05T07:42:50+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:42:50+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: No matching school/date lunch heading on this page"
+    },
+    "213640:2026-11-05": {
+      "school_code": "213640",
+      "school_name": "市立崇明國小",
+      "date": "2026-11-05",
+      "first_checked_at": "2026-11-05T07:42:53+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:42:53+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: No matching school/date lunch heading on this page"
+    },
+    "213623:2026-11-05": {
+      "school_code": "213623",
+      "school_name": "市立進學國小",
+      "date": "2026-11-05",
+      "first_checked_at": "2026-11-05T07:42:55+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:42:55+00:00",
+      "first_seen_at": "2026-11-05T06:46:06.338514+00:00",
+      "last_status": "ok"
+    },
+    "114669:2026-11-05": {
+      "school_code": "114669",
+      "school_name": "市立佳興國小",
+      "date": "2026-11-05",
+      "first_checked_at": "2026-11-05T07:42:59+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:42:59+00:00",
+      "first_seen_at": "2026-11-05T06:46:09.369751+00:00",
+      "last_status": "ok"
+    },
+    "213518:2026-11-05": {
+      "school_code": "213518",
+      "school_name": "市立崇明國中",
+      "date": "2026-11-05",
+      "first_checked_at": "2026-11-05T07:43:05+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:43:05+00:00",
+      "first_seen_at": "2026-11-05T06:46:14.189675+00:00",
+      "last_status": "ok"
+    },
+    "114785:2026-11-05": {
+      "school_code": "114785",
+      "school_name": "市立紅瓦厝國小",
+      "date": "2026-11-05",
+      "first_checked_at": "2026-11-05T07:43:09+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:43:09+00:00",
+      "first_seen_at": "2026-11-05T06:46:18.929680+00:00",
+      "last_status": "ok"
+    },
+    "213615:2026-11-05": {
+      "school_code": "213615",
+      "school_name": "市立新南國小",
+      "date": "2026-11-05",
+      "first_checked_at": "2026-11-05T07:43:16+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:43:16+00:00",
+      "first_seen_at": "2026-11-05T07:43:16+00:00",
+      "last_changed_at": "2026-11-05T07:43:16+00:00",
+      "last_status": "ok"
+    },
+    "114758:2026-11-06": {
+      "school_code": "114758",
+      "school_name": "市立柳營國小",
+      "date": "2026-11-06",
+      "first_checked_at": "2026-11-05T07:43:19+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:43:19+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: No matching school/date lunch heading on this page"
+    },
+    "213601:2026-11-06": {
+      "school_code": "213601",
+      "school_name": "市立東區勝利國小",
+      "date": "2026-11-06",
+      "first_checked_at": "2026-11-05T07:43:21+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:43:21+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: No matching school/date lunch heading on this page"
+    },
+    "114768:2026-11-06": {
+      "school_code": "114768",
+      "school_name": "市立新嘉國小",
+      "date": "2026-11-06",
+      "first_checked_at": "2026-11-05T07:43:23+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:43:23+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: No matching school/date lunch heading on this page"
+    },
+    "114734:2026-11-06": {
+      "school_code": "114734",
+      "school_name": "市立新生國小",
+      "date": "2026-11-06",
+      "first_checked_at": "2026-11-05T07:43:24+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:43:24+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: No matching school/date lunch heading on this page"
+    },
+    "213640:2026-11-06": {
+      "school_code": "213640",
+      "school_name": "市立崇明國小",
+      "date": "2026-11-06",
+      "first_checked_at": "2026-11-05T07:43:26+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:43:26+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: No matching school/date lunch heading on this page"
+    },
+    "213623:2026-11-06": {
+      "school_code": "213623",
+      "school_name": "市立進學國小",
+      "date": "2026-11-06",
+      "first_checked_at": "2026-11-05T07:43:27+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:43:27+00:00",
+      "first_seen_at": "2026-11-05T07:43:27+00:00",
+      "last_changed_at": "2026-11-05T07:43:27+00:00",
+      "last_status": "ok"
+    },
+    "114669:2026-11-06": {
+      "school_code": "114669",
+      "school_name": "市立佳興國小",
+      "date": "2026-11-06",
+      "first_checked_at": "2026-11-05T07:43:31+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:43:31+00:00",
+      "first_seen_at": "2026-11-05T07:43:31+00:00",
+      "last_changed_at": "2026-11-05T07:43:31+00:00",
+      "last_status": "ok"
+    },
+    "213518:2026-11-06": {
+      "school_code": "213518",
+      "school_name": "市立崇明國中",
+      "date": "2026-11-06",
+      "first_checked_at": "2026-11-05T07:43:34+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:43:34+00:00",
+      "first_seen_at": "2026-11-05T07:43:34+00:00",
+      "last_changed_at": "2026-11-05T07:43:34+00:00",
+      "last_status": "ok"
+    },
+    "114785:2026-11-06": {
+      "school_code": "114785",
+      "school_name": "市立紅瓦厝國小",
+      "date": "2026-11-06",
+      "first_checked_at": "2026-11-05T07:43:38+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:43:38+00:00",
+      "first_seen_at": "2026-11-05T07:43:38+00:00",
+      "last_changed_at": "2026-11-05T07:43:38+00:00",
+      "last_status": "ok"
+    },
+    "213615:2026-11-06": {
+      "school_code": "213615",
+      "school_name": "市立新南國小",
+      "date": "2026-11-06",
+      "first_checked_at": "2026-11-05T07:43:42+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-05T07:43:42+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
+    }
+  }
+}

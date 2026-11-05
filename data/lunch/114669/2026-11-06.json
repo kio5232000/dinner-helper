@@ -1,0 +1,44 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.jsps.tn.edu.tw/index.php?period=2026-11-06",
+  "retrieved_at": "2026-11-05T07:43:31+00:00",
+  "first_seen_at": "2026-11-05T07:43:31+00:00",
+  "last_changed_at": "2026-11-05T07:43:31+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "230c7131b490bf4f3a8a89da80f496d1e4960284718e12bfdf8007ace415aaf9",
+  "date": "2026-11-06",
+  "school_code": "114669",
+  "school_name": "市立佳興國小",
+  "dishes": [
+    {
+      "name": "胚芽飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "筍香燉肉",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "玉米炒蛋",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "薑絲油菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "當歸雞湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "百香果",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}
