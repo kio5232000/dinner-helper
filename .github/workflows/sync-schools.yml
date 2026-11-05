@@ -1,0 +1,38 @@
+name: Sync public school directory
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/sync_schools.py'
+      - '.github/workflows/sync-schools.yml'
+  schedule:
+    - cron: '23 2 * * 1'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: school-directory-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Import MOE public elementary-school registry
+        run: python scripts/sync_schools.py
+      - name: Commit refreshed directory if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/schools.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: refresh MOE elementary schools registry"
+            git push
+          fi
