@@ -36,6 +36,9 @@ for school, url, expected in SAMPLES:
         decoded = html.unescape(raw)
         item["contains_date"] = DATE in decoded
         item["menu_names_found"] = [x for x in expected if x in decoded]
+        match_at = decoded.find(expected[0])
+        if match_at >= 0:
+            item["sample_markup"] = decoded[max(0, match_at-500):match_at+360]
         item["looks_like_lunch_module"] = "tad_lunch3" in raw or "午餐資訊" in decoded
         item["can_read_expected_meals"] = (
             item["status"] == 200 and item["contains_date"]
