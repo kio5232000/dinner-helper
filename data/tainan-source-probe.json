@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-05T06:15:55.304686+00:00",
+  "checked_at": "2026-11-05T06:18:23.845747+00:00",
   "description": "Limited public-page probe, not an API availability guarantee",
   "results": [
     {
@@ -12,6 +12,7 @@
         "蒜香翅小腿",
         "蒜香青花菜"
       ],
+      "sample_markup": ">\n                                    <div style=\"color:white;padding:2px;text-align:center;font-size:1em;\">主食</div>\n                    <div style=\"color:white;padding:2px;text-align:center;font-size:1.1em\">小米飯</div>\n                            </div>\n                                <div style=\"width:120px;display: inline-block; margin:2px; background-color: #009688;\">\n                <img src=\"https://fatraceschool.k12ea.gov.tw/dish/pic/1611038700315753\" style=\"width:120px;height:120px;\" alt=\"蒜香翅小腿\">\n                                    <div style=\"color:white;padding:2px;text-align:center;font-size:1em;\">主菜</div>\n                    <div style=\"color:white;padding:2px;text-align:center;font-size:1.1em\">蒜香翅小腿</div>\n                            </div>\n                                <div style=\"width:120px;display: inline-block; margin:2px; backgrou",
       "looks_like_lunch_module": true,
       "can_read_expected_meals": true
     },
@@ -25,6 +26,7 @@
         "高昇排骨",
         "玉米蛋花湯"
       ],
+      "sample_markup": "41165526\" style=\"width:150px;height:150px;\" alt=\"糙米飯\">\n                <div style=\"color:white;padding:2px;text-align:center;\">主食</div>\n                <div style=\"color:white;padding:2px;text-align:center;font-size:1.2em;\">糙米飯</div>\n            </div>\n                                <div style=\"width:150px;display: inline-block; margin:2px; background-color: #009688;\">\n                <img src=\"https://fatraceschool.k12ea.gov.tw/dish/pic/1559096008225053\" style=\"width:150px;height:150px;\" alt=\"高昇排骨\">\n                <div style=\"color:white;padding:2px;text-align:center;\">主菜</div>\n                <div style=\"color:white;padding:2px;text-align:center;font-size:1.2em;\">高昇排骨</div>\n            </div>\n                                <div style=\"width:150px;display: inline-block; margin:2px; background-color: #009688;\">\n                <img src=\"https://",
       "looks_like_lunch_module": true,
       "can_read_expected_meals": true
     },
@@ -38,6 +40,7 @@
         "蜂蜜檸檬醬燒豬",
         "涼拌雲耳"
       ],
+      "sample_markup": "                   <div style=\"display: inline-block;\">\n                    <div style=\"color:white;padding:2px;font-size:1em;\">主食</div>\n                    <div style=\"color:white;padding:2px;font-size:1.1em\">白米飯</div>\n                </div>\n                            </div>\n                                <div style=\"width:100%; margin:2px; background-color: #009688;\">\n                <img src=\"https://fatraceschool.k12ea.gov.tw/dish/pic/1666925808036373\" style=\"width:50px;height:50px;\" alt=\"蜂蜜檸檬醬燒豬\">\n                                <div style=\"display: inline-block;\">\n                    <div style=\"color:white;padding:2px;font-size:1em;\">主菜</div>\n                    <div style=\"color:white;padding:2px;font-size:1.1em\">蜂蜜檸檬醬燒豬</div>\n                </div>\n                            </div>\n                                <div style=\"width:100%;",
       "looks_like_lunch_module": true,
       "can_read_expected_meals": true
     }
