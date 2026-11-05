@@ -33,13 +33,29 @@
 .demoButton{background:none;border:0;color:#829080;font-size:11px;text-decoration:underline;margin-top:12px;padding:5px}
 .primary:disabled{opacity:.54;cursor:not-allowed;box-shadow:none}
 .photoTag{font-size:10px;color:#858f84;font-weight:600}
+
+.schoolSteps{display:grid;gap:17px;margin:17px 0 0}
+.schoolStepGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.selectField{min-width:0}
+.selectField label{display:block;font-size:12px;font-weight:800;color:#66796a;letter-spacing:.03em;margin:0 0 9px}
+.selectField label span{font-family:Georgia,serif;color:#97ad9a;font-size:11px;margin-right:4px}
+.selectField select{width:100%;min-height:53px;border:1px solid #dfe8dc;border-radius:14px;padding:0 12px;background:#fafbf7;color:#2b4434;font-size:15px;font-weight:600;text-overflow:ellipsis}
+.selectField select:disabled{color:#9ca7a0;background:#f3f4f0;cursor:not-allowed}
+@media(max-width:350px){.schoolStepGrid{grid-template-columns:1fr}}
 </style>
 </head><body>
 <div class="container">
 <header class="topbar"><div class="brand"><div class="brandMark" aria-hidden="true">🍚</div><div>今晚煮什麼？<div class="mini" style="font-weight:500">YOUR DAILY DINNER IDEA</div></div></div><button id="topAction" class="quiet hidden" type="button">更換學校</button></header>
 <main>
 <section id="welcome" class="welcome hidden"><div class="eyebrow">HELLO, DINNER TIME</div><h1>孩子午餐吃什麼，<br>今晚就<span style="color:var(--green)">換個口味。</span></h1><p class="intro">選擇一次學校，下次打開就會直接顯示午餐區，幫你找到不同的晚餐靈感。</p><div class="heroIllustration" id="heroArt" aria-label="餐盤料理示意插畫"></div>
-<div class="setupCard"><h2 class="cardTitle">先告訴我孩子念哪所學校</h2><p>之後會記住，不用每天重新選擇。</p><div class="formLine"><select class="selectCity" id="city" aria-label="選擇縣市"><option>臺南市</option><option>高雄市</option><option>臺北市</option><option>新北市</option><option>臺中市</option><option>桃園市</option><option>其他縣市</option></select><select id="school" class="schoolInput" aria-label="選擇學校" disabled><option value="">學校名錄載入中…</option></select></div><div id="registryStatus" class="hintTiny" role="status">正在讀取教育部國小名錄…</div><div id="formError" class="error" role="alert"></div><button class="primary" id="saveSchool" type="button">查看今日午餐 <span class="arrow">→</span></button><div class="hintTiny">先選縣市，再從下拉選單挑學校。學校名錄來自教育部（114 學年度）；午餐即時資料仍在介接中。</div></div></section>
+<div class="setupCard"><h2 class="cardTitle">先告訴我孩子念哪所學校</h2><p>之後會記住，不用每天重新選擇。</p><div class="schoolSteps">
+  <div class="schoolStepGrid">
+    <div class="selectField"><label for="city"><span>01</span> 縣市</label><select id="city" aria-label="選擇縣市"><option>臺南市</option><option>高雄市</option><option>臺北市</option><option>新北市</option></select></div>
+    <div class="selectField"><label for="district"><span>02</span> 行政區</label><select id="district" aria-label="選擇行政區" disabled><option value="">請先選縣市</option></select></div>
+  </div>
+  <div class="selectField"><label for="level"><span>03</span> 就讀階段</label><select id="level" aria-label="選擇國中或國小"><option value="國小">國小</option><option value="國中">國中</option></select></div>
+  <div class="selectField"><label for="school"><span>04</span> 學校名稱</label><select id="school" aria-label="選擇學校" disabled><option value="">請先選行政區及階段</option></select></div>
+</div><div id="registryStatus" class="hintTiny" role="status">正在讀取教育部國小名錄…</div><div id="formError" class="error" role="alert"></div><button class="primary" id="saveSchool" type="button">查看今日午餐 <span class="arrow">→</span></button><div class="hintTiny">依照縣市、行政區和國中／國小逐步篩選，最後選學校。學校名錄來自教育部；午餐資料仍在介接中。</div></div></section>
 <section id="dashboard" class="hidden">
 <div class="hello"><div class="eyebrow">TODAY'S SCHOOL LUNCH</div><div class="date" id="todayDate"></div><h1 class="welcomeTitle">今天中午，<br>孩子<span>吃了什麼？</span></h1><div class="schoolPill"><span aria-hidden="true">⌂</span><span id="schoolText"></span><button type="button" id="changeSchool">更換</button></div></div>
 <section class="section" aria-labelledby="lunchTitle"><div class="sectionHead"><div><div class="eyebrow">LUNCH MENU</div><h2 id="lunchTitle">今日午餐清單</h2></div><span class="softLabel" id="dishCount"></span></div><p class="helptext" id="lunchNotice">正在檢查今日午餐資料…</p><div class="menuGrid hidden" id="menuGrid"></div><div id="noLunch" class="emptyLunch hidden"><div class="emptyIcon">🥗</div><strong>今天的菜單還沒有取得</strong><p>已從 GitHub 伺服器測試官方查詢頁與舊版 API，均回傳 403；目前無法取得當日菜單，因此不會拿示範菜單冒充真正供餐。</p><a class="sourceButton" href="https://fatraceschool.k12ea.gov.tw/frontend/search.html" target="_blank" rel="noopener noreferrer">前往教育部查詢今日午餐 ↗</a><details class="manualDetails"><summary>我知道午餐菜色，先輸入讓網站推薦</summary><p>把今天的午餐菜名用逗號隔開。這是家長手動輸入，並非官方資料。</p><textarea id="manualDishes" placeholder="例如：白飯、滷雞腿、炒高麗菜、番茄炒蛋"></textarea><button id="useManual" class="secondary" type="button">使用這份午餐清單</button></details><button id="tryDemo" class="demoButton" type="button">只想試試介面？載入明確標示的示範菜單</button></div><div class="summary hidden" id="lunchSummary"><div class="summaryIcon">💡</div><div><strong>今晚可以換個主菜</strong><p id="mealTip"></p></div></div></section>
@@ -84,7 +100,7 @@ return '<svg viewBox="0 0 320 210" role="img" aria-label="餐點插畫示意" xm
 }
 const colors={chicken:'#f8ebd9',rice:'#f3eee7',greens:'#e9f0dd',egg:'#f9eddc',soup:'#e5ece8',fish:'#e4f0eb',tofu:'#f2eee3',pork:'#f5e6db',broccoli:'#e7f0df'};
 let current=null,lunch=[],rotation=0;
-function readState(){try{const v=JSON.parse(localStorage.getItem(KEY)||'null');if(v&&typeof v.school==='string'&&v.school.trim()&&typeof v.city==='string')return {school:v.school.trim(),city:v.city,code:typeof v.code==='string'?v.code:undefined}}catch(e){}return null}
+function readState(){try{const v=JSON.parse(localStorage.getItem(KEY)||'null');if(v&&typeof v.school==='string'&&v.school.trim()&&typeof v.city==='string')return {school:v.school.trim(),city:v.city,code:typeof v.code==='string'?v.code:undefined,district:typeof v.district==='string'?v.district:undefined,level:typeof v.level==='string'?v.level:undefined}}catch(e){}return null}
 function saveState(v){try{localStorage.setItem(KEY,JSON.stringify(v))}catch(e){}}
 function taiwanParts(){const f=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit'});const parts=f.formatToParts(new Date());return Object.fromEntries(parts.map(p=>[p.type,p.value]))}
 function menuIndex(){const p=taiwanParts();return (Number(p.year)+Number(p.month)*31+Number(p.day))%menus.length}
@@ -111,73 +127,115 @@ const norm=s=>String(s||'').replace(/[臺]/g,'台').replace(/\s+/g,'').toLowerCa
 function toDateKey(){let p=taiwanParts();return p.year+'-'+p.month+'-'+p.day}
 function schoolMemoKey(){return LUNCH_DATE_KEY+':'+(current?.code||norm(current?.school||''))+':'+toDateKey()}
 function citySelect(cities){const previous=$('city').value;let unique=[...new Set(cities)].sort((a,b)=>a.localeCompare(b,'zh-TW'));if(unique.some(c=>norm(c)===norm(previous))){$('city').replaceChildren(...unique.map(c=>new Option(c,c)));$('city').value=unique.find(c=>norm(c)===norm(previous));}else{$('city').replaceChildren(...unique.map(c=>new Option(c,c)));$('city').value=unique.find(c=>norm(c)==='台南市')||unique[0]||''}}
-function fillSchoolDropdown(preferredCode=null){
- const select=$('school');
+
+function extractDistrict(address,city){
+ const normalized=norm(address);
+ const c=norm(city);
+ const i=normalized.indexOf(c);
+ const suffix=i>=0?normalized.slice(i+c.length):normalized.replace(/^\\d{3,6}/,'');
+ const m=suffix.match(/^(.{1,6}?(?:區|鄉|鎮|市))/);
+ return m?m[1]:'';
+}
+function normalizeSchool(row){
+ return {...row,level:row.level||'國小',district:row.district||extractDistrict(row.address||'',row.city)};
+}
+function findSavedSchool(){
+ if(!current)return null;
+ return directory.find(s=>s.code===current.code&&s.level===(current.level||'國小'))||
+   directory.find(s=>norm(s.city)===norm(current.city)&&norm(s.name)===norm(current.school)&&s.level===(current.level||'國小'))||null;
+}
+function fillDistricts(preferred){
  const city=$('city').value;
- const matches=directory.filter(s=>norm(s.city)===norm(city))
+ const districts=[...new Set(directory.filter(s=>norm(s.city)===norm(city)).map(s=>s.district).filter(Boolean))]
+   .sort((a,b)=>a.localeCompare(b,'zh-TW'));
+ const select=$('district');
+ const previous=preferred||select.value;
+ select.replaceChildren(new Option('請選擇行政區',''));
+ for(const district of districts)select.add(new Option(district,district));
+ select.disabled=!directoryLoaded||districts.length===0;
+ const chosen=districts.find(d=>norm(d)===norm(previous));
+ if(chosen)select.value=chosen;
+ fillSchoolDropdown();
+}
+function fillSchoolDropdown(preferredCode){
+ const select=$('school'),city=$('city').value,district=$('district').value,level=$('level').value;
+ const filtered=directory.filter(s=>norm(s.city)===norm(city)&&norm(s.district)===norm(district)&&s.level===level)
    .sort((a,b)=>a.name.localeCompare(b.name,'zh-TW')||a.code.localeCompare(b.code));
- select.replaceChildren(new Option(directoryLoaded?'選擇學校（共 '+matches.length+' 所）':'學校名錄載入中…',''));
- if(!directoryLoaded){select.disabled=true;return}
- for(const s of matches){
-   let region=s.address?.match(/(?:市|縣)(.{1,5}?(?:區|鄉|鎮|市))/)?.[1]||'';
-   select.add(new Option(s.name+(region?' · '+region:''),s.code));
+ let prompt='請先選擇行政區';
+ if(district)prompt='請選學校（'+filtered.length+' 所）';
+ select.replaceChildren(new Option(prompt,''));
+ for(const s of filtered)select.add(new Option(s.name,s.code));
+ select.disabled=!directoryLoaded||!district||filtered.length===0;
+ const selected=filtered.find(s=>s.code===preferredCode);
+ if(selected)select.value=selected.code;
+ selectedSchool=filtered.find(s=>s.code===select.value)||null;
+ if(directoryLoaded&&district&&!filtered.length){
+   $('registryStatus').textContent='此行政區目前沒有「'+level+'」名錄資料，請切換階段或選其他行政區。';
  }
- select.disabled=matches.length===0;
- if(preferredCode&&matches.some(s=>s.code===preferredCode))select.value=preferredCode;
- else if(current&&norm(current.city)===norm(city)){
-   const saved=matches.find(s=>s.code===current.code)||matches.find(s=>norm(s.name)===norm(current.school));
-   if(saved)select.value=saved.code;
- }
- selectedSchool=matches.find(s=>s.code===select.value)||null;
 }
 async function loadDirectory(){
  try{
-   const res=await fetch(DIRECTORY_URL+'?v=114',{cache:'no-cache'});
-   if(!res.ok)throw new Error('學校名錄尚未同步');
-   const data=await res.json();
+   const r=await fetch(DIRECTORY_URL+'?v=115-district',{cache:'no-cache'});
+   if(!r.ok)throw new Error('學校名錄同步未完成');
+   const data=await r.json();
    if(!Array.isArray(data.schools)||data.schools.length<1000)throw new Error('學校名錄不完整');
-   directory=data.schools.filter(s=>s&&s.code&&s.name&&s.city);
+   directory=data.schools.filter(s=>s&&s.code&&s.name&&s.city).map(normalizeSchool);
    directoryLoaded=true;
    citySelect(directory.map(s=>s.city));
-   if(current){
-     let found=directory.find(s=>s.code===current.code)||
-       directory.find(s=>norm(s.city)===norm(current.city)&&norm(s.name)===norm(current.school));
-     if(found){current={city:found.city,school:found.name,code:found.code};saveState(current)}
-     const matchedCity=[...$('city').options].find(o=>norm(o.value)===norm(current.city));
-     if(matchedCity)$('city').value=matchedCity.value;
+   const saved=findSavedSchool();
+   if(saved){
+     current={city:saved.city,school:saved.name,code:saved.code,district:saved.district,level:saved.level};
+     saveState(current);
    }
-   fillSchoolDropdown(current?.code||null);
-   $('registryStatus').textContent='✓ 已載入教育部國小名錄（'+directory.length+' 所）';
+   if(current){
+     let cityOption=[...$('city').options].find(o=>norm(o.value)===norm(current.city));
+     if(cityOption)$('city').value=cityOption.value;
+     if(current.level&&['國中','國小'].includes(current.level))$('level').value=current.level;
+   }
+   fillDistricts(current?.district||saved?.district);
+   fillSchoolDropdown(current?.code);
+   const counts=data.counts_by_level||{國小:directory.filter(s=>s.level==='國小').length,國中:directory.filter(s=>s.level==='國中').length};
+   $('registryStatus').textContent='✓ 教育部學校名錄已載入：國小 '+(counts['國小']||0)+' 所、國中 '+(counts['國中']||0)+' 所';
  }catch(e){
-   directoryLoaded=false;fillSchoolDropdown();
-   $('registryStatus').textContent='學校名錄暫時無法載入，請重新整理網頁再試。已儲存的學校仍會保留。';
+   directoryLoaded=false;
+   $('district').disabled=true;$('school').disabled=true;
+   $('registryStatus').textContent='學校資料暫時無法載入，請重新整理再試。已儲存的學校不會清除。';
  }
 }
 $('city').addEventListener('change',()=>{
-  selectedSchool=null;
-  $('formError').textContent='';
-  fillSchoolDropdown();
+ selectedSchool=null;$('formError').textContent='';
+ fillDistricts('');
+});
+$('district').addEventListener('change',()=>{
+ selectedSchool=null;$('formError').textContent='';
+ fillSchoolDropdown();
+});
+$('level').addEventListener('change',()=>{
+ selectedSchool=null;$('formError').textContent='';
+ fillSchoolDropdown();
+ $('registryStatus').textContent='已選 '+$('level').value+'，可從最後一欄選擇學校。';
 });
 $('school').addEventListener('change',()=>{
-  selectedSchool=directory.find(s=>s.code===$('school').value)||null;
-  $('formError').textContent='';
+ const code=$('school').value;
+ selectedSchool=directory.find(s=>s.code===code&&s.level===$('level').value)||null;
+ $('formError').textContent='';
 });
 function saveSchool(){
  const code=$('school').value;
- const chosen=directoryLoaded?directory.find(s=>s.code===code&&norm(s.city)===norm($('city').value)):null;
- if(!chosen){$('formError').textContent='請先從下拉選單選擇一所學校';return}
- current={city:chosen.city,school:chosen.name,code:chosen.code};
+ const chosen=directoryLoaded?directory.find(s=>s.code===code&&s.level===$('level').value&&norm(s.city)===norm($('city').value)&&norm(s.district)===norm($('district').value)):null;
+ if(!chosen){$('formError').textContent='請依序選擇縣市、行政區、國中／國小，最後選學校';return}
+ current={city:chosen.city,school:chosen.name,code:chosen.code,district:chosen.district,level:chosen.level};
  selectedSchool=chosen;
- saveState(current);
- $('formError').textContent='';
- showDashboard();
+ saveState(current);$('formError').textContent='';showDashboard();
 }
 function showSchool(){
- if(current){
-   const cityOption=[...$('city').options].find(o=>norm(o.value)===norm(current.city));
-   if(cityOption)$('city').value=cityOption.value;
+ if(current&&directoryLoaded){
+  const cityOption=[...$('city').options].find(o=>norm(o.value)===norm(current.city));
+  if(cityOption)$('city').value=cityOption.value;
+  $('level').value=current.level||'國小';
  }
- fillSchoolDropdown(current?.code||null);
+ fillDistricts(current?.district||'');
+ fillSchoolDropdown(current?.code);
  setScreen('welcome');
  window.scrollTo({top:0,behavior:'instant'});
 }
