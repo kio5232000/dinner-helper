@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Taipei",
-  "checked_at": "2026-11-06T04:09:03+00:00",
+  "checked_at": "2026-11-06T06:27:37+00:00",
   "note": "first_seen_at is earliest OUR SYSTEM observed; not the school's publication time",
   "observations": {
     "114758:2026-11-05": {
@@ -110,7 +110,7 @@
       "date": "2026-11-06",
       "first_checked_at": "2026-11-05T07:43:19+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-06T04:08:35+00:00",
+      "last_checked_at": "2026-11-06T06:27:01+00:00",
       "last_status": "ok",
       "first_seen_at": "2026-11-05T23:26:19+00:00",
       "last_changed_at": "2026-11-05T23:26:19+00:00"
@@ -121,7 +121,7 @@
       "date": "2026-11-06",
       "first_checked_at": "2026-11-05T07:43:21+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-06T04:08:37+00:00",
+      "last_checked_at": "2026-11-06T06:27:05+00:00",
       "last_status": "unavailable",
       "last_error": "ValueError: No matching school/date lunch heading on this page"
     },
@@ -131,7 +131,7 @@
       "date": "2026-11-06",
       "first_checked_at": "2026-11-05T07:43:23+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-06T04:08:39+00:00",
+      "last_checked_at": "2026-11-06T06:27:09+00:00",
       "last_status": "ok",
       "first_seen_at": "2026-11-05T23:26:25+00:00",
       "last_changed_at": "2026-11-05T23:26:25+00:00"
@@ -142,7 +142,7 @@
       "date": "2026-11-06",
       "first_checked_at": "2026-11-05T07:43:24+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-06T04:08:41+00:00",
+      "last_checked_at": "2026-11-06T06:27:11+00:00",
       "last_status": "unavailable",
       "last_error": "ValueError: No matching school/date lunch heading on this page"
     },
@@ -152,7 +152,7 @@
       "date": "2026-11-06",
       "first_checked_at": "2026-11-05T07:43:26+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-06T04:08:43+00:00",
+      "last_checked_at": "2026-11-06T06:27:14+00:00",
       "last_status": "unavailable",
       "last_error": "ValueError: No matching school/date lunch heading on this page"
     },
@@ -162,7 +162,7 @@
       "date": "2026-11-06",
       "first_checked_at": "2026-11-05T07:43:27+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-06T04:08:45+00:00",
+      "last_checked_at": "2026-11-06T06:27:17+00:00",
       "first_seen_at": "2026-11-05T07:43:27+00:00",
       "last_changed_at": "2026-11-05T07:43:27+00:00",
       "last_status": "ok"
@@ -173,7 +173,7 @@
       "date": "2026-11-06",
       "first_checked_at": "2026-11-05T07:43:31+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-06T04:08:49+00:00",
+      "last_checked_at": "2026-11-06T06:27:21+00:00",
       "first_seen_at": "2026-11-05T07:43:31+00:00",
       "last_changed_at": "2026-11-05T07:43:31+00:00",
       "last_status": "ok"
@@ -184,7 +184,7 @@
       "date": "2026-11-06",
       "first_checked_at": "2026-11-05T07:43:34+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-06T04:08:52+00:00",
+      "last_checked_at": "2026-11-06T06:27:25+00:00",
       "first_seen_at": "2026-11-05T07:43:34+00:00",
       "last_changed_at": "2026-11-05T07:43:34+00:00",
       "last_status": "ok"
@@ -195,7 +195,7 @@
       "date": "2026-11-06",
       "first_checked_at": "2026-11-05T07:43:38+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-06T04:08:56+00:00",
+      "last_checked_at": "2026-11-06T06:27:29+00:00",
       "first_seen_at": "2026-11-05T07:43:38+00:00",
       "last_changed_at": "2026-11-05T07:43:38+00:00",
       "last_status": "ok"
@@ -206,7 +206,7 @@
       "date": "2026-11-06",
       "first_checked_at": "2026-11-05T07:43:42+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-06T04:09:00+00:00",
+      "last_checked_at": "2026-11-06T06:27:33+00:00",
       "last_status": "ok",
       "first_seen_at": "2026-11-06T01:51:49+00:00",
       "last_changed_at": "2026-11-06T01:51:49+00:00"
