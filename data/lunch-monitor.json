@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Taipei",
-  "checked_at": "2026-11-08T11:48:38+00:00",
+  "checked_at": "2026-11-08T23:17:49+00:00",
   "note": "first_seen_at is earliest OUR SYSTEM observed; not the school's publication time",
   "observations": {
     "114758:2026-11-05": {
@@ -317,9 +317,10 @@
       "date": "2026-11-09",
       "first_checked_at": "2026-11-08T11:48:07+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-08T11:48:07+00:00",
-      "last_status": "unavailable",
-      "last_error": "ValueError: No matching school/date lunch heading on this page"
+      "last_checked_at": "2026-11-08T23:16:56+00:00",
+      "last_status": "ok",
+      "first_seen_at": "2026-11-08T23:16:56+00:00",
+      "last_changed_at": "2026-11-08T23:16:56+00:00"
     },
     "213601:2026-11-09": {
       "school_code": "213601",
@@ -327,7 +328,7 @@
       "date": "2026-11-09",
       "first_checked_at": "2026-11-08T11:48:10+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-08T11:48:10+00:00",
+      "last_checked_at": "2026-11-08T23:16:59+00:00",
       "last_status": "unavailable",
       "last_error": "ValueError: No matching school/date lunch heading on this page"
     },
@@ -337,9 +338,9 @@
       "date": "2026-11-09",
       "first_checked_at": "2026-11-08T11:48:12+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-08T11:48:12+00:00",
+      "last_checked_at": "2026-11-08T23:17:00+00:00",
       "last_status": "unavailable",
-      "last_error": "ValueError: No matching school/date lunch heading on this page"
+      "last_error": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
     },
     "114734:2026-11-09": {
       "school_code": "114734",
@@ -347,7 +348,7 @@
       "date": "2026-11-09",
       "first_checked_at": "2026-11-08T11:48:14+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-08T11:48:14+00:00",
+      "last_checked_at": "2026-11-08T23:17:02+00:00",
       "last_status": "unavailable",
       "last_error": "ValueError: No matching school/date lunch heading on this page"
     },
@@ -357,7 +358,7 @@
       "date": "2026-11-09",
       "first_checked_at": "2026-11-08T11:48:16+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-08T11:48:16+00:00",
+      "last_checked_at": "2026-11-08T23:17:05+00:00",
       "last_status": "unavailable",
       "last_error": "ValueError: No matching school/date lunch heading on this page"
     },
@@ -367,7 +368,7 @@
       "date": "2026-11-09",
       "first_checked_at": "2026-11-08T11:48:18+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-08T11:48:18+00:00",
+      "last_checked_at": "2026-11-08T23:17:07+00:00",
       "first_seen_at": "2026-11-08T11:48:18+00:00",
       "last_changed_at": "2026-11-08T11:48:18+00:00",
       "last_status": "ok"
@@ -378,7 +379,7 @@
       "date": "2026-11-09",
       "first_checked_at": "2026-11-08T11:48:22+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-08T11:48:22+00:00",
+      "last_checked_at": "2026-11-08T23:17:11+00:00",
       "first_seen_at": "2026-11-08T11:48:22+00:00",
       "last_changed_at": "2026-11-08T11:48:22+00:00",
       "last_status": "ok"
@@ -389,7 +390,7 @@
       "date": "2026-11-09",
       "first_checked_at": "2026-11-08T11:48:26+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-08T11:48:26+00:00",
+      "last_checked_at": "2026-11-08T23:17:14+00:00",
       "first_seen_at": "2026-11-08T11:48:26+00:00",
       "last_changed_at": "2026-11-08T11:48:26+00:00",
       "last_status": "ok"
@@ -400,7 +401,7 @@
       "date": "2026-11-09",
       "first_checked_at": "2026-11-08T11:48:30+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-08T11:48:30+00:00",
+      "last_checked_at": "2026-11-08T23:17:18+00:00",
       "first_seen_at": "2026-11-08T11:48:30+00:00",
       "last_changed_at": "2026-11-08T11:48:30+00:00",
       "last_status": "ok"
@@ -411,7 +412,111 @@
       "date": "2026-11-09",
       "first_checked_at": "2026-11-08T11:48:34+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-08T11:48:34+00:00",
+      "last_checked_at": "2026-11-08T23:17:22+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
+    },
+    "114758:2026-11-10": {
+      "school_code": "114758",
+      "school_name": "市立柳營國小",
+      "date": "2026-11-10",
+      "first_checked_at": "2026-11-08T23:17:25+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-08T23:17:25+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: No matching school/date lunch heading on this page"
+    },
+    "213601:2026-11-10": {
+      "school_code": "213601",
+      "school_name": "市立東區勝利國小",
+      "date": "2026-11-10",
+      "first_checked_at": "2026-11-08T23:17:27+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-08T23:17:27+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: No matching school/date lunch heading on this page"
+    },
+    "114768:2026-11-10": {
+      "school_code": "114768",
+      "school_name": "市立新嘉國小",
+      "date": "2026-11-10",
+      "first_checked_at": "2026-11-08T23:17:28+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-08T23:17:28+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: No matching school/date lunch heading on this page"
+    },
+    "114734:2026-11-10": {
+      "school_code": "114734",
+      "school_name": "市立新生國小",
+      "date": "2026-11-10",
+      "first_checked_at": "2026-11-08T23:17:30+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-08T23:17:30+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: No matching school/date lunch heading on this page"
+    },
+    "213640:2026-11-10": {
+      "school_code": "213640",
+      "school_name": "市立崇明國小",
+      "date": "2026-11-10",
+      "first_checked_at": "2026-11-08T23:17:32+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-08T23:17:32+00:00",
+      "last_status": "unavailable",
+      "last_error": "ValueError: No matching school/date lunch heading on this page"
+    },
+    "213623:2026-11-10": {
+      "school_code": "213623",
+      "school_name": "市立進學國小",
+      "date": "2026-11-10",
+      "first_checked_at": "2026-11-08T23:17:33+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-08T23:17:33+00:00",
+      "first_seen_at": "2026-11-08T23:17:33+00:00",
+      "last_changed_at": "2026-11-08T23:17:33+00:00",
+      "last_status": "ok"
+    },
+    "114669:2026-11-10": {
+      "school_code": "114669",
+      "school_name": "市立佳興國小",
+      "date": "2026-11-10",
+      "first_checked_at": "2026-11-08T23:17:36+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-08T23:17:36+00:00",
+      "first_seen_at": "2026-11-08T23:17:36+00:00",
+      "last_changed_at": "2026-11-08T23:17:36+00:00",
+      "last_status": "ok"
+    },
+    "213518:2026-11-10": {
+      "school_code": "213518",
+      "school_name": "市立崇明國中",
+      "date": "2026-11-10",
+      "first_checked_at": "2026-11-08T23:17:39+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-08T23:17:39+00:00",
+      "first_seen_at": "2026-11-08T23:17:39+00:00",
+      "last_changed_at": "2026-11-08T23:17:39+00:00",
+      "last_status": "ok"
+    },
+    "114785:2026-11-10": {
+      "school_code": "114785",
+      "school_name": "市立紅瓦厝國小",
+      "date": "2026-11-10",
+      "first_checked_at": "2026-11-08T23:17:43+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-08T23:17:43+00:00",
+      "first_seen_at": "2026-11-08T23:17:43+00:00",
+      "last_changed_at": "2026-11-08T23:17:43+00:00",
+      "last_status": "ok"
+    },
+    "213615:2026-11-10": {
+      "school_code": "213615",
+      "school_name": "市立新南國小",
+      "date": "2026-11-10",
+      "first_checked_at": "2026-11-08T23:17:46+00:00",
+      "change_count": 0,
+      "last_checked_at": "2026-11-08T23:17:46+00:00",
       "last_status": "unavailable",
       "last_error": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
     }
