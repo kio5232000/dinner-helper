@@ -58,7 +58,9 @@ jobs:
             # Rebase on the latest main before pushing; never force-push.
             for attempt in 1 2 3; do
               git fetch origin main
-              if ! git rebase origin/main; then
+              # On a data-data conflict, prefer the remote main snapshot
+              # rather than letting an older run overwrite newer live data.
+              if ! git rebase -X ours origin/main; then
                 git rebase --abort
                 exit 1
               fi
