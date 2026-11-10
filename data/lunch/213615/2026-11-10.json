@@ -1,0 +1,39 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.hnps.tn.edu.tw/index.php?period=2026-11-10",
+  "retrieved_at": "2026-11-10T01:45:21+00:00",
+  "first_seen_at": "2026-11-10T01:45:21+00:00",
+  "last_changed_at": "2026-11-10T01:45:21+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "de934070bf7f3e2ac01fa56579956d269d88e5d678c195e9d736fbdcdeb64067",
+  "date": "2026-11-10",
+  "school_code": "213615",
+  "school_name": "市立新南國小",
+  "dishes": [
+    {
+      "name": "五穀飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "鳳梨肉片",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "小黃瓜香腸",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "雙色花菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "人蔘湯",
+      "category": "湯品",
+      "photo_url": null
+    }
+  ]
+}
