@@ -186,7 +186,9 @@ def detect_tad_menu_options(source_html, school, day):
                 break
             if not hasattr(sibling, "select"):
                 continue
-            for tab in sibling.select("#kitchenTab, #lunch3Tab"):
+            tabs = ([sibling] if sibling.get("id") in ("kitchenTab", "lunch3Tab") else [])
+            tabs += sibling.select("#kitchenTab, #lunch3Tab")
+            for tab in tabs:
                 labels = []
                 for li in tab.select("ul.resp-tabs-list > li"):
                     name = li.get_text(" ", strip=True)[:60]
