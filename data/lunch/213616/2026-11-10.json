@@ -1,0 +1,44 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.lines.tn.edu.tw/index.php?period=2026-11-10",
+  "retrieved_at": "2026-11-10T09:47:40+00:00",
+  "first_seen_at": "2026-11-10T09:47:40+00:00",
+  "last_changed_at": "2026-11-10T09:47:40+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "02b436d69763351b575a0e36d517b00e593daecf3550ba1a0233e44401e82aff",
+  "date": "2026-11-10",
+  "school_code": "213616",
+  "school_name": "市立立人國小",
+  "dishes": [
+    {
+      "name": "麥片飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "蒙古炒肉",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "三色毛豆",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "有機蔬菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "菜脯雞湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "鮮奶",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.gmjh.tn.edu.tw/index.php?period=2026-11-11",
+  "retrieved_at": "2026-11-10T09:49:13+00:00",
+  "first_seen_at": "2026-11-10T09:49:13+00:00",
+  "last_changed_at": "2026-11-10T09:49:13+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "63c7b35eda76cdf26fbd54d7ca52dfcfafdb9976c71752e4910a450cabbc2672",
+  "date": "2026-11-11",
+  "school_code": "114504",
+  "school_name": "市立關廟國中",
+  "dishes": [
+    {
+      "name": "糙米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "咖哩杏鮑菇",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "涼拌小黃瓜",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "有機黑葉白菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "魚皮湯",
+      "category": "湯品",
+      "photo_url": null
+    }
+  ]
+}

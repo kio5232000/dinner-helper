@@ -1,0 +1,44 @@
+{
+  "source": "school_website",
+  "source_url": "https://schoolweb.tn.edu.tw/~aces_www/index.php?period=2026-11-11",
+  "retrieved_at": "2026-11-10T09:49:21+00:00",
+  "first_seen_at": "2026-11-10T09:49:21+00:00",
+  "last_changed_at": "2026-11-10T09:49:21+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "ee69f9bbc0c7017fe617101ddc7d14c3ee98cc3bdc3f51c7adab38530a950ee2",
+  "date": "2026-11-11",
+  "school_code": "213629",
+  "school_name": "市立安慶國小",
+  "dishes": [
+    {
+      "name": "牛排麵",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "茶葉蛋",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "巧克力捲麵包",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "薑絲翠白菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "紅燒豬肉麵",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "義美布丁",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}

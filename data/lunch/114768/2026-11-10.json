@@ -1,11 +1,11 @@
 {
   "source": "school_website",
   "source_url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-10",
-  "retrieved_at": "2026-11-09T23:22:32+00:00",
+  "retrieved_at": "2026-11-10T09:46:54+00:00",
   "first_seen_at": "2026-11-09T23:22:32+00:00",
-  "last_changed_at": "2026-11-09T23:22:32+00:00",
-  "revision_count": 0,
-  "menu_fingerprint": "0090f5ce20102ac528e2567fa0bb167730b366d01616f3ee75cbffe234199e7b",
+  "last_changed_at": "2026-11-10T09:46:54+00:00",
+  "revision_count": 1,
+  "menu_fingerprint": "194aef4920e8b9305d30f356b291634aec6a2c708e5b9e0ae8914f102706f38f",
   "date": "2026-11-10",
   "school_code": "114768",
   "school_name": "市立新嘉國小",
@@ -26,9 +26,9 @@
       "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1793932853007580"
     },
     {
-      "name": "炒有機小松菜",
+      "name": "炒有機黑葉白菜",
       "category": "蔬菜",
-      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1426651695196151"
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1660890555069756"
     },
     {
       "name": "牛蒡湯",
@@ -36,9 +36,9 @@
       "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1775011040099914"
     },
     {
-      "name": "香蕉",
+      "name": "橘子",
       "category": "附餐",
-      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1410332708269219"
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1413182925234577"
     }
   ]
 }
