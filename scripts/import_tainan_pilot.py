@@ -166,6 +166,38 @@ def parse_tad_page(soup, school, day):
         raise ValueError("Tad Lunch3 school date input does not match requested day")
     return None
 
+def detect_tad_menu_options(source_html, school, day):
+    """Return labeled alternate meal groups only from the matching Tad h3.
+
+    The importer still publishes a single parsed menu: labels do not prove
+    that each kitchen's dishes have been parsed and checked independently.
+    """
+    soup = BeautifulSoup(source_html, "html.parser")
+    for heading in soup.select("h3"):
+        img = heading.find("img", alt=True)
+        period = heading.select_one('input[name="period"]')
+        if img is None or period is None:
+            continue
+        label = re.sub(r"\s+", "", img.get("alt", ""))
+        if not label.endswith(school+"午餐資訊") or period.get("value", "") != day:
+            continue
+        for sibling in heading.next_siblings:
+            if getattr(sibling, "name", None) == "h3":
+                break
+            if not hasattr(sibling, "select"):
+                continue
+            for tab in sibling.select("#kitchenTab, #lunch3Tab"):
+                labels = []
+                for li in tab.select("ul.resp-tabs-list > li"):
+                    name = li.get_text(" ", strip=True)[:60]
+                    if name and name not in labels:
+                        labels.append(name)
+                if len(labels) >= 2:
+                    return labels[:10]
+        return []
+    return []
+
+
 def parse_menu(source_html, school, day):
     soup = BeautifulSoup(source_html, "html.parser")
     validated_tad = parse_tad_page(soup, school, day)
@@ -306,17 +338,20 @@ def sync_school_day(school, entry, day, monitor):
                 raise ValueError(f"HTTP {response.status}")
             markup = response.read(900_000).decode("utf-8", errors="replace")
         dishes = parse_menu(markup, entry["name"], day)
+        menu_options = detect_tad_menu_options(markup, entry["name"], day)
         digest = fingerprint(dishes)
         old_digest = fingerprint(old["dishes"]) if old else None
         first_seen = status.get("first_seen_at") or (
             old.get("first_seen_at") or old.get("retrieved_at") if old else None
         ) or now
         changed = old_digest != digest
+        options_changed = bool(old) and old.get("menu_options", []) != menu_options
+        metadata_missing = bool(old) and "menu_scope_note" not in old
         status["first_seen_at"] = first_seen
         if changed:
             status["last_changed_at"] = now
             status["change_count"] = int(status.get("change_count", 0)) + (1 if old else 0)
-        if old and not changed:
+        if old and not changed and not options_changed and not metadata_missing:
             result["change"] = "unchanged"
         else:
             output = {
@@ -327,6 +362,8 @@ def sync_school_day(school, entry, day, monitor):
                 "last_changed_at": status.get("last_changed_at", now),
                 "revision_count": status["change_count"],
                 "menu_fingerprint": digest,
+                "menu_options": menu_options,
+                "menu_scope_note": "Only one validated menu is displayed; consult the school for other kitchens or meal types" if menu_options else "",
                 "date": day, "school_code": code,
                 "school_name": school["name"], "dishes": dishes,
             }
@@ -340,6 +377,7 @@ def sync_school_day(school, entry, day, monitor):
         result["dishes"] = [x["name"] for x in dishes]
         result["first_seen_at"] = first_seen
         result["last_changed_at"] = status.get("last_changed_at")
+        result["menu_options"] = menu_options
     except Exception as error:
         status["last_status"] = "unavailable"
         status["last_error"] = f"{type(error).__name__}: {str(error)[:120]}"
