@@ -1,0 +1,56 @@
+name: Check a candidate Tainan lunch school
+on:
+  workflow_dispatch:
+    inputs:
+      school:
+        description: 'School short name, e.g. 新興國小'
+        required: true
+        type: string
+      district:
+        description: 'District, e.g. 南區'
+        required: true
+        type: string
+      level:
+        description: 'Elementary or junior high'
+        required: true
+        type: choice
+        options:
+          - 國小
+          - 國中
+      url:
+        description: 'Official HTTPS public school homepage or Tad Lunch3 URL'
+        required: true
+        type: string
+      date:
+        description: 'YYYY-MM-DD (blank = Taiwan today)'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser
+        run: python -m pip install beautifulsoup4
+      - name: Validate provided school and official page
+        env:
+          SCHOOL: ${{ inputs.school }}
+          DISTRICT: ${{ inputs.district }}
+          LEVEL: ${{ inputs.level }}
+          SCHOOL_URL: ${{ inputs.url }}
+          SCHOOL_DATE: ${{ inputs.date }}
+        shell: bash
+        run: |
+          if [ -n "$SCHOOL_DATE" ]; then
+            python -m scripts.probe_school_source --school "$SCHOOL" --district "$DISTRICT" --level "$LEVEL" --url "$SCHOOL_URL" --date "$SCHOOL_DATE"
+          else
+            python -m scripts.probe_school_source --school "$SCHOOL" --district "$DISTRICT" --level "$LEVEL" --url "$SCHOOL_URL"
+          fi
