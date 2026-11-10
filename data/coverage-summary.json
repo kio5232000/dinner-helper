@@ -1,0 +1,392 @@
+{
+  "timezone": "Asia/Taipei",
+  "generated_at": "2026-11-10T09:55:25+00:00",
+  "target_date": "2026-11-10",
+  "pilot_schools": 30,
+  "current_and_next": {
+    "2026-11-10": {
+      "school_count": 30,
+      "available": 30,
+      "unavailable": 0,
+      "available_codes": [
+        "114758",
+        "213601",
+        "114768",
+        "114734",
+        "213640",
+        "213623",
+        "114669",
+        "213518",
+        "114785",
+        "213615",
+        "213608",
+        "213620",
+        "213637",
+        "114776",
+        "114638",
+        "114624",
+        "114635",
+        "213612",
+        "213616",
+        "114522",
+        "114509",
+        "114511",
+        "114543",
+        "114662",
+        "114504",
+        "213618",
+        "213629",
+        "114659",
+        "114660",
+        "114501"
+      ],
+      "checked_for_date": true
+    },
+    "2026-11-11": {
+      "school_count": 30,
+      "available": 23,
+      "unavailable": 7,
+      "available_codes": [
+        "114758",
+        "213601",
+        "114734",
+        "213640",
+        "213623",
+        "114669",
+        "213518",
+        "114785",
+        "213620",
+        "114776",
+        "114638",
+        "114624",
+        "114635",
+        "213612",
+        "114522",
+        "114509",
+        "114511",
+        "114543",
+        "114504",
+        "213618",
+        "213629",
+        "114659",
+        "114660"
+      ],
+      "checked_for_date": true
+    }
+  },
+  "recent_school_days": [
+    {
+      "date": "2026-11-04",
+      "observed_schools": 0,
+      "schools_with_menu_observed": 0,
+      "observation_rate_percent": null,
+      "last_observed_change_count": 0,
+      "note": "Observed coverage only; not school-wide publishing reliability or attendance"
+    },
+    {
+      "date": "2026-11-05",
+      "observed_schools": 10,
+      "schools_with_menu_observed": 7,
+      "observation_rate_percent": 70.0,
+      "last_observed_change_count": 0,
+      "note": "Observed coverage only; not school-wide publishing reliability or attendance"
+    },
+    {
+      "date": "2026-11-06",
+      "observed_schools": 10,
+      "schools_with_menu_observed": 7,
+      "observation_rate_percent": 70.0,
+      "last_observed_change_count": 0,
+      "note": "Observed coverage only; not school-wide publishing reliability or attendance"
+    },
+    {
+      "date": "2026-11-09",
+      "observed_schools": 10,
+      "schools_with_menu_observed": 7,
+      "observation_rate_percent": 70.0,
+      "last_observed_change_count": 0,
+      "note": "Observed coverage only; not school-wide publishing reliability or attendance"
+    },
+    {
+      "date": "2026-11-10",
+      "observed_schools": 30,
+      "schools_with_menu_observed": 30,
+      "observation_rate_percent": 100.0,
+      "last_observed_change_count": 1,
+      "note": "Observed coverage only; not school-wide publishing reliability or attendance"
+    }
+  ],
+  "by_school": [
+    {
+      "name": "柳營國小",
+      "district": "柳營區",
+      "level": "國小",
+      "code": "114758",
+      "observed_school_days": 4,
+      "menu_observed_days": 4,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "勝利國小",
+      "district": "東區",
+      "level": "國小",
+      "code": "213601",
+      "observed_school_days": 4,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 25.0
+    },
+    {
+      "name": "新嘉國小",
+      "district": "後壁區",
+      "level": "國小",
+      "code": "114768",
+      "observed_school_days": 4,
+      "menu_observed_days": 4,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "新生國小",
+      "district": "新營區",
+      "level": "國小",
+      "code": "114734",
+      "observed_school_days": 4,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 25.0
+    },
+    {
+      "name": "崇明國小",
+      "district": "東區",
+      "level": "國小",
+      "code": "213640",
+      "observed_school_days": 4,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 25.0
+    },
+    {
+      "name": "進學國小",
+      "district": "中西區",
+      "level": "國小",
+      "code": "213623",
+      "observed_school_days": 4,
+      "menu_observed_days": 4,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "佳興國小",
+      "district": "佳里區",
+      "level": "國小",
+      "code": "114669",
+      "observed_school_days": 4,
+      "menu_observed_days": 4,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "崇明國中",
+      "district": "東區",
+      "level": "國中",
+      "code": "213518",
+      "observed_school_days": 4,
+      "menu_observed_days": 4,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "紅瓦厝國小",
+      "district": "歸仁區",
+      "level": "國小",
+      "code": "114785",
+      "observed_school_days": 4,
+      "menu_observed_days": 4,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "新南國小",
+      "district": "安平區",
+      "level": "國小",
+      "code": "213615",
+      "observed_school_days": 4,
+      "menu_observed_days": 4,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "新興國小",
+      "district": "南區",
+      "level": "國小",
+      "code": "213608",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "成功國小",
+      "district": "中西區",
+      "level": "國小",
+      "code": "213620",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "大港國小",
+      "district": "北區",
+      "level": "國小",
+      "code": "213637",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "崑山國小",
+      "district": "永康區",
+      "level": "國小",
+      "code": "114776",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "楠西國小",
+      "district": "楠西區",
+      "level": "國小",
+      "code": "114638",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "大灣國小",
+      "district": "永康區",
+      "level": "國小",
+      "code": "114624",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "山上國小",
+      "district": "山上區",
+      "level": "國小",
+      "code": "114635",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "日新國小",
+      "district": "南區",
+      "level": "國小",
+      "code": "213612",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "立人國小",
+      "district": "北區",
+      "level": "國小",
+      "code": "213616",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "大內國中",
+      "district": "大內區",
+      "level": "國中",
+      "code": "114522",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "新化國中",
+      "district": "新化區",
+      "level": "國中",
+      "code": "114509",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "玉井國中",
+      "district": "玉井區",
+      "level": "國中",
+      "code": "114511",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "大橋國中",
+      "district": "永康區",
+      "level": "國中",
+      "code": "114543",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "大山國小",
+      "district": "麻豆區",
+      "level": "國小",
+      "code": "114662",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "關廟國中",
+      "district": "關廟區",
+      "level": "國中",
+      "code": "114504",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "開元國小",
+      "district": "北區",
+      "level": "國小",
+      "code": "213618",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "安慶國小",
+      "district": "安南區",
+      "level": "國小",
+      "code": "213629",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "麻豆國小",
+      "district": "麻豆區",
+      "level": "國小",
+      "code": "114659",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "培文國小",
+      "district": "麻豆區",
+      "level": "國小",
+      "code": "114660",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    },
+    {
+      "name": "仁德國中",
+      "district": "仁德區",
+      "level": "國中",
+      "code": "114501",
+      "observed_school_days": 1,
+      "menu_observed_days": 1,
+      "observed_rate_percent": 100.0
+    }
+  ],
+  "limitations": "Rates only indicate menus our system observed for checked school-days; they do not prove publication times or meals served. School closures and late publication may lower the rate."
+}

@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-10T09:49:25+00:00",
+  "checked_at": "2026-11-10T09:55:25+00:00",
   "pilot_only": true,
   "checked_dates": [
     "2026-11-10",
@@ -436,6 +436,54 @@
         "甜柿"
       ],
       "first_seen_at": "2026-11-10T09:48:09+00:00"
+    },
+    {
+      "name": "麻豆國小",
+      "date": "2026-11-10",
+      "school_code": "114659",
+      "status": "ok",
+      "source_url": "https://www.mdes.tn.edu.tw/index.php?period=2026-11-10",
+      "dishes": [
+        "白飯",
+        "高昇排骨干丁",
+        "絲瓜燴蛤蜊",
+        "薑絲荷葉白菜",
+        "蘿蔔雞湯",
+        "新北黑豆漿"
+      ],
+      "first_seen_at": "2026-11-10T09:53:54+00:00"
+    },
+    {
+      "name": "培文國小",
+      "date": "2026-11-10",
+      "school_code": "114660",
+      "status": "ok",
+      "source_url": "https://www.pwes.tn.edu.tw/index.php?period=2026-11-10",
+      "dishes": [
+        "糙米飯",
+        "瓜仔肉燥",
+        "毛豆麵筋",
+        "有機荷葉白菜",
+        "白菜胡椒雞湯",
+        "保久乳"
+      ],
+      "first_seen_at": "2026-11-10T09:53:59+00:00"
+    },
+    {
+      "name": "仁德國中",
+      "date": "2026-11-10",
+      "school_code": "114501",
+      "status": "ok",
+      "source_url": "https://www.rdjh.tn.edu.tw/index.php?period=2026-11-10",
+      "dishes": [
+        "糙米飯",
+        "春川炒雞",
+        "榨菜豆芽",
+        "黑葉白菜",
+        "魚皮湯",
+        "保久乳"
+      ],
+      "first_seen_at": "2026-11-10T09:54:02+00:00"
     }
   ],
   "by_date": {
@@ -870,6 +918,54 @@
           "甜柿"
         ],
         "first_seen_at": "2026-11-10T09:48:09+00:00"
+      },
+      {
+        "name": "麻豆國小",
+        "date": "2026-11-10",
+        "school_code": "114659",
+        "status": "ok",
+        "source_url": "https://www.mdes.tn.edu.tw/index.php?period=2026-11-10",
+        "dishes": [
+          "白飯",
+          "高昇排骨干丁",
+          "絲瓜燴蛤蜊",
+          "薑絲荷葉白菜",
+          "蘿蔔雞湯",
+          "新北黑豆漿"
+        ],
+        "first_seen_at": "2026-11-10T09:53:54+00:00"
+      },
+      {
+        "name": "培文國小",
+        "date": "2026-11-10",
+        "school_code": "114660",
+        "status": "ok",
+        "source_url": "https://www.pwes.tn.edu.tw/index.php?period=2026-11-10",
+        "dishes": [
+          "糙米飯",
+          "瓜仔肉燥",
+          "毛豆麵筋",
+          "有機荷葉白菜",
+          "白菜胡椒雞湯",
+          "保久乳"
+        ],
+        "first_seen_at": "2026-11-10T09:53:59+00:00"
+      },
+      {
+        "name": "仁德國中",
+        "date": "2026-11-10",
+        "school_code": "114501",
+        "status": "ok",
+        "source_url": "https://www.rdjh.tn.edu.tw/index.php?period=2026-11-10",
+        "dishes": [
+          "糙米飯",
+          "春川炒雞",
+          "榨菜豆芽",
+          "黑葉白菜",
+          "魚皮湯",
+          "保久乳"
+        ],
+        "first_seen_at": "2026-11-10T09:54:02+00:00"
       }
     ],
     "2026-11-11": [
@@ -1246,6 +1342,45 @@
           "義美布丁"
         ],
         "first_seen_at": "2026-11-10T09:49:21+00:00"
+      },
+      {
+        "name": "麻豆國小",
+        "date": "2026-11-11",
+        "school_code": "114659",
+        "status": "ok",
+        "source_url": "https://www.mdes.tn.edu.tw/index.php?period=2026-11-11",
+        "dishes": [
+          "炸醬麵",
+          "炸醬麵料",
+          "烤地瓜",
+          "綠豆芽炒韭菜",
+          "海芽味噌湯",
+          "橘子"
+        ],
+        "first_seen_at": "2026-11-10T09:55:14+00:00"
+      },
+      {
+        "name": "培文國小",
+        "date": "2026-11-11",
+        "school_code": "114660",
+        "status": "ok",
+        "source_url": "https://www.pwes.tn.edu.tw/index.php?period=2026-11-11",
+        "dishes": [
+          "當歸蔬香麵線(麵線)",
+          "當歸蔬香麵線",
+          "南瓜造型包",
+          "雙色花椰菜",
+          "香蕉"
+        ],
+        "first_seen_at": "2026-11-10T09:55:19+00:00"
+      },
+      {
+        "name": "仁德國中",
+        "date": "2026-11-11",
+        "school_code": "114501",
+        "status": "unavailable",
+        "source_url": "https://www.rdjh.tn.edu.tw/index.php?period=2026-11-11",
+        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
       }
     ]
   },
