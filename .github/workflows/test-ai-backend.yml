@@ -1,0 +1,43 @@
+name: V2 AI backend tests
+on:
+  push:
+    paths:
+      - 'worker/**'
+      - 'index.html'
+      - 'ai-config.js'
+      - '.github/workflows/test-ai-backend.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Worker syntax and exercise API with mocks
+        run: |
+          node --check worker/src/index.js
+          node --test worker/tests/*.test.js
+      - name: Check embedded website JavaScript syntax
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          text=Path("index.html").read_text(encoding="utf-8")
+          scripts=re.findall(r"<script(?:\s[^>]*)?>([\s\S]*?)</script>",text)
+          scripts=[s for s in scripts if s.strip()]
+          assert len(scripts)==1
+          Path("/tmp/dinner-helper-inline-check.js").write_text(scripts[0],encoding="utf-8")
+          PY
+          node --check /tmp/dinner-helper-inline-check.js
+      - name: Assert no API key in GitHub Pages config
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          page=(Path("index.html").read_text()+Path("ai-config.js").read_text())
+          assert "OPENAI_API_KEY" not in page
+          assert "Bearer sk-" not in page
+          assert 'window.DINNER_AI_ENDPOINT = "";' in Path("ai-config.js").read_text()
+          PY
