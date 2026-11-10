@@ -4,6 +4,22 @@
 
 **網站：** https://kio5232000.github.io/dinner-helper/
 
+## V2.0｜AI 晚餐助手（已開發，待帳戶啟用）
+
+已完成：從學校午餐菜色分析可能的主要食材、生成三道晚餐、推薦原因、食材清單、簡明料理步驟與預估時間；原有規則式免費晚餐推薦仍保留。
+
+**安全架構：** GitHub Pages 不存放 OpenAI API Key；前端僅將午餐菜名與分類送至 Cloudflare Worker，由 Worker 使用 OpenAI Responses API。Cloudflare D1 設有每來源 IP 每臺灣日 2 次及全站每臺灣日 35 次請求配額，且不儲存原始 IP。
+
+**目前尚未啟用真實 AI：** 根目錄 `ai-config.js` 的 Worker 網址預設為空，使用者會看到「AI 尚未啟用」與可正常使用的免費基本推薦。待網站擁有者於 Cloudflare 建立 D1、設定 Worker secrets 與 OpenAI 專案金鑰，再填入公開 Worker URL，才能正式啟動。**不要將 API Key 放進 GitHub、前端或聊天中。**
+
+- 詳細操作：**[V2.0 安全部署與費用控制指南](docs/ai-v2-deployment.md)**
+- Worker 核心程式：`worker/src/index.js`
+- D1 SQL：`worker/migrations/0001_quota.sql`
+- AI 後端模擬測試：`worker/tests/worker.test.js`
+- 自動化測試：`.github/workflows/test-ai-backend.yml`
+
+AI 只依菜名推測食材，不能視為精確營養分析、孩子實際吃下的份量或過敏安全建議。
+
 ## V1.9｜菜單可靠性與手機使用改善（2026-11-10）
 
 - **顯示「本站保存這份菜單」時間**，不把第一次取得菜單誤當學校公布時間；有當日查詢紀錄時，另外顯示「最近檢查來源」時間。
