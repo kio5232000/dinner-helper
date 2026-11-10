@@ -98,7 +98,7 @@ def parse_tad_page(soup, school, day):
         title_image = heading.find("img", alt=True)
         if title_image is None:
             continue
-        title = re.sub(r"\\s+", "", title_image.get("alt", ""))
+        title = re.sub(r"\s+", "", title_image.get("alt", ""))
         if not title.endswith(school + "午餐資訊"):
             continue
         period = heading.select_one('input[name="period"]')
