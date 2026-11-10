@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.sases.tn.edu.tw/index.php?period=2026-11-12",
+  "retrieved_at": "2026-11-10T23:20:11+00:00",
+  "first_seen_at": "2026-11-10T23:20:11+00:00",
+  "last_changed_at": "2026-11-10T23:20:11+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "76ab844741627e7a18048b80a4d4768e5ee0093b9ad4fa2e9ccbabf74016d2da",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-12",
+  "school_code": "114635",
+  "school_name": "市立山上國小",
+  "dishes": [
+    {
+      "name": "五穀米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "匈牙利紅椒豬柳丁",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "黑木耳滷豆乾",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "蒜香高麗菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "金針菇冬瓜湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "光泉優酪乳",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}

@@ -1,972 +1,434 @@
 {
-  "checked_at": "2026-11-10T11:58:56+00:00",
+  "checked_at": "2026-11-10T23:21:00+00:00",
   "pilot_only": true,
   "checked_dates": [
-    "2026-11-11"
+    "2026-11-11",
+    "2026-11-12"
   ],
   "results": [
     {
       "name": "柳營國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114758",
       "status": "ok",
-      "source_url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-10",
+      "source_url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-11",
       "dishes": [
         "白飯",
-        "塔香肉燥2",
-        "白花菜炒油豆腐",
-        "有機荷葉白",
-        "扁蒲龍骨湯",
-        "萬丹保久乳"
+        "台式鹹粥料",
+        "CAS魚鬆",
+        "茶葉蛋2",
+        "香蕉"
       ],
-      "first_seen_at": "2026-11-09T23:22:27+00:00"
+      "first_seen_at": "2026-11-10T09:05:28+00:00"
     },
     {
       "name": "勝利國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "213601",
       "status": "ok",
-      "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-10",
+      "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-11",
       "dishes": [
-        "糙米飯",
-        "東山鴨頭",
-        "什錦黃瓜",
-        "有機蔬菜",
-        "花生排骨湯",
-        "簡單點優酪乳"
+        "牛排麵",
+        "八寶炸醬麵料",
+        "水煮蛋",
+        "薑香地瓜葉",
+        "餛飩湯",
+        "香蕉"
       ],
-      "first_seen_at": "2026-11-10T09:05:00+00:00"
+      "first_seen_at": "2026-11-10T09:05:30+00:00"
     },
     {
       "name": "新嘉國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114768",
-      "status": "ok",
-      "source_url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-10",
-      "dishes": [
-        "五穀飯",
-        "鵪鶉肉燥",
-        "黃瓜炒油腐",
-        "炒有機黑葉白菜",
-        "牛蒡湯",
-        "橘子"
-      ],
-      "first_seen_at": "2026-11-09T23:22:32+00:00"
+      "status": "unavailable",
+      "source_url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-11",
+      "last_check_note": "ValueError: Matching Tad Lunch3 section had no complete menu"
     },
     {
       "name": "新生國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114734",
       "status": "ok",
-      "source_url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-10",
+      "source_url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-11",
       "dishes": [
-        "糙米飯",
-        "親子丼雞肉",
-        "絲瓜麵線",
-        "香菇青江菜",
-        "玉米湯",
+        "米飯",
+        "滷肉",
+        "炒酸菜",
+        "有機蔬菜",
+        "香菇肉羹湯",
         "乳飲品"
       ],
-      "first_seen_at": "2026-11-10T09:05:05+00:00"
+      "first_seen_at": "2026-11-10T09:05:32+00:00"
     },
     {
       "name": "崇明國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "213640",
       "status": "ok",
-      "source_url": "https://old.cmes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-10",
+      "source_url": "https://old.cmes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-11",
       "dishes": [
-        "燕麥飯",
-        "花雕雞",
-        "蠔油養生菇燜冬瓜",
-        "有機黑葉白菜",
-        "金瓜豆腐湯"
+        "刈包",
+        "燒烤無骨雞腿排",
+        "蒜爆醬燒蔬菜豆乾",
+        "紅豆雙色湯圓",
+        "鮮乳"
       ],
-      "first_seen_at": "2026-11-10T09:05:07+00:00"
+      "first_seen_at": "2026-11-10T09:05:34+00:00"
     },
     {
       "name": "進學國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "213623",
       "status": "ok",
-      "source_url": "https://www.chps.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.chps.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "五穀飯",
-        "咖哩雞",
-        "芹香三絲",
-        "有機蔬菜",
-        "扁魚蕃茄蛋花湯",
-        "臺灣豆漿"
+        "皮蛋瘦肉粥",
+        "卡拉雞漢堡",
+        "涼拌小黃瓜",
+        "萬丹鮮奶"
       ],
-      "first_seen_at": "2026-11-08T23:17:33+00:00"
+      "first_seen_at": "2026-11-09T23:23:08+00:00"
     },
     {
       "name": "佳興國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114669",
       "status": "ok",
-      "source_url": "https://www.jsps.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.jsps.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "白米飯",
-        "蔥蒜虱目魚柳",
-        "醬燒豆乾米血",
-        "有機油菜",
-        "高麗菜金針菇湯"
+        "味噌烏龍麵",
+        "燒烤檸檬雞翅",
+        "蒜香福山萵苣",
+        "統一保久乳"
       ],
-      "first_seen_at": "2026-11-08T23:17:36+00:00"
+      "first_seen_at": "2026-11-09T23:23:12+00:00"
     },
     {
       "name": "崇明國中",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "213518",
       "status": "ok",
-      "source_url": "https://www.cmjh.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.cmjh.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "燕麥飯",
-        "花雕雞",
-        "蠔油養生菇燜冬瓜",
-        "有機黑葉白菜",
-        "金瓜豆腐湯"
+        "刈包",
+        "燒烤無骨雞腿排",
+        "蒜爆醬燒蔬菜豆乾",
+        "紅豆雙色湯圓",
+        "鮮乳"
       ],
-      "first_seen_at": "2026-11-08T23:17:39+00:00"
+      "first_seen_at": "2026-11-09T23:23:14+00:00"
     },
     {
       "name": "紅瓦厝國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114785",
       "status": "ok",
-      "source_url": "https://www.hwces.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.hwces.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "白飯",
-        "麻油雞丁",
-        "蒙古炒肉",
-        "有機白菜",
-        "味噌湯",
-        "全脂保久乳"
+        "醬油拌飯",
+        "照燒翅中2支",
+        "粉絲大白菜",
+        "油菜",
+        "當歸素肉湯"
       ],
-      "first_seen_at": "2026-11-08T23:17:43+00:00"
+      "first_seen_at": "2026-11-09T23:23:18+00:00"
     },
     {
       "name": "新南國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "213615",
-      "status": "ok",
-      "source_url": "https://www.hnps.tn.edu.tw/index.php?period=2026-11-10",
-      "dishes": [
-        "五穀飯",
-        "鳳梨肉片",
-        "小黃瓜香腸",
-        "雙色花菜",
-        "人蔘湯"
-      ],
-      "first_seen_at": "2026-11-10T01:45:21+00:00"
+      "status": "unavailable",
+      "source_url": "https://www.hnps.tn.edu.tw/index.php?period=2026-11-11",
+      "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
     },
     {
       "name": "新興國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "213608",
-      "status": "ok",
-      "source_url": "https://www.sses.tn.edu.tw/index.php?period=2026-11-10",
-      "dishes": [
-        "米飯",
-        "三杯雞",
-        "炒四寶2",
-        "翠玉絲瓜",
-        "菇菇排骨湯",
-        "橘子"
-      ],
-      "first_seen_at": "2026-11-10T09:47:19+00:00"
+      "status": "unavailable",
+      "source_url": "https://www.sses.tn.edu.tw/index.php?period=2026-11-11",
+      "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
     },
     {
       "name": "成功國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "213620",
       "status": "ok",
-      "source_url": "https://www.ckes.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.ckes.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "紅扁豆飯",
-        "香酥魚排",
-        "豆薯三絲",
-        "薑絲有機荷葉白菜",
-        "紫菜蛋花湯",
-        "葡萄"
+        "麵條",
+        "什錦海鮮麵配料",
+        "滷蛋",
+        "薑絲油菜",
+        "乳酪麵包",
+        "鮮奶"
       ],
-      "first_seen_at": "2026-11-10T09:47:21+00:00"
+      "first_seen_at": "2026-11-10T09:48:37+00:00"
     },
     {
       "name": "大港國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "213637",
-      "status": "ok",
-      "source_url": "https://www.takes.tn.edu.tw/index.php?period=2026-11-10",
-      "dishes": [
-        "米飯",
-        "貴妃燒雞",
-        "三杯豆干",
-        "佛跳牆",
-        "筍片鮮菇湯",
-        "香蕉"
-      ],
-      "first_seen_at": "2026-11-10T09:47:24+00:00"
+      "status": "unavailable",
+      "source_url": "https://www.takes.tn.edu.tw/index.php?period=2026-11-11",
+      "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
     },
     {
       "name": "崑山國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114776",
       "status": "ok",
-      "source_url": "https://www.kses.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.kses.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "小米米飯",
-        "香酥魚丁3",
-        "黃瓜燒鴿蛋",
-        "有機蔬菜",
-        "菱角排骨湯",
-        "芭樂"
+        "紫米油飯",
+        "滷蛋",
+        "腰果拌花菜(1)",
+        "白菜肉片鍋"
       ],
-      "first_seen_at": "2026-11-10T09:47:27+00:00"
+      "first_seen_at": "2026-11-10T09:48:42+00:00"
     },
     {
       "name": "楠西國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114638",
       "status": "ok",
-      "source_url": "https://www.nsps.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.nsps.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "海苔飯",
-        "三杯魚丁",
-        "菜脯蛋",
-        "田園大白菜",
-        "綠豆地瓜湯",
-        "百香果"
+        "牛排麵",
+        "番茄肉醬麵",
+        "肉丸子佐青花",
+        "雞茸玉米濃湯",
+        "全脂保久乳"
       ],
-      "first_seen_at": "2026-11-10T09:47:30+00:00"
+      "first_seen_at": "2026-11-10T09:48:45+00:00"
     },
     {
       "name": "大灣國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114624",
       "status": "ok",
-      "source_url": "https://www.dwps.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.dwps.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "五穀飯",
-        "香菇滷肉",
-        "丁丁四寶",
-        "蒜香蚵白菜",
-        "海菜蛋花湯",
-        "橘子"
+        "白油麵",
+        "檸檬雞翅",
+        "海鮮青醬",
+        "玉米濃湯",
+        "小富士山麵包"
       ],
-      "first_seen_at": "2026-11-10T09:47:32+00:00"
+      "first_seen_at": "2026-11-10T09:48:47+00:00"
     },
     {
       "name": "山上國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114635",
       "status": "ok",
-      "source_url": "https://www.sases.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.sases.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
         "米飯",
-        "冬菜鴨",
-        "麻婆豆腐",
-        "蒜香油菜炒鴻喜菇",
-        "韓式年糕湯",
-        "義美無乳糖牛乳"
+        "酥炸旗魚丁",
+        "番茄炒蛋",
+        "沙茶白菜",
+        "綠豆湯",
+        "香蕉"
       ],
-      "first_seen_at": "2026-11-10T09:47:35+00:00"
+      "first_seen_at": "2026-11-10T09:48:49+00:00"
     },
     {
       "name": "日新國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "213612",
       "status": "ok",
-      "source_url": "https://www.zhes.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.zhes.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "米飯",
-        "三杯雞",
-        "炒四寶2",
-        "翠玉絲瓜",
-        "菇菇排骨湯",
-        "橘子"
+        "麵食",
+        "香酥魚塊",
+        "烤地瓜",
+        "醬拌海帶根",
+        "魚羹麵",
+        "乳品"
       ],
-      "first_seen_at": "2026-11-10T09:47:38+00:00"
+      "first_seen_at": "2026-11-10T09:48:52+00:00"
     },
     {
       "name": "立人國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "213616",
-      "status": "ok",
-      "source_url": "https://www.lines.tn.edu.tw/index.php?period=2026-11-10",
-      "dishes": [
-        "麥片飯",
-        "蒙古炒肉",
-        "三色毛豆",
-        "有機蔬菜",
-        "菜脯雞湯",
-        "鮮奶"
-      ],
-      "first_seen_at": "2026-11-10T09:47:40+00:00"
+      "status": "unavailable",
+      "source_url": "https://www.lines.tn.edu.tw/index.php?period=2026-11-11",
+      "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
     },
     {
       "name": "大內國中",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114522",
       "status": "ok",
-      "source_url": "https://www.dnjh.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.dnjh.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "紫米飯",
-        "三杯雞",
-        "桂竹筍肉末",
-        "有機白松菜",
-        "鮮鱸魚湯",
-        "橘子"
+        "拉麵",
+        "豚骨拉麵料",
+        "滷蛋",
+        "豚骨拉麵湯底",
+        "光泉保久乳"
       ],
-      "first_seen_at": "2026-11-10T09:47:44+00:00"
+      "first_seen_at": "2026-11-10T09:48:58+00:00"
     },
     {
       "name": "新化國中",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114509",
       "status": "ok",
-      "source_url": "https://www.shjhs.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.shjhs.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
         "米飯",
-        "冬菜鴨",
-        "麻婆豆腐",
-        "蒜香油菜炒鴻喜菇",
-        "韓式年糕湯",
-        "義美無乳糖牛乳"
+        "酥炸旗魚丁",
+        "番茄炒蛋",
+        "沙茶白菜",
+        "冬瓜雙圓甜湯",
+        "香蕉"
       ],
-      "first_seen_at": "2026-11-10T09:47:48+00:00"
+      "first_seen_at": "2026-11-10T09:49:01+00:00"
     },
     {
       "name": "玉井國中",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114511",
       "status": "ok",
-      "source_url": "https://www.yjjh.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.yjjh.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "海苔飯",
-        "三杯魚丁",
-        "菜脯蛋",
-        "田園大白菜",
-        "綠豆地瓜湯",
-        "百香果"
+        "牛排麵",
+        "番茄肉醬麵",
+        "肉丸子佐青花",
+        "雞茸玉米濃湯",
+        "全脂保久乳"
       ],
-      "first_seen_at": "2026-11-10T09:47:51+00:00"
+      "first_seen_at": "2026-11-10T09:49:05+00:00"
     },
     {
       "name": "大橋國中",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114543",
       "status": "ok",
-      "source_url": "https://www.dcjh.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.dcjh.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "滷麵",
-        "虱目魚排",
-        "毛豆炒豆干",
-        "滷麵(素)",
-        "塔香三杯油豆腐(素)",
-        "紅蘿蔔玉米炒蛋(素)",
-        "地瓜葉(素)",
-        "滷麵羹(素)",
-        "青江菜",
-        "滷麵羹"
+        "小米飯",
+        "咖哩雞",
+        "煎蛋捲",
+        "小米飯(素)",
+        "翡翠豆腐(素)",
+        "鮮蔬豆腸(素)",
+        "油菜(素)",
+        "鮮蔬豆腐湯(素)",
+        "高麗菜",
+        "紫菜豆腐湯",
+        "乳品"
       ],
-      "first_seen_at": "2026-11-10T09:47:54+00:00"
+      "first_seen_at": "2026-11-10T09:49:07+00:00"
     },
     {
       "name": "大山國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114662",
       "status": "ok",
-      "source_url": "https://dses.dses.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://dses.dses.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "白飯",
-        "高昇排骨干丁",
-        "絲瓜燴蛤蜊",
-        "薑絲荷葉白菜",
-        "蘿蔔雞湯",
-        "新北黑豆漿"
+        "炸醬麵",
+        "炸醬麵料",
+        "烤地瓜",
+        "綠豆芽炒韭菜",
+        "海芽味噌湯",
+        "橘子"
       ],
-      "first_seen_at": "2026-11-10T09:47:58+00:00"
+      "first_seen_at": "2026-11-10T23:18:59+00:00"
     },
     {
       "name": "關廟國中",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114504",
       "status": "ok",
-      "source_url": "https://www.gmjh.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.gmjh.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "五穀飯",
-        "三杯雞",
-        "紅蘿蔔炒蛋",
-        "莧菜炒吻仔魚",
-        "蘿蔔湯"
+        "糙米飯",
+        "咖哩杏鮑菇",
+        "涼拌小黃瓜",
+        "有機黑葉白菜",
+        "魚皮湯"
       ],
-      "first_seen_at": "2026-11-10T09:48:01+00:00"
+      "first_seen_at": "2026-11-10T09:49:13+00:00"
     },
     {
       "name": "開元國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "213618",
       "status": "ok",
-      "source_url": "https://www.kyes.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.kyes.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "紅扁豆飯",
-        "香酥魚排",
-        "豆薯三絲",
-        "薑絲有機荷葉白菜",
-        "紫菜蛋花湯",
-        "葡萄"
+        "麵條",
+        "什錦海鮮麵配料",
+        "滷蛋",
+        "薑絲油菜",
+        "乳酪麵包",
+        "鮮奶"
       ],
-      "first_seen_at": "2026-11-10T09:48:06+00:00"
+      "first_seen_at": "2026-11-10T09:49:19+00:00"
     },
     {
       "name": "安慶國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "213629",
       "status": "ok",
-      "source_url": "https://schoolweb.tn.edu.tw/~aces_www/index.php?period=2026-11-10",
+      "source_url": "https://schoolweb.tn.edu.tw/~aces_www/index.php?period=2026-11-11",
       "dishes": [
-        "糙米飯",
-        "椒鹽雞丁",
-        "洋蔥炒蛋",
-        "培根青花菜",
-        "關東煮",
-        "甜柿"
+        "牛排麵",
+        "茶葉蛋",
+        "巧克力捲麵包",
+        "薑絲翠白菜",
+        "紅燒豬肉麵",
+        "義美布丁"
       ],
-      "first_seen_at": "2026-11-10T09:48:09+00:00"
+      "first_seen_at": "2026-11-10T09:49:21+00:00"
     },
     {
       "name": "麻豆國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114659",
       "status": "ok",
-      "source_url": "https://www.mdes.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.mdes.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "白飯",
-        "高昇排骨干丁",
-        "絲瓜燴蛤蜊",
-        "薑絲荷葉白菜",
-        "蘿蔔雞湯",
-        "新北黑豆漿"
+        "炸醬麵",
+        "炸醬麵料",
+        "烤地瓜",
+        "綠豆芽炒韭菜",
+        "海芽味噌湯",
+        "橘子"
       ],
-      "first_seen_at": "2026-11-10T09:53:54+00:00"
+      "first_seen_at": "2026-11-10T09:55:14+00:00"
     },
     {
       "name": "培文國小",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114660",
       "status": "ok",
-      "source_url": "https://www.pwes.tn.edu.tw/index.php?period=2026-11-10",
+      "source_url": "https://www.pwes.tn.edu.tw/index.php?period=2026-11-11",
       "dishes": [
-        "糙米飯",
-        "瓜仔肉燥",
-        "毛豆麵筋",
-        "有機荷葉白菜",
-        "白菜胡椒雞湯",
-        "保久乳"
+        "當歸蔬香麵線(麵線)",
+        "當歸蔬香麵線",
+        "南瓜造型包",
+        "雙色花椰菜",
+        "香蕉"
       ],
-      "first_seen_at": "2026-11-10T09:53:59+00:00"
+      "first_seen_at": "2026-11-10T09:55:19+00:00"
     },
     {
       "name": "仁德國中",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "school_code": "114501",
-      "status": "ok",
-      "source_url": "https://www.rdjh.tn.edu.tw/index.php?period=2026-11-10",
-      "dishes": [
-        "糙米飯",
-        "春川炒雞",
-        "榨菜豆芽",
-        "黑葉白菜",
-        "魚皮湯",
-        "保久乳"
-      ],
-      "first_seen_at": "2026-11-10T09:54:02+00:00"
+      "status": "unavailable",
+      "source_url": "https://www.rdjh.tn.edu.tw/index.php?period=2026-11-11",
+      "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
     }
   ],
   "by_date": {
-    "2026-11-10": [
-      {
-        "name": "柳營國小",
-        "date": "2026-11-10",
-        "school_code": "114758",
-        "status": "ok",
-        "source_url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-10",
-        "dishes": [
-          "白飯",
-          "塔香肉燥2",
-          "白花菜炒油豆腐",
-          "有機荷葉白",
-          "扁蒲龍骨湯",
-          "萬丹保久乳"
-        ],
-        "first_seen_at": "2026-11-09T23:22:27+00:00"
-      },
-      {
-        "name": "勝利國小",
-        "date": "2026-11-10",
-        "school_code": "213601",
-        "status": "ok",
-        "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-10",
-        "dishes": [
-          "糙米飯",
-          "東山鴨頭",
-          "什錦黃瓜",
-          "有機蔬菜",
-          "花生排骨湯",
-          "簡單點優酪乳"
-        ],
-        "first_seen_at": "2026-11-10T09:05:00+00:00"
-      },
-      {
-        "name": "新嘉國小",
-        "date": "2026-11-10",
-        "school_code": "114768",
-        "status": "ok",
-        "source_url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-10",
-        "dishes": [
-          "五穀飯",
-          "鵪鶉肉燥",
-          "黃瓜炒油腐",
-          "炒有機黑葉白菜",
-          "牛蒡湯",
-          "橘子"
-        ],
-        "first_seen_at": "2026-11-09T23:22:32+00:00"
-      },
-      {
-        "name": "新生國小",
-        "date": "2026-11-10",
-        "school_code": "114734",
-        "status": "ok",
-        "source_url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-10",
-        "dishes": [
-          "糙米飯",
-          "親子丼雞肉",
-          "絲瓜麵線",
-          "香菇青江菜",
-          "玉米湯",
-          "乳飲品"
-        ],
-        "first_seen_at": "2026-11-10T09:05:05+00:00"
-      },
-      {
-        "name": "崇明國小",
-        "date": "2026-11-10",
-        "school_code": "213640",
-        "status": "ok",
-        "source_url": "https://old.cmes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-10",
-        "dishes": [
-          "燕麥飯",
-          "花雕雞",
-          "蠔油養生菇燜冬瓜",
-          "有機黑葉白菜",
-          "金瓜豆腐湯"
-        ],
-        "first_seen_at": "2026-11-10T09:05:07+00:00"
-      },
-      {
-        "name": "進學國小",
-        "date": "2026-11-10",
-        "school_code": "213623",
-        "status": "ok",
-        "source_url": "https://www.chps.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "五穀飯",
-          "咖哩雞",
-          "芹香三絲",
-          "有機蔬菜",
-          "扁魚蕃茄蛋花湯",
-          "臺灣豆漿"
-        ],
-        "first_seen_at": "2026-11-08T23:17:33+00:00"
-      },
-      {
-        "name": "佳興國小",
-        "date": "2026-11-10",
-        "school_code": "114669",
-        "status": "ok",
-        "source_url": "https://www.jsps.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "白米飯",
-          "蔥蒜虱目魚柳",
-          "醬燒豆乾米血",
-          "有機油菜",
-          "高麗菜金針菇湯"
-        ],
-        "first_seen_at": "2026-11-08T23:17:36+00:00"
-      },
-      {
-        "name": "崇明國中",
-        "date": "2026-11-10",
-        "school_code": "213518",
-        "status": "ok",
-        "source_url": "https://www.cmjh.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "燕麥飯",
-          "花雕雞",
-          "蠔油養生菇燜冬瓜",
-          "有機黑葉白菜",
-          "金瓜豆腐湯"
-        ],
-        "first_seen_at": "2026-11-08T23:17:39+00:00"
-      },
-      {
-        "name": "紅瓦厝國小",
-        "date": "2026-11-10",
-        "school_code": "114785",
-        "status": "ok",
-        "source_url": "https://www.hwces.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "白飯",
-          "麻油雞丁",
-          "蒙古炒肉",
-          "有機白菜",
-          "味噌湯",
-          "全脂保久乳"
-        ],
-        "first_seen_at": "2026-11-08T23:17:43+00:00"
-      },
-      {
-        "name": "新南國小",
-        "date": "2026-11-10",
-        "school_code": "213615",
-        "status": "ok",
-        "source_url": "https://www.hnps.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "五穀飯",
-          "鳳梨肉片",
-          "小黃瓜香腸",
-          "雙色花菜",
-          "人蔘湯"
-        ],
-        "first_seen_at": "2026-11-10T01:45:21+00:00"
-      },
-      {
-        "name": "新興國小",
-        "date": "2026-11-10",
-        "school_code": "213608",
-        "status": "ok",
-        "source_url": "https://www.sses.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "米飯",
-          "三杯雞",
-          "炒四寶2",
-          "翠玉絲瓜",
-          "菇菇排骨湯",
-          "橘子"
-        ],
-        "first_seen_at": "2026-11-10T09:47:19+00:00"
-      },
-      {
-        "name": "成功國小",
-        "date": "2026-11-10",
-        "school_code": "213620",
-        "status": "ok",
-        "source_url": "https://www.ckes.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "紅扁豆飯",
-          "香酥魚排",
-          "豆薯三絲",
-          "薑絲有機荷葉白菜",
-          "紫菜蛋花湯",
-          "葡萄"
-        ],
-        "first_seen_at": "2026-11-10T09:47:21+00:00"
-      },
-      {
-        "name": "大港國小",
-        "date": "2026-11-10",
-        "school_code": "213637",
-        "status": "ok",
-        "source_url": "https://www.takes.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "米飯",
-          "貴妃燒雞",
-          "三杯豆干",
-          "佛跳牆",
-          "筍片鮮菇湯",
-          "香蕉"
-        ],
-        "first_seen_at": "2026-11-10T09:47:24+00:00"
-      },
-      {
-        "name": "崑山國小",
-        "date": "2026-11-10",
-        "school_code": "114776",
-        "status": "ok",
-        "source_url": "https://www.kses.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "小米米飯",
-          "香酥魚丁3",
-          "黃瓜燒鴿蛋",
-          "有機蔬菜",
-          "菱角排骨湯",
-          "芭樂"
-        ],
-        "first_seen_at": "2026-11-10T09:47:27+00:00"
-      },
-      {
-        "name": "楠西國小",
-        "date": "2026-11-10",
-        "school_code": "114638",
-        "status": "ok",
-        "source_url": "https://www.nsps.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "海苔飯",
-          "三杯魚丁",
-          "菜脯蛋",
-          "田園大白菜",
-          "綠豆地瓜湯",
-          "百香果"
-        ],
-        "first_seen_at": "2026-11-10T09:47:30+00:00"
-      },
-      {
-        "name": "大灣國小",
-        "date": "2026-11-10",
-        "school_code": "114624",
-        "status": "ok",
-        "source_url": "https://www.dwps.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "五穀飯",
-          "香菇滷肉",
-          "丁丁四寶",
-          "蒜香蚵白菜",
-          "海菜蛋花湯",
-          "橘子"
-        ],
-        "first_seen_at": "2026-11-10T09:47:32+00:00"
-      },
-      {
-        "name": "山上國小",
-        "date": "2026-11-10",
-        "school_code": "114635",
-        "status": "ok",
-        "source_url": "https://www.sases.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "米飯",
-          "冬菜鴨",
-          "麻婆豆腐",
-          "蒜香油菜炒鴻喜菇",
-          "韓式年糕湯",
-          "義美無乳糖牛乳"
-        ],
-        "first_seen_at": "2026-11-10T09:47:35+00:00"
-      },
-      {
-        "name": "日新國小",
-        "date": "2026-11-10",
-        "school_code": "213612",
-        "status": "ok",
-        "source_url": "https://www.zhes.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "米飯",
-          "三杯雞",
-          "炒四寶2",
-          "翠玉絲瓜",
-          "菇菇排骨湯",
-          "橘子"
-        ],
-        "first_seen_at": "2026-11-10T09:47:38+00:00"
-      },
-      {
-        "name": "立人國小",
-        "date": "2026-11-10",
-        "school_code": "213616",
-        "status": "ok",
-        "source_url": "https://www.lines.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "麥片飯",
-          "蒙古炒肉",
-          "三色毛豆",
-          "有機蔬菜",
-          "菜脯雞湯",
-          "鮮奶"
-        ],
-        "first_seen_at": "2026-11-10T09:47:40+00:00"
-      },
-      {
-        "name": "大內國中",
-        "date": "2026-11-10",
-        "school_code": "114522",
-        "status": "ok",
-        "source_url": "https://www.dnjh.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "紫米飯",
-          "三杯雞",
-          "桂竹筍肉末",
-          "有機白松菜",
-          "鮮鱸魚湯",
-          "橘子"
-        ],
-        "first_seen_at": "2026-11-10T09:47:44+00:00"
-      },
-      {
-        "name": "新化國中",
-        "date": "2026-11-10",
-        "school_code": "114509",
-        "status": "ok",
-        "source_url": "https://www.shjhs.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "米飯",
-          "冬菜鴨",
-          "麻婆豆腐",
-          "蒜香油菜炒鴻喜菇",
-          "韓式年糕湯",
-          "義美無乳糖牛乳"
-        ],
-        "first_seen_at": "2026-11-10T09:47:48+00:00"
-      },
-      {
-        "name": "玉井國中",
-        "date": "2026-11-10",
-        "school_code": "114511",
-        "status": "ok",
-        "source_url": "https://www.yjjh.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "海苔飯",
-          "三杯魚丁",
-          "菜脯蛋",
-          "田園大白菜",
-          "綠豆地瓜湯",
-          "百香果"
-        ],
-        "first_seen_at": "2026-11-10T09:47:51+00:00"
-      },
-      {
-        "name": "大橋國中",
-        "date": "2026-11-10",
-        "school_code": "114543",
-        "status": "ok",
-        "source_url": "https://www.dcjh.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "滷麵",
-          "虱目魚排",
-          "毛豆炒豆干",
-          "滷麵(素)",
-          "塔香三杯油豆腐(素)",
-          "紅蘿蔔玉米炒蛋(素)",
-          "地瓜葉(素)",
-          "滷麵羹(素)",
-          "青江菜",
-          "滷麵羹"
-        ],
-        "first_seen_at": "2026-11-10T09:47:54+00:00"
-      },
-      {
-        "name": "大山國小",
-        "date": "2026-11-10",
-        "school_code": "114662",
-        "status": "ok",
-        "source_url": "https://dses.dses.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "白飯",
-          "高昇排骨干丁",
-          "絲瓜燴蛤蜊",
-          "薑絲荷葉白菜",
-          "蘿蔔雞湯",
-          "新北黑豆漿"
-        ],
-        "first_seen_at": "2026-11-10T09:47:58+00:00"
-      },
-      {
-        "name": "關廟國中",
-        "date": "2026-11-10",
-        "school_code": "114504",
-        "status": "ok",
-        "source_url": "https://www.gmjh.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "五穀飯",
-          "三杯雞",
-          "紅蘿蔔炒蛋",
-          "莧菜炒吻仔魚",
-          "蘿蔔湯"
-        ],
-        "first_seen_at": "2026-11-10T09:48:01+00:00"
-      },
-      {
-        "name": "開元國小",
-        "date": "2026-11-10",
-        "school_code": "213618",
-        "status": "ok",
-        "source_url": "https://www.kyes.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "紅扁豆飯",
-          "香酥魚排",
-          "豆薯三絲",
-          "薑絲有機荷葉白菜",
-          "紫菜蛋花湯",
-          "葡萄"
-        ],
-        "first_seen_at": "2026-11-10T09:48:06+00:00"
-      },
-      {
-        "name": "安慶國小",
-        "date": "2026-11-10",
-        "school_code": "213629",
-        "status": "ok",
-        "source_url": "https://schoolweb.tn.edu.tw/~aces_www/index.php?period=2026-11-10",
-        "dishes": [
-          "糙米飯",
-          "椒鹽雞丁",
-          "洋蔥炒蛋",
-          "培根青花菜",
-          "關東煮",
-          "甜柿"
-        ],
-        "first_seen_at": "2026-11-10T09:48:09+00:00"
-      },
-      {
-        "name": "麻豆國小",
-        "date": "2026-11-10",
-        "school_code": "114659",
-        "status": "ok",
-        "source_url": "https://www.mdes.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "白飯",
-          "高昇排骨干丁",
-          "絲瓜燴蛤蜊",
-          "薑絲荷葉白菜",
-          "蘿蔔雞湯",
-          "新北黑豆漿"
-        ],
-        "first_seen_at": "2026-11-10T09:53:54+00:00"
-      },
-      {
-        "name": "培文國小",
-        "date": "2026-11-10",
-        "school_code": "114660",
-        "status": "ok",
-        "source_url": "https://www.pwes.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "糙米飯",
-          "瓜仔肉燥",
-          "毛豆麵筋",
-          "有機荷葉白菜",
-          "白菜胡椒雞湯",
-          "保久乳"
-        ],
-        "first_seen_at": "2026-11-10T09:53:59+00:00"
-      },
-      {
-        "name": "仁德國中",
-        "date": "2026-11-10",
-        "school_code": "114501",
-        "status": "ok",
-        "source_url": "https://www.rdjh.tn.edu.tw/index.php?period=2026-11-10",
-        "dishes": [
-          "糙米飯",
-          "春川炒雞",
-          "榨菜豆芽",
-          "黑葉白菜",
-          "魚皮湯",
-          "保久乳"
-        ],
-        "first_seen_at": "2026-11-10T09:54:02+00:00"
-      }
-    ],
     "2026-11-11": [
       {
         "name": "柳營國小",
@@ -1291,9 +753,17 @@
         "name": "大山國小",
         "date": "2026-11-11",
         "school_code": "114662",
-        "status": "unavailable",
+        "status": "ok",
         "source_url": "https://dses.dses.tn.edu.tw/index.php?period=2026-11-11",
-        "last_check_note": "ValueError: No matching school/date lunch heading on this page"
+        "dishes": [
+          "炸醬麵",
+          "炸醬麵料",
+          "烤地瓜",
+          "綠豆芽炒韭菜",
+          "海芽味噌湯",
+          "橘子"
+        ],
+        "first_seen_at": "2026-11-10T23:18:59+00:00"
       },
       {
         "name": "關廟國中",
@@ -1379,6 +849,413 @@
         "school_code": "114501",
         "status": "unavailable",
         "source_url": "https://www.rdjh.tn.edu.tw/index.php?period=2026-11-11",
+        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
+      }
+    ],
+    "2026-11-12": [
+      {
+        "name": "柳營國小",
+        "date": "2026-11-12",
+        "school_code": "114758",
+        "status": "ok",
+        "source_url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-12",
+        "dishes": [
+          "白飯",
+          "紅蔥雞肉絲",
+          "刺瓜炒黑輪",
+          "有機白松菜",
+          "山藥龍骨湯",
+          "芭樂"
+        ],
+        "first_seen_at": "2026-11-10T23:19:29+00:00"
+      },
+      {
+        "name": "勝利國小",
+        "date": "2026-11-12",
+        "school_code": "213601",
+        "status": "ok",
+        "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-12",
+        "dishes": [
+          "糙米飯",
+          "茄汁雞腿丁",
+          "玉米甜椒",
+          "炒高麗菜",
+          "豆芽排骨湯",
+          "新北黃豆漿"
+        ],
+        "first_seen_at": "2026-11-10T23:19:31+00:00"
+      },
+      {
+        "name": "新嘉國小",
+        "date": "2026-11-12",
+        "school_code": "114768",
+        "status": "unavailable",
+        "source_url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-12",
+        "last_check_note": "ValueError: Matching Tad Lunch3 section had no complete menu"
+      },
+      {
+        "name": "新生國小",
+        "date": "2026-11-12",
+        "school_code": "114734",
+        "status": "ok",
+        "source_url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-12",
+        "dishes": [
+          "小米飯",
+          "滷豆干",
+          "蝦仁炒蛋",
+          "有機蔬菜",
+          "味噌蔬菜湯",
+          "時令水果"
+        ],
+        "first_seen_at": "2026-11-10T23:19:34+00:00"
+      },
+      {
+        "name": "崇明國小",
+        "date": "2026-11-12",
+        "school_code": "213640",
+        "status": "ok",
+        "source_url": "https://old.cmes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-12",
+        "dishes": [
+          "糙米飯",
+          "蒸三色蛋",
+          "麻婆豆腐",
+          "雙色花椰",
+          "大黃瓜魚丸湯"
+        ],
+        "first_seen_at": "2026-11-10T23:19:36+00:00"
+      },
+      {
+        "name": "進學國小",
+        "date": "2026-11-12",
+        "school_code": "213623",
+        "status": "ok",
+        "source_url": "https://www.chps.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "米飯",
+          "鮪魚洋蔥玉米炒蛋",
+          "蜜汁豆乾杏鮑菇",
+          "白菜滷",
+          "綠豆薏仁湯"
+        ],
+        "first_seen_at": "2026-11-10T23:19:38+00:00"
+      },
+      {
+        "name": "佳興國小",
+        "date": "2026-11-12",
+        "school_code": "114669",
+        "status": "ok",
+        "source_url": "https://www.jsps.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "紫米飯",
+          "椰香咖哩豬",
+          "小黃瓜炒蛋",
+          "蒜香高麗菜",
+          "菱角排骨湯"
+        ],
+        "first_seen_at": "2026-11-10T23:19:41+00:00"
+      },
+      {
+        "name": "崇明國中",
+        "date": "2026-11-12",
+        "school_code": "213518",
+        "status": "ok",
+        "source_url": "https://www.cmjh.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "糙米飯",
+          "蒸三色蛋",
+          "麻婆豆腐",
+          "雙色花椰",
+          "大黃瓜魚丸湯"
+        ],
+        "first_seen_at": "2026-11-10T23:19:44+00:00"
+      },
+      {
+        "name": "紅瓦厝國小",
+        "date": "2026-11-12",
+        "school_code": "114785",
+        "status": "ok",
+        "source_url": "https://www.hwces.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "小米飯",
+          "香酥虱目魚條2條",
+          "綜合滷味",
+          "三色高麗菜",
+          "巧達濃湯",
+          "履歷豆漿"
+        ],
+        "first_seen_at": "2026-11-10T23:19:48+00:00"
+      },
+      {
+        "name": "新南國小",
+        "date": "2026-11-12",
+        "school_code": "213615",
+        "status": "unavailable",
+        "source_url": "https://www.hnps.tn.edu.tw/index.php?period=2026-11-12",
+        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
+      },
+      {
+        "name": "新興國小",
+        "date": "2026-11-12",
+        "school_code": "213608",
+        "status": "unavailable",
+        "source_url": "https://www.sses.tn.edu.tw/index.php?period=2026-11-12",
+        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
+      },
+      {
+        "name": "成功國小",
+        "date": "2026-11-12",
+        "school_code": "213620",
+        "status": "ok",
+        "source_url": "https://www.ckes.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "糙米飯",
+          "烤雞翅",
+          "洋蔥炒豆干",
+          "彩椒花椰菜",
+          "黃瓜魚羹湯",
+          "香蕉"
+        ],
+        "first_seen_at": "2026-11-10T23:19:57+00:00"
+      },
+      {
+        "name": "大港國小",
+        "date": "2026-11-12",
+        "school_code": "213637",
+        "status": "unavailable",
+        "source_url": "https://www.takes.tn.edu.tw/index.php?period=2026-11-12",
+        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
+      },
+      {
+        "name": "崑山國小",
+        "date": "2026-11-12",
+        "school_code": "114776",
+        "status": "ok",
+        "source_url": "https://www.kses.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "五榖米飯",
+          "橙汁翅腿",
+          "花生拌小黃瓜",
+          "有機蔬菜",
+          "紫菜湯",
+          "優酪乳c"
+        ],
+        "first_seen_at": "2026-11-10T23:20:02+00:00"
+      },
+      {
+        "name": "楠西國小",
+        "date": "2026-11-12",
+        "school_code": "114638",
+        "status": "unavailable",
+        "source_url": "https://www.nsps.tn.edu.tw/index.php?period=2026-11-12",
+        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
+      },
+      {
+        "name": "大灣國小",
+        "date": "2026-11-12",
+        "school_code": "114624",
+        "status": "ok",
+        "source_url": "https://www.dwps.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "香Q白米飯",
+          "三杯雞",
+          "五行炒料",
+          "有機味美菜",
+          "關東煮",
+          "高大牧質調鮮奶"
+        ],
+        "first_seen_at": "2026-11-10T23:20:08+00:00"
+      },
+      {
+        "name": "山上國小",
+        "date": "2026-11-12",
+        "school_code": "114635",
+        "status": "ok",
+        "source_url": "https://www.sases.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "五穀米飯",
+          "匈牙利紅椒豬柳丁",
+          "黑木耳滷豆乾",
+          "蒜香高麗菜",
+          "金針菇冬瓜湯",
+          "光泉優酪乳"
+        ],
+        "first_seen_at": "2026-11-10T23:20:11+00:00"
+      },
+      {
+        "name": "日新國小",
+        "date": "2026-11-12",
+        "school_code": "213612",
+        "status": "ok",
+        "source_url": "https://www.zhes.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "米飯",
+          "黑胡椒炒豬柳",
+          "黃瓜魚丸",
+          "有機葉菜",
+          "玉米蛋花湯",
+          "甜柿"
+        ],
+        "first_seen_at": "2026-11-10T23:20:13+00:00"
+      },
+      {
+        "name": "立人國小",
+        "date": "2026-11-12",
+        "school_code": "213616",
+        "status": "unavailable",
+        "source_url": "https://www.lines.tn.edu.tw/index.php?period=2026-11-12",
+        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
+      },
+      {
+        "name": "大內國中",
+        "date": "2026-11-12",
+        "school_code": "114522",
+        "status": "ok",
+        "source_url": "https://www.dnjh.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "麥片飯",
+          "麻油雞",
+          "四季豆炒肉絲",
+          "高麗菜",
+          "干貝蘿蔔排骨湯"
+        ],
+        "first_seen_at": "2026-11-10T23:20:20+00:00"
+      },
+      {
+        "name": "新化國中",
+        "date": "2026-11-12",
+        "school_code": "114509",
+        "status": "ok",
+        "source_url": "https://www.shjhs.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "五穀米飯",
+          "匈牙利紅椒豬柳丁",
+          "黑木耳滷豆乾",
+          "蒜香高麗菜",
+          "金針菇冬瓜湯",
+          "光泉優酪乳"
+        ],
+        "first_seen_at": "2026-11-10T23:20:23+00:00"
+      },
+      {
+        "name": "玉井國中",
+        "date": "2026-11-12",
+        "school_code": "114511",
+        "status": "unavailable",
+        "source_url": "https://www.yjjh.tn.edu.tw/index.php?period=2026-11-12",
+        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
+      },
+      {
+        "name": "大橋國中",
+        "date": "2026-11-12",
+        "school_code": "114543",
+        "status": "ok",
+        "source_url": "https://www.dcjh.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "燕麥飯",
+          "油豆腐燒肉",
+          "雞堡",
+          "燕麥飯(素)",
+          "素佛跳牆(素)",
+          "菜脯煎蛋(素)",
+          "咖哩白花菜(素)",
+          "玉米蛋花湯(素)",
+          "地瓜葉",
+          "玉米蛋花湯"
+        ],
+        "first_seen_at": "2026-11-10T23:20:30+00:00"
+      },
+      {
+        "name": "大山國小",
+        "date": "2026-11-12",
+        "school_code": "114662",
+        "status": "unavailable",
+        "source_url": "https://dses.dses.tn.edu.tw/index.php?period=2026-11-12",
+        "last_check_note": "ValueError: No matching school/date lunch heading on this page"
+      },
+      {
+        "name": "關廟國中",
+        "date": "2026-11-12",
+        "school_code": "114504",
+        "status": "ok",
+        "source_url": "https://www.gmjh.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "糙米飯",
+          "筍乾滷肉",
+          "炸虱目魚丸",
+          "滷白菜",
+          "當歸雞湯",
+          "水果"
+        ],
+        "first_seen_at": "2026-11-10T23:20:36+00:00"
+      },
+      {
+        "name": "開元國小",
+        "date": "2026-11-12",
+        "school_code": "213618",
+        "status": "ok",
+        "source_url": "https://www.kyes.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "糙米飯",
+          "烤雞翅",
+          "洋蔥炒豆干",
+          "彩椒花椰菜",
+          "黃瓜魚羹湯",
+          "香蕉"
+        ],
+        "first_seen_at": "2026-11-10T23:20:42+00:00"
+      },
+      {
+        "name": "安慶國小",
+        "date": "2026-11-12",
+        "school_code": "213629",
+        "status": "ok",
+        "source_url": "https://schoolweb.tn.edu.tw/~aces_www/index.php?period=2026-11-12",
+        "dishes": [
+          "米飯",
+          "洋芋燒鴨",
+          "田園三寶",
+          "薑絲黑葉白菜",
+          "蔬菜蛋花湯"
+        ],
+        "first_seen_at": "2026-11-10T23:20:44+00:00"
+      },
+      {
+        "name": "麻豆國小",
+        "date": "2026-11-12",
+        "school_code": "114659",
+        "status": "ok",
+        "source_url": "https://www.mdes.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "麥片飯",
+          "薑母鴨",
+          "黃豆芽炒肉絲",
+          "翠綠油菜",
+          "洋芋排骨湯"
+        ],
+        "first_seen_at": "2026-11-10T23:20:48+00:00"
+      },
+      {
+        "name": "培文國小",
+        "date": "2026-11-12",
+        "school_code": "114660",
+        "status": "ok",
+        "source_url": "https://www.pwes.tn.edu.tw/index.php?period=2026-11-12",
+        "dishes": [
+          "小米飯",
+          "洋芋燒雞",
+          "菇菇炒蛋",
+          "有機什錦時蔬",
+          "海帶豆芽湯",
+          "優酪乳"
+        ],
+        "first_seen_at": "2026-11-10T23:20:54+00:00"
+      },
+      {
+        "name": "仁德國中",
+        "date": "2026-11-12",
+        "school_code": "114501",
+        "status": "unavailable",
+        "source_url": "https://www.rdjh.tn.edu.tw/index.php?period=2026-11-12",
         "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
       }
     ]

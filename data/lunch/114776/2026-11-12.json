@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.kses.tn.edu.tw/index.php?period=2026-11-12",
+  "retrieved_at": "2026-11-10T23:20:02+00:00",
+  "first_seen_at": "2026-11-10T23:20:02+00:00",
+  "last_changed_at": "2026-11-10T23:20:02+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "f4e2259689c0b9b59ca85856fa1e2e4ee02f9a17cdfcae9fd55cd4933eb35e10",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-12",
+  "school_code": "114776",
+  "school_name": "市立崑山國小",
+  "dishes": [
+    {
+      "name": "五榖米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "橙汁翅腿",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "花生拌小黃瓜",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "有機蔬菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "紫菜湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "優酪乳c",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}
