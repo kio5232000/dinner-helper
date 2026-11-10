@@ -76,6 +76,12 @@ PILOTS = [
      "url": "https://www.kyes.tn.edu.tw/index.php"},
     {"name": "安慶國小", "level": "國小", "district": "安南區",
      "url": "https://schoolweb.tn.edu.tw/~aces_www/index.php"},
+    {"name": "麻豆國小", "level": "國小", "district": "麻豆區",
+     "url": "https://www.mdes.tn.edu.tw/index.php"},
+    {"name": "培文國小", "level": "國小", "district": "麻豆區",
+     "url": "https://www.pwes.tn.edu.tw/index.php"},
+    {"name": "仁德國中", "level": "國中", "district": "仁德區",
+     "url": "https://www.rdjh.tn.edu.tw/index.php"},
 ]
 CATEGORIES = ("主食", "主菜", "副菜", "蔬菜", "湯品", "附餐")
 
