@@ -1,68 +1,82 @@
 # 🍚 今晚煮什麼？臺南版
 
-**從學校午餐，找到不重複的晚餐靈感。**
+手機友善的學校午餐查詢＋家庭晚餐靈感網站。
 
-網站：https://kio5232000.github.io/dinner-helper/
+**網站：** https://kio5232000.github.io/dinner-helper/
 
-## 現在完成的功能（2026-11-05）
+## V1.7 穩定性改善（2026-11-10）
 
-- 臺南限定手機首頁：**行政區 → 國小／國中 → 學校**，學校只需選一次，會記住選擇。
-- 學校名錄採教育部統計處 114 學年度國小與國中資料，含行政區。
-- 已接通部分學校的公開午餐頁面：每天由 GitHub Actions 抓取並整理**當日菜色**，顯示菜名、分類、來源連結。
-- 若有來源提供的菜色圖片網址，嘗試顯示；否則使用標示為示意圖的 SVG 插畫。
-- 下拉選單會標記「✓ 今日已同步」的試點學校。
-- 未取得該校當日資料時會明確說明，不用舊菜單或示範菜單假裝是當日資料。可自願手動輸入菜名來測試推薦。
-- 點擊晚餐推薦按鈕，使用**本地規則**選出與主要午餐食材不同的家常料理；**尚未接真正的 AI**。
+### 最新實測（11 月 10 日下午，臺北時間）
 
-### 2026-11-05 實測：9 所學校午餐 JSON 匯入成功
+- **今日菜單：10/10 試點學校成功同步**。
+- **11 月 11 日菜單預告：8/10 成功同步**；尚未驗證新嘉與新南國小明日菜單，不以今天菜單充數。
+- 修復東區勝利、新生、崇明國小的 Tad Lunch3 解析：模組在 h3 中使用圖片 alt 顯示校名、`input[name=period]` 儲存日期。新解析依同一區塊確認校名、日期、菜色，不再假設日期一定是一般文字。
+- **12 項解析測試通過**，包括錯日期、錯學校、附幼菜單隔離、重複菜色及更新指紋。
+- 修正 GitHub Actions 在程式碼與資料同步提交互相競爭時，使用 `fetch / rebase / retry` 的非強制推送，避免非 fast-forward 錯誤。
 
-| 學校 | 行政區 | 資料方式 |
-| --- | --- | --- |
-| 柳營國小 | 柳營區 | Tad Lunch3 菜色圖片與文字 |
-| 東區勝利國小 | 東區 | Tad Lunch3 菜色圖片與文字 |
-| 新嘉國小 | 後壁區 | Tad Lunch3 菜色圖片與文字 |
-| 新生國小 | 新營區 | Tad Lunch3 菜色圖片與文字 |
-| 崇明國小 | 東區 | Tad Lunch3 菜色圖片與文字 |
-| 進學國小 | 中西區 | 學校首頁午餐文字 |
-| 佳興國小 | 佳里區 | 學校首頁午餐文字 |
-| 崇明國中 | 東區 | 學校首頁午餐文字 |
-| 紅瓦厝國小 | 歸仁區 | 學校首頁午餐文字 |
+以上是單次的實測成功率，不代表每天保證 100%。學校來源可能改版、停餐或晚於我們的排程公開。
 
-**這不是全臺南市覆蓋率，** 未列入的學校仍需確認網址、解析與使用權。資料更新排程不保證每一天都有菜單（週末、停餐、網站異常等可能沒有資料）。
+### 目前串接的學校
 
-## 同步架構
+| 行政區 | 國小／國中 |
+|---|---|
+| 柳營區 | 柳營國小 |
+| 東區 | 勝利國小、崇明國小、崇明國中 |
+| 後壁區 | 新嘉國小 |
+| 新營區 | 新生國小 |
+| 中西區 | 進學國小 |
+| 佳里區 | 佳興國小 |
+| 歸仁區 | 紅瓦厝國小 |
+| 安平區 | 新南國小 |
+
+本階段只維持**10 所白名單試點學校**。其他臺南國中小在學校選單中仍可選，但未串接的學校不會顯示假資料。
+
+## 家長端功能
+
+- 首次選擇 **行政區 → 國小／國中 → 學校**，記住學校。
+- **今天／明天**午餐切換。試點學校有資料時標示 `✓`；來源檔案必須符合所選學校與日期。
+- 顯示主食、主菜、副菜、蔬菜、湯品、附餐；圖像可能連來源網站，若跨站失敗用明確示意插畫取代。
+- 顯示學校來源網站連結及**本站最早觀測時間**，不把它宣稱為校方首次上傳時間。明日菜單註明預告，可能臨時更改。
+- 若沒有菜單，可手動輸入或選明確標示的示範菜單。
+- 晚餐推薦**目前只用本地規則**，不是串接 ChatGPT 或其他 AI，尚不提供精確營養、熱量或過敏原判斷。
+
+## 資料同步及監測
 
 ```
-臺南學校公開午餐網頁 (Tad Lunch3 或同源首頁午餐區塊)
-  → GitHub Actions (平日臺北 14:35)
-  → scripts/import_tainan_pilot.py （依校名、行政區、學制比對與日期檢驗）
-  → data/lunch/{school_code}/{YYYY-MM-DD}.json
-  → GitHub Pages 首頁（只讀選校、當日、驗證過的菜單）
+臺南學校公開網站（Tad Lunch3 全頁／學校首頁午餐區）
+  ↓ GitHub Actions 公開頁面同步
+scripts/import_tainan_pilot.py
+  ├─ 校名＋行政區＋學制對照教育部學校名錄
+  ├─ 日期及同校菜單驗證（含附幼隔離）
+  ├─ 資料變更指紋與首次觀測時間
+  ├─ data/lunch/{school_code}/{YYYY-MM-DD}.json
+  ├─ data/lunch-monitor.json
+  └─ data/tainan-pilot-status.json
+  ↓ GitHub Pages
+index.html（今天／明天，沒有資料就明確標示）
 ```
 
-- 白名單校址：`scripts/import_tainan_pilot.py`。
-- 同步工作流程：`.github/workflows/import-tainan-pilot.yml`。
-- 同步結果：`data/tainan-pilot-status.json`。
-- 基本解析測試：`tests/test_lunch_import.py`，同步前自動執行。
-- 學校名錄同步：`scripts/sync_schools.py`、`.github/workflows/sync-schools.yml`。
+**排程：臺北時間週一至週五** 06:45、08:45、11:15、13:35；週日至週四 19:15 查隔日預告。GitHub Actions 排程有執行延遲，**上述是設定的時間，不是每次實際取得菜單的時間**。監測結果以檔案中的 `checked_at`、`first_seen_at`、`last_changed_at` 為準。
 
-## 官方 API 研究結果
+- 正式同步：`.github/workflows/import-tainan-pilot.yml`
+- 解析回歸測試：`tests/test_lunch_import.py`
+- 限定公開學校頁面結構診斷：`scripts/diagnose_lunch_pages.py`，工作流程 `.github/workflows/diagnose-lunch-headings.yml`，只用於排錯，不保存來源完整 HTML
+- 名錄定期同步：`scripts/sync_schools.py`、`.github/workflows/sync-schools.yml`
+- 可在 GitHub Actions 查看原始執行紀錄，或查看 `data/tainan-pilot-status.json` 的每一校來源和驗證狀態
 
-Tad Lunch3 的開源程式碼記載三種歷史接口：
+## 官方 API 研究
 
-- `/school/{SchoolId}`
-- `/offered/meal?SchoolId=...&period=...&KitchenId=all`
-- `/dish?BatchDataId=...`
+- Tad Lunch3 開源程式：https://github.com/tad0616/tad_lunch3
+- 公開平台的歷史單校每日接口在自動化執行環境先前回傳 HTTP 403 / Cloudflare 驗證，不能視為已授權的第三方 API。
+- 官方 OpenAPI v1 的 `/accountReg/`、`/county/`、`/opendatadataset/`、`/opendatadownload/` 是**月度開放資料集**用途，**不是**即時單校午餐 API；第三方申請與正式授權方式仍需官方確認。
+- 已根據完整 Swagger v1 規格撰寫 `docs/official-openapi-v1-assessment.md`，並有不送出網路請求的安全預覽工具 `scripts/official_monthly_openapi.py`。不得使用外洩金鑰或繞過 Cloudflare。
+- 詳細研究：`docs/lunch-data-research.md`、`data/source-diagnostics.json`。
 
-但中央校園食材登錄平臺在 2026-11-05 GitHub runner 測試回覆 **403**，尚不能直接從 GitHub Pages 使用。學校名錄代碼也不是已驗證的中央午餐 `SchoolId`。詳細紀錄見 [午餐資料來源研究](docs/lunch-data-research.md) 與 `data/source-diagnostics.json`。
+## 下一步與限制
 
-`https://lunch.tn.edu.tw/` 是臺南學校午餐營養教育相關資源，尚未驗證有可供本網站使用的全臺南每日供餐 API。
+1. 持續追蹤至少一個上課週，確認**首次觀測時間**、菜單臨時修改與各校未公布情況。
+2. 對目前明日預告失敗的兩所學校確認是否為資料尚未發布或來源格式不同。
+3. 確認資料及圖片使用權、更新頻率和多供餐批次後，再逐批擴展臺南學校。
+4. 建立來源可靠的家庭食譜資料，再於安全的後端實作真正 AI 推薦。
 
-## 下一步
-
-1. 觀察多個工作日的匯入成功率，處理供餐中斷、多供應商、附幼及重複菜單問題。
-2. 確認頁面文字及圖片再利用條件，尋找可正式介接的校園食材 API。
-3. 擴展學校網址白名單，優先由不同行政區、國小與國中分批測試。
-4. 建立已驗證的家庭食譜與營養估算資料庫，之後再於安全的後端串接 AI。
-
-> 本網站目前是試點，不是正式的全臺南午餐資料服務。學校菜單是供餐資訊，並不能證明孩子實際吃了多少。熱量、過敏原及營養建議仍需要份量與經驗證的資料支持。
+學校午餐菜單只是供餐資訊，不代表每位孩子實際吃下的菜色或份量。網站為試點工具，並非全臺南市所有學校皆已串接的即時服務。
