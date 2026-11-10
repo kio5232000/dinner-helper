@@ -112,6 +112,27 @@ class LunchParsingTests(unittest.TestCase):
         result = parse_menu(wrong + correct, "崇明國小", DATE)
         self.assertEqual(result[1]["name"], "烤雞腿")
 
+    def test_detect_multiple_kitchen_tabs_from_matching_school(self):
+        from scripts.import_tainan_pilot import detect_tad_menu_options
+        html = ('<h3><img alt="臺南市東區勝利國小午餐資訊">'
+                '<input name="period" value="'+DATE+'"></h3>'
+                '<div id="kitchenTab"><ul class="resp-tabs-list vert">'
+                '<li>中央廚房 A</li><li>中央廚房 B</li></ul></div>')
+        self.assertEqual(detect_tad_menu_options(html,"勝利國小",DATE),
+                         ["中央廚房 A","中央廚房 B"])
+        self.assertEqual(detect_tad_menu_options(html,"其他國小",DATE),[])
+        self.assertEqual(detect_tad_menu_options(html,"勝利國小","2026-11-06"),[])
+
+    def test_detect_options_does_not_take_next_school_section(self):
+        from scripts.import_tainan_pilot import detect_tad_menu_options
+        html = ('<h3><img alt="臺南市勝利國小午餐資訊">'
+                '<input name="period" value="'+DATE+'"></h3>'
+                '<p>一般午餐</p>'
+                '<h3><img alt="臺南市勝利國小附設幼兒園午餐資訊">'
+                '<input name="period" value="'+DATE+'"></h3>'
+                '<div id="lunch3Tab"><ul class="resp-tabs-list"><li>午餐</li><li>下午點心</li></ul></div>')
+        self.assertEqual(detect_tad_menu_options(html,"勝利國小",DATE),[])
+
     def test_menu_fingerprint_and_schedule_targets(self):
         from scripts.import_tainan_pilot import fingerprint, choose_dates
         dishes=[{"name":"白飯","category":"主食"},{"name":"三杯雞","category":"主菜"}]
