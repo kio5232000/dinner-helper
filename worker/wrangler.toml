@@ -1,0 +1,11 @@
+name = "dinner-helper-ai"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+# After creating the database, replace this placeholder with your actual ID.
+[[d1_databases]]
+binding = "QUOTA_DB"
+database_name = "dinner-helper-quota"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+migrations_dir = "migrations"
