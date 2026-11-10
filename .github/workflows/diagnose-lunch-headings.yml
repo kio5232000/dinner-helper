@@ -1,0 +1,24 @@
+name: Diagnose public lunch headings
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/diagnose_lunch_pages.py'
+      - '.github/workflows/diagnose-lunch-headings.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install HTML parser
+        run: python -m pip install beautifulsoup4
+      - name: Inspect heading and date clues without saving pages
+        run: python -m scripts.diagnose_lunch_pages
