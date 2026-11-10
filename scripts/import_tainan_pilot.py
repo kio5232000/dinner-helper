@@ -94,6 +94,7 @@ def parse_tad_page(soup, school, day):
     affiliated kindergarten. Scope dishes to the validated h3 section only.
     The date cannot be taken from form URLs or unrelated page text.
     """
+    date_mismatch = False
     for heading in soup.select("h3"):
         title_image = heading.find("img", alt=True)
         if title_image is None:
@@ -102,7 +103,10 @@ def parse_tad_page(soup, school, day):
         if not title.endswith(school + "午餐資訊"):
             continue
         period = heading.select_one('input[name="period"]')
-        if period is None or period.get("value", "").strip() != day:
+        if period is None:
+            continue
+        if period.get("value", "").strip() != day:
+            date_mismatch = True
             continue
         images = []
         for sibling in heading.next_siblings:
@@ -118,6 +122,8 @@ def parse_tad_page(soup, school, day):
         # A correctly dated heading with no complete meal must not
         # silently use a different school's menu farther down the document.
         raise ValueError("Matching Tad Lunch3 section had no complete menu")
+    if date_mismatch:
+        raise ValueError("Tad Lunch3 school date input does not match requested day")
     return None
 
 def parse_menu(source_html, school, day):
