@@ -49,6 +49,8 @@
 .mealDayTab{border:0;background:transparent;color:#5c7563;padding:11px 17px;border-radius:11px;font-size:13px;font-weight:800;white-space:nowrap}
 .mealDayTab.active{background:white;box-shadow:0 2px 9px #24382b12;color:#2b6948}
 .mealDayTab:focus-visible{outline:2px solid #468a66;outline-offset:2px}
+
+.coveragePulse{font-size:12px;font-weight:700;color:#376f52;line-height:1.65;margin:10px 0 3px}
 </style>
 </head><body>
 <div class="container">
@@ -60,7 +62,7 @@
   <div class="selectField"><label for="district"><span>01</span> 臺南市・行政區</label><select id="district" aria-label="選擇行政區" disabled><option value="">學校名錄載入中…</option></select></div>
   <div class="selectField"><label for="level"><span>02</span> 就讀階段</label><select id="level" aria-label="選擇國中或國小"><option value="國小">國小</option><option value="國中">國中</option></select></div>
   <div class="selectField"><label for="school"><span>03</span> 學校名稱</label><select id="school" aria-label="選擇學校" disabled><option value="">請先選行政區及階段</option></select></div>
-</div><div id="registryStatus" class="hintTiny" role="status">正在讀取教育部國小名錄…</div><div id="formError" class="error" role="alert"></div><button class="primary" id="saveSchool" type="button">查看今日午餐 <span class="arrow">→</span></button><div class="hintTiny">此版限定臺南市，依序選擇行政區、國小／國中與學校。部分學校午餐來源已通過讀取測試，完整串接仍在開發中。</div></div></section>
+</div><div id="registryStatus" class="hintTiny" role="status">正在讀取教育部國小名錄…</div><div id="coveragePulse" class="coveragePulse" role="status" aria-live="polite"></div><div id="formError" class="error" role="alert"></div><button class="primary" id="saveSchool" type="button">查看今日午餐 <span class="arrow">→</span></button><div class="hintTiny">此版限定臺南市，依序選擇行政區、國小／國中與學校。部分學校午餐來源已通過讀取測試，完整串接仍在開發中。</div></div></section>
 <section id="dashboard" class="hidden">
 <div class="hello"><div class="eyebrow">TODAY'S SCHOOL LUNCH</div><div class="date" id="todayDate"></div><h1 class="welcomeTitle" id="dashboardTitle">今天中午，<br>孩子<span>吃了什麼？</span></h1><div class="schoolPill"><span aria-hidden="true">⌂</span><span id="schoolText"></span><button type="button" id="changeSchool">更換</button></div>
 <div class="mealDayTabs" role="group" aria-label="查詢午餐日期">
@@ -71,7 +73,7 @@
 <section class="aiPanel" aria-labelledby="aiTitle"><div class="aiSymbol">✨</div><div class="eyebrow">WHAT'S FOR DINNER?</div><h2 id="aiTitle">晚上煮什麼？<br>幫你想好了。</h2><p>參考午餐菜色，優先推薦不同主要食材的家常料理。不用填預算，也不用想菜單。</p><button class="primary" id="makeRecommendation" type="button">推薦今晚煮什麼 <span class="iconArrow">→</span></button><small class="aiDisclose">目前使用本地規則提供料理靈感，尚未串接真正的 AI；需先有午餐菜色才能啟動。</small></section>
 <section id="recommendationBlock" class="recommendations hidden" aria-live="polite"><div class="resultHead"><div><div class="eyebrow">DINNER INSPIRATION</div><h2>今晚的三個靈感</h2></div><span class="softLabel">示範推薦</span></div><div id="recommendationList"></div><button class="again" id="nextIdeas" type="button">↻ 都不喜歡？再換三道</button></section>
 </section>
-</main><footer class="bottom">今晚煮什麼？臺南版 · V1.7 午餐預告與資料穩定版<br>學校名錄來源：教育部統計處；午餐資料未取得時會明確提示。料理步驟目前為示範。</footer>
+</main><footer class="bottom">今晚煮什麼？臺南版 · V1.8 臺南學校擴充測試版<br>學校名錄來源：教育部統計處；午餐資料未取得時會明確提示。料理步驟目前為示範。</footer>
 </div>
 <script>
 'use strict';
@@ -189,6 +191,18 @@ function fillSchoolDropdown(preferredCode){
    $('registryStatus').textContent='此行政區目前沒有「'+level+'」名錄資料，請切換階段或選其他行政區。';
  }
 }
+function renderCoveragePulse(){
+ const day=toDateKey(),next=toDateKey(1);
+ const todayRows=lunchCoverage?.by_date?.[day]||[];
+ const nextRows=lunchCoverage?.by_date?.[next]||[];
+ const todayOK=todayRows.filter(x=>x.date===day&&x.status==='ok').length;
+ const nextOK=nextRows.filter(x=>x.date===next&&x.status==='ok').length;
+ const tested=todayRows.length;
+ const node=$('coveragePulse');
+ if(!tested){node.textContent='';return}
+ const observedAt=lunchCoverage?.checked_at?timeSeen(lunchCoverage.checked_at):'';
+ node.textContent='試點學校：今日 '+todayOK+'/'+tested+' 所有菜單 · 明日預告 '+nextOK+'/'+nextRows.length+' 所'+(observedAt?' · 最近同步 '+observedAt:'');
+}
 function updateSchoolAvailability(){
  const date=viewedDate();
  const records=lunchCoverage?.by_date?.[date]||(selectedDay==='today'?lunchCoverage?.results:[])||[];
@@ -205,6 +219,7 @@ async function loadAvailableLunches(){
   if(!response.ok)return;
   lunchCoverage=await response.json();
   updateSchoolAvailability();
+  renderCoveragePulse();
  }catch(e){}
 }
 async function loadDirectory(){
