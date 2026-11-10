@@ -342,7 +342,11 @@ async function showDashboard(resetScroll=true){
   const changed=timeSeen(data.last_changed_at);
   if(first)note+=' 本站最早觀測：'+first+'（非學校上傳時間）。';
   if(Number(data.revision_count)>0&&changed)note+=' 最近觀測到變更：'+changed+'。';
-  if(data.retrieved_at)note+=' 菜單最後驗證：'+timeSeen(data.retrieved_at)+'。';
+  if(data.retrieved_at)note+=' 本站保存這份菜單：'+timeSeen(data.retrieved_at)+'。';
+  const confirmed=lunchCoverage?.by_date?.[date]?.find(r=>r.school_code===current.code && r.status==='ok');
+  if(confirmed&&Array.isArray(lunchCoverage?.checked_dates)&&lunchCoverage.checked_dates.includes(date)&&lunchCoverage.checked_at){
+   note+=' 最近檢查來源：'+timeSeen(lunchCoverage.checked_at)+'。';
+  }
   showLunch(data.source,dishes,note);
   if(Array.isArray(data.menu_options)&&data.menu_options.length>1){
    const names=data.menu_options.slice(0,5).map(x=>String(x).slice(0,35)).join('、');
