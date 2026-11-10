@@ -57,8 +57,74 @@ def match_code(rows, expected, level, district=None):
         raise ValueError(f"Ambiguous pilot school {expected}/{level}: {[x['name'] for x in matches]}")
     return matches[0]
 
+
+def parse_image_cards(images):
+    """Parse dish cards in one verified meal section (never all schools together)."""
+    dishes = []
+    seen = set()
+    for image in images:
+        alt = image.get("alt", "").strip()
+        if not alt or len(alt) > 65:
+            continue
+        parent = image.parent
+        if parent is None:
+            continue
+        description = parent.get_text(" ", strip=True)
+        category = next((c for c in CATEGORIES if c in description), None)
+        if not category:
+            continue
+        if category == "主食" and any(d["category"] in ("湯品", "附餐") for d in dishes):
+            break
+        key = (category, alt)
+        if key in seen:
+            continue
+        seen.add(key)
+        image_url = image.get("src", "")
+        photo_url = image_url if image_url.startswith(
+            "https://fatraceschool.k12ea.gov.tw/dish/pic/"
+        ) else None
+        dishes.append({"name": alt, "category": category, "photo_url": photo_url})
+    return dishes[:20]
+
+
+def parse_tad_page(soup, school, day):
+    """Tad Lunch3 full-page template: school/date are in an h3 and date input.
+
+    The module emits a separate top-level h3 for each school, including an
+    affiliated kindergarten. Scope dishes to the validated h3 section only.
+    The date cannot be taken from form URLs or unrelated page text.
+    """
+    for heading in soup.select("h3"):
+        title_image = heading.find("img", alt=True)
+        if title_image is None:
+            continue
+        title = re.sub(r"\\s+", "", title_image.get("alt", ""))
+        if not title.endswith(school + "午餐資訊"):
+            continue
+        period = heading.select_one('input[name="period"]')
+        if period is None or period.get("value", "").strip() != day:
+            continue
+        images = []
+        for sibling in heading.next_siblings:
+            tag = getattr(sibling, "name", None)
+            if tag == "h3":
+                break
+            if not hasattr(sibling, "select"):
+                continue
+            images.extend(sibling.select('img[src*="/dish/pic/"]'))
+        dishes = parse_image_cards(images)
+        if len(dishes) >= 3 and any(d["category"] == "主菜" for d in dishes):
+            return dishes
+        # A correctly dated heading with no complete meal must not
+        # silently use a different school's menu farther down the document.
+        raise ValueError("Matching Tad Lunch3 section had no complete menu")
+    return None
+
 def parse_menu(source_html, school, day):
     soup = BeautifulSoup(source_html, "html.parser")
+    validated_tad = parse_tad_page(soup, school, day)
+    if validated_tad is not None:
+        return validated_tad
     visible = soup.get_text(" ", strip=True)
     # A homepage may IGNORE ?period and display a different day's lunch.
     # Only accept a same-school, same-date lunch heading, not date text
@@ -87,34 +153,7 @@ def parse_menu(source_html, school, day):
                 break
     if not match_found:
         raise ValueError("No matching school/date lunch heading on this page")
-    dishes = []
-    seen = set()
-    for image in soup.select('img[src*="/dish/pic/"]'):
-        alt = image.get("alt", "").strip()
-        if not alt or len(alt) > 65:
-            continue
-        parent = image.parent
-        if not parent:
-            continue
-        description = parent.get_text(" ", strip=True)
-        category = next((c for c in CATEGORIES if re.search(r"(?<!\\w)" + c, description)), None)
-        if category is None:
-            category = next((c for c in CATEGORIES if c in description), None)
-        if not category:
-            continue
-        # Public pages can append an affiliated kindergarten snack menu.
-        # For primary/junior-high pilots, keep only the first complete lunch set.
-        if category == "主食" and any(x["category"] in ("湯品", "附餐") for x in dishes):
-            break
-        key = (category, alt)
-        if key in seen:
-            continue
-        seen.add(key)
-        image_url = image.get("src", "")
-        # A source photo might be blocked or unlicensed for copying.
-        # Store only source references; our UI will fall back to SVG when needed.
-        photo_url = image_url if image_url.startswith("https://fatraceschool.k12ea.gov.tw/dish/pic/") else None
-        dishes.append({"name": alt, "category": category, "photo_url": photo_url})
+    dishes = parse_image_cards(soup.select('img[src*="/dish/pic/"]'))
     if len(dishes) >= 3 and any(x["category"] == "主菜" for x in dishes):
         return dishes[:20]
     # Homepage lunch blocks often render text but do not include a /dish/pic/
