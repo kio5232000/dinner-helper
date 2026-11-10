@@ -1,0 +1,44 @@
+{
+  "source": "school_website",
+  "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-11",
+  "retrieved_at": "2026-11-10T09:05:30+00:00",
+  "first_seen_at": "2026-11-10T09:05:30+00:00",
+  "last_changed_at": "2026-11-10T09:05:30+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "2ccaa4c9d9c4e66e819dc45df9cb25c5c0293aae9fc902238cce97efa4500571",
+  "date": "2026-11-11",
+  "school_code": "213601",
+  "school_name": "市立東區勝利國小",
+  "dishes": [
+    {
+      "name": "牛排麵",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1677655656030995"
+    },
+    {
+      "name": "八寶炸醬麵料",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1794180216061606"
+    },
+    {
+      "name": "水煮蛋",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1432532221240823"
+    },
+    {
+      "name": "薑香地瓜葉",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1608687815199238"
+    },
+    {
+      "name": "餛飩湯",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1423723745153121"
+    },
+    {
+      "name": "香蕉",
+      "category": "附餐",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1442987059235808"
+    }
+  ]
+}

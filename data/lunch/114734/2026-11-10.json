@@ -1,0 +1,44 @@
+{
+  "source": "school_website",
+  "source_url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-10",
+  "retrieved_at": "2026-11-10T09:05:05+00:00",
+  "first_seen_at": "2026-11-10T09:05:05+00:00",
+  "last_changed_at": "2026-11-10T09:05:05+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "a24c0913cc6b8faca2cb55a47600b7f634452ab473934afc11e450d3004943a6",
+  "date": "2026-11-10",
+  "school_code": "114734",
+  "school_name": "市立新生國小",
+  "dishes": [
+    {
+      "name": "糙米飯",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1504156007397934"
+    },
+    {
+      "name": "親子丼雞肉",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1493960136230705"
+    },
+    {
+      "name": "絲瓜麵線",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1433474437278678"
+    },
+    {
+      "name": "香菇青江菜",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1681266240098528"
+    },
+    {
+      "name": "玉米湯",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1558929820169410"
+    },
+    {
+      "name": "乳飲品",
+      "category": "附餐",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1662085178023262"
+    }
+  ]
+}
