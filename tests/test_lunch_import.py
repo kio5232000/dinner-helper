@@ -9,6 +9,14 @@ def dishes_html(names):
         for cat,name in names
     )
 
+
+def tad_section(name, day, dish_items):
+    # Based on the upstream op_tad_lunch3_list.tpl template.
+    return ('<h3><img alt="臺南市東區'+name+'午餐資訊" src="images/groceries.png">'
+            +name+'<form><input type="text" name="period" value="'+day+'"></form>午餐資訊</h3>'
+            +dishes_html(dish_items)
+            +'<a href="/modules/tad_lunch3/index.php?op=re_get&period='+day+'">重新擷取資料</a>')
+
 class LunchParsingTests(unittest.TestCase):
     def test_valid_image_cards(self):
         html = "<h2>柳營國小"+DATE+"午餐資訊</h2>"+dishes_html([
@@ -66,6 +74,43 @@ class LunchParsingTests(unittest.TestCase):
         ])
         with self.assertRaises(ValueError):
             parse_menu(page, "柳營國小", "2026-11-06")
+
+
+    def test_tad_header_date_input_and_image_menu(self):
+        html = tad_section("勝利國小", DATE, [
+            ("主食","糙米飯"),("主菜","高昇排骨"),("副菜","水蓮銀芽"),
+            ("蔬菜","有機蔬菜"),("湯品","玉米蛋花湯"),("附餐","義美保久乳")
+        ])
+        dishes = parse_menu(html, "勝利國小", DATE)
+        self.assertEqual(len(dishes), 6)
+        self.assertEqual(dishes[1]["name"], "高昇排骨")
+
+    def test_tad_school_does_not_merge_kindergarten(self):
+        primary = tad_section("勝利國小", DATE, [
+            ("主食","糙米飯"),("主菜","高昇排骨"),("蔬菜","青菜"),("湯品","蛋花湯")
+        ])
+        kindergarten = tad_section("勝利國小附設幼兒園", DATE, [
+            ("主食","麵線"),("主菜","紅燒肉"),("蔬菜","高麗菜"),("湯品","蔬菜湯")
+        ])
+        result = parse_menu(primary + kindergarten, "勝利國小", DATE)
+        self.assertEqual([d["name"] for d in result],["糙米飯","高昇排骨","青菜","蛋花湯"])
+
+    def test_tad_input_must_match_date_even_if_url_contains_day(self):
+        html = tad_section("新生國小", "2026-11-04", [
+            ("主食","白飯"),("主菜","滷雞腿"),("蔬菜","青江菜")
+        ]) + '<p>新聞活動 2026-11-05</p>'
+        with self.assertRaises(ValueError):
+            parse_menu(html, "新生國小", DATE)
+
+    def test_tad_correct_school_after_other_school(self):
+        wrong = tad_section("其他國小", DATE, [
+            ("主食","白飯"),("主菜","豬排"),("蔬菜","青江菜")
+        ])
+        correct = tad_section("崇明國小", DATE, [
+            ("主食","糙米飯"),("主菜","烤雞腿"),("蔬菜","地瓜葉")
+        ])
+        result = parse_menu(wrong + correct, "崇明國小", DATE)
+        self.assertEqual(result[1]["name"], "烤雞腿")
 
     def test_menu_fingerprint_and_schedule_targets(self):
         from scripts.import_tainan_pilot import fingerprint, choose_dates
