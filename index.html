@@ -51,6 +51,11 @@
 .mealDayTab:focus-visible{outline:2px solid #468a66;outline-offset:2px}
 
 .coveragePulse{font-size:12px;font-weight:700;color:#376f52;line-height:1.65;margin:10px 0 3px}
+
+.menuScopeNotice{font-size:12px;line-height:1.65;color:#7a5416;background:#fff7e5;border:1px solid #e5c88d;padding:11px 13px;border-radius:12px;margin:10px 0}
+.refreshTab{background:#f1f6f0;color:#476b54}
+.refreshTab:disabled{opacity:.6}
+@media(max-width:390px){.mealDayTabs{gap:3px;padding:4px;width:100%}.mealDayTab{padding:10px 9px;font-size:11px}.refreshTab{margin-left:auto}}
 </style>
 </head><body>
 <div class="container">
@@ -67,13 +72,13 @@
 <div class="hello"><div class="eyebrow">TODAY'S SCHOOL LUNCH</div><div class="date" id="todayDate"></div><h1 class="welcomeTitle" id="dashboardTitle">今天中午，<br>孩子<span>吃了什麼？</span></h1><div class="schoolPill"><span aria-hidden="true">⌂</span><span id="schoolText"></span><button type="button" id="changeSchool">更換</button></div>
 <div class="mealDayTabs" role="group" aria-label="查詢午餐日期">
 <button id="dayToday" type="button" class="mealDayTab active" aria-pressed="true">今天</button>
-<button id="dayTomorrow" type="button" class="mealDayTab" aria-pressed="false">明天 · 預告</button>
+<button id="dayTomorrow" type="button" class="mealDayTab" aria-pressed="false">明天 · 預告</button><button type="button" class="mealDayTab refreshTab" id="refreshLunch" aria-label="重新檢查已同步菜單">↻ 更新檢查</button>
 </div></div>
-<section class="section" aria-labelledby="lunchTitle"><div class="sectionHead"><div><div class="eyebrow">LUNCH MENU</div><h2 id="lunchTitle">今日午餐清單</h2></div><span class="softLabel" id="dishCount"></span></div><p class="helptext" id="lunchNotice">正在檢查今日午餐資料…</p><a id="lunchSource" class="lunchSource hidden" href="#" target="_blank" rel="noopener noreferrer">查看學校原始午餐菜單 ↗</a><div class="menuGrid hidden" id="menuGrid"></div><div id="noLunch" class="emptyLunch hidden"><div class="emptyIcon">🥗</div><strong id="noLunchTitle">這所學校今天的菜單尚未取得</strong><p>目前先串接部分臺南學校的公開午餐頁面。若這所學校尚未接通，就不會把示範菜單冒充成實際午餐。</p><a class="sourceButton" href="https://fatraceschool.k12ea.gov.tw/frontend/search.html" target="_blank" rel="noopener noreferrer">前往教育部查詢今日午餐 ↗</a><details class="manualDetails"><summary>我知道午餐菜色，先輸入讓網站推薦</summary><p>把今天的午餐菜名用逗號隔開。這是家長手動輸入，並非官方資料。</p><textarea id="manualDishes" placeholder="例如：白飯、滷雞腿、炒高麗菜、番茄炒蛋"></textarea><button id="useManual" class="secondary" type="button">使用這份午餐清單</button></details><button id="tryDemo" class="demoButton" type="button">只想試試介面？載入明確標示的示範菜單</button></div><div class="summary hidden" id="lunchSummary"><div class="summaryIcon">💡</div><div><strong id="summaryTitle">今晚可以換個主菜</strong><p id="mealTip"></p></div></div></section>
+<section class="section" aria-labelledby="lunchTitle"><div class="sectionHead"><div><div class="eyebrow">LUNCH MENU</div><h2 id="lunchTitle">今日午餐清單</h2></div><span class="softLabel" id="dishCount"></span></div><p class="helptext" id="lunchNotice">正在檢查今日午餐資料…</p><a id="lunchSource" class="lunchSource hidden" href="#" target="_blank" rel="noopener noreferrer">查看學校原始午餐菜單 ↗</a><div id="menuScopeNotice" class="menuScopeNotice hidden" role="note"></div><div class="menuGrid hidden" id="menuGrid"></div><div id="noLunch" class="emptyLunch hidden"><div class="emptyIcon">🥗</div><strong id="noLunchTitle">這所學校今天的菜單尚未取得</strong><p>目前先串接部分臺南學校的公開午餐頁面。若這所學校尚未接通，就不會把示範菜單冒充成實際午餐。</p><a class="sourceButton" href="https://fatraceschool.k12ea.gov.tw/frontend/search.html" target="_blank" rel="noopener noreferrer">前往教育部查詢今日午餐 ↗</a><details class="manualDetails"><summary>我知道午餐菜色，先輸入讓網站推薦</summary><p>把今天的午餐菜名用逗號隔開。這是家長手動輸入，並非官方資料。</p><textarea id="manualDishes" placeholder="例如：白飯、滷雞腿、炒高麗菜、番茄炒蛋"></textarea><button id="useManual" class="secondary" type="button">使用這份午餐清單</button></details><button id="tryDemo" class="demoButton" type="button">只想試試介面？載入明確標示的示範菜單</button></div><div class="summary hidden" id="lunchSummary"><div class="summaryIcon">💡</div><div><strong id="summaryTitle">今晚可以換個主菜</strong><p id="mealTip"></p></div></div></section>
 <section class="aiPanel" aria-labelledby="aiTitle"><div class="aiSymbol">✨</div><div class="eyebrow">WHAT'S FOR DINNER?</div><h2 id="aiTitle">晚上煮什麼？<br>幫你想好了。</h2><p>參考午餐菜色，優先推薦不同主要食材的家常料理。不用填預算，也不用想菜單。</p><button class="primary" id="makeRecommendation" type="button">推薦今晚煮什麼 <span class="iconArrow">→</span></button><small class="aiDisclose">目前使用本地規則提供料理靈感，尚未串接真正的 AI；需先有午餐菜色才能啟動。</small></section>
 <section id="recommendationBlock" class="recommendations hidden" aria-live="polite"><div class="resultHead"><div><div class="eyebrow">DINNER INSPIRATION</div><h2>今晚的三個靈感</h2></div><span class="softLabel">示範推薦</span></div><div id="recommendationList"></div><button class="again" id="nextIdeas" type="button">↻ 都不喜歡？再換三道</button></section>
 </section>
-</main><footer class="bottom">今晚煮什麼？臺南版 · V1.8 臺南學校擴充測試版<br>學校名錄來源：教育部統計處；午餐資料未取得時會明確提示。料理步驟目前為示範。</footer>
+</main><footer class="bottom">今晚煮什麼？臺南版 · V1.9 菜單可靠性改善版<br>學校名錄來源：教育部統計處；午餐資料未取得時會明確提示。料理步驟目前為示範。</footer>
 </div>
 <script>
 'use strict';
@@ -140,6 +145,13 @@ const norm=s=>String(s||'').replace(/[臺]/g,'台').replace(/\s+/g,'').toLowerCa
 function toDateKey(offset=0){let p=taiwanParts();return new Date(Date.UTC(Number(p.year),Number(p.month)-1,Number(p.day)+offset)).toISOString().slice(0,10)}
 function viewedDate(){return toDateKey(selectedDay==='tomorrow'?1:0)}
 function timeSeen(value){if(!value)return '';let d=new Date(value);if(Number.isNaN(d.getTime()))return '';return new Intl.DateTimeFormat('zh-TW',{timeZone:'Asia/Taipei',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(d)}
+async function refreshLunchStatus(){
+ const button=$('refreshLunch');
+ button.disabled=true;button.textContent='檢查中…';
+ try{await loadAvailableLunches();await showDashboard(false)}
+ finally{button.disabled=false;button.textContent='↻ 更新檢查'}
+}
+$('refreshLunch').addEventListener('click',refreshLunchStatus);
 function setDay(day){if(!['today','tomorrow'].includes(day)||selectedDay===day)return;selectedDay=day;updateSchoolAvailability();showDashboard(false)}
 $('dayToday').addEventListener('click',()=>setDay('today'));
 $('dayTomorrow').addEventListener('click',()=>setDay('tomorrow'));
@@ -287,7 +299,7 @@ function showSchool(){
  setScreen('welcome');
  window.scrollTo({top:0,behavior:'instant'});
 }
-function showLunch(source,records,remark){menuOrigin=source;lunch=records;$('lunchSource').classList.add('hidden');$('lunchSource').removeAttribute('href');$('recommendationBlock').classList.add('hidden');rotation=0;const has=records.length>0;$('noLunch').classList.toggle('hidden',has);$('menuGrid').classList.toggle('hidden',!has);$('lunchSummary').classList.toggle('hidden',!has);$('makeRecommendation').disabled=!has;$('dishCount').textContent=has?records.length+' 道 · '+(source==='official'?'官方資料':source==='school_website'?'學校網站':source==='manual'?'手動輸入':'示範'):'尚無資料';$('lunchNotice').textContent=remark;if(!has){$('menuGrid').replaceChildren();return}buildLunchLive(records,source)}
+function showLunch(source,records,remark){$('menuScopeNotice').classList.add('hidden');$('menuScopeNotice').textContent='';menuOrigin=source;lunch=records;$('lunchSource').classList.add('hidden');$('lunchSource').removeAttribute('href');$('recommendationBlock').classList.add('hidden');rotation=0;const has=records.length>0;$('noLunch').classList.toggle('hidden',has);$('menuGrid').classList.toggle('hidden',!has);$('lunchSummary').classList.toggle('hidden',!has);$('makeRecommendation').disabled=!has;$('dishCount').textContent=has?records.length+' 道 · '+(source==='official'?'官方資料':source==='school_website'?'學校網站':source==='manual'?'手動輸入':'示範'):'尚無資料';$('lunchNotice').textContent=remark;if(!has){$('menuGrid').replaceChildren();return}buildLunchLive(records,source)}
 function inferType(name){let n=String(name);if(/魚|鮭|鯖|鱸|海鮮/.test(n))return {type:'fish',group:'魚肉'};if(/雞|鴨|鵝|翅小腿|雞翅|雞腿|翅腿/.test(n))return {type:'chicken',group:'雞肉'};if(/豬|肉燥|肉末|排骨/.test(n))return {type:'pork',group:'豬肉'};if(/牛肉/.test(n))return {type:'pork',group:'牛肉'};if(/豆腐|豆干|豆皮/.test(n))return {type:'tofu',group:'豆腐'};if(/蛋/.test(n))return {type:'egg',group:'雞蛋'};if(/花椰|青花/.test(n))return {type:'broccoli',group:'花椰菜'};if(/菜|菠菜|空心菜|筍/.test(n))return {type:'greens',group:'葉菜'};if(/飯|米|粥|麵|冬粉/.test(n))return {type:'rice',group:'米飯'};if(/湯|羹/.test(n))return {type:'soup',group:'湯品'};return {type:'soup',group:'其他'}}
 function buildLunchLive(records,source){$('menuGrid').replaceChildren();records.forEach((d,i)=>{let card=document.createElement('article');card.className='menuItem'+(i===0?' featured':'');let art=document.createElement('div');art.className='dishArt';art.style.background=colors[d.type]||'#eff2e8';art.innerHTML=svgFood(d.type);if((source==='official'||source==='school_website')&&d.photo_url){try{let u=new URL(d.photo_url);if(u.protocol==='https:'&&u.hostname==='fatraceschool.k12ea.gov.tw'){let img=document.createElement('img');img.alt=d.name+' 官方提供的午餐照片';img.src=u.href;img.loading='lazy';img.style.cssText='width:100%;height:100%;object-fit:cover';img.onerror=()=>img.remove();art.prepend(img)}}catch(e){}}let body=document.createElement('div');body.className='menuContent';let category=document.createElement('div');category.className='type';category.textContent=d.category||'午餐菜色';let title=document.createElement('h3');title.textContent=d.name;let note=document.createElement('p');note.textContent=((source==='official'||source==='school_website')&&d.photo_url)?'學校菜色圖片／載入失敗時為示意插畫':'餐點插畫示意';body.append(category,title,note);card.append(art,body);$('menuGrid').append(card)});const main=records.find(r=>r.category==='主菜')||records.find(r=>['魚肉','雞肉','豬肉','牛肉','豆腐'].includes(r.group))||records[0];$('mealTip').textContent=source==='demo'?'以下分析基於示範菜單，不是這所學校實際供餐。':'午餐菜色含「'+main.name+'」。晚餐可優先考慮不同的主要食材；但供餐不代表孩子實際全部吃下。'}
 async function showDashboard(resetScroll=true){
@@ -330,7 +342,13 @@ async function showDashboard(resetScroll=true){
   const changed=timeSeen(data.last_changed_at);
   if(first)note+=' 本站最早觀測：'+first+'（非學校上傳時間）。';
   if(Number(data.revision_count)>0&&changed)note+=' 最近觀測到變更：'+changed+'。';
+  if(data.retrieved_at)note+=' 菜單最後驗證：'+timeSeen(data.retrieved_at)+'。';
   showLunch(data.source,dishes,note);
+  if(Array.isArray(data.menu_options)&&data.menu_options.length>1){
+   const names=data.menu_options.slice(0,5).map(x=>String(x).slice(0,35)).join('、');
+   $('menuScopeNotice').textContent='⚠ 學校來源有多組供餐選項（'+names+'）。本站目前只顯示一組已驗證的菜單；請點選學校來源確認孩子所屬餐別或供餐商。';
+   $('menuScopeNotice').classList.remove('hidden');
+  }
   if(data.source==='school_website'&&typeof data.source_url==='string'){
    try{
     const link=new URL(data.source_url);
