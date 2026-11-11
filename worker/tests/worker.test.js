@@ -59,6 +59,7 @@ async function mockOpenai(t,fn){
  let calls=0;
  const old=globalThis.fetch;globalThis.fetch=async(url,opts)=>{
   if(new URL(url).hostname==="kio5232000.github.io"){
+   assert.equal(opts.redirect,"manual","Cloudflare Workers does not support redirect:error");
    return Response.json({source:"school_website",school_code:verified.school_code,date,dishes:sample.dishes});
   }
   calls++;
@@ -149,4 +150,17 @@ test("source fallback verifies same repository menu without charging diagnostics
  t.after(()=>{globalThis.fetch=old});
  const e=env();const r=new Request("https://worker.example.workers.dev/cache-status",{method:"POST",headers:{"Origin":origin,"Content-Type":"application/json","CF-Connecting-IP":"203.0.113.5"},body:JSON.stringify(verified)});
  const b=await (await worker.fetch(r,e)).json();assert.equal(b.verified,true);assert.equal(b.source,"raw.githubusercontent.com");assert.equal(calls,0);assert.equal(e.QUOTA_DB.counts.size,0);
+});
+
+test("public source redirects are rejected, not followed or charged",async(t)=>{
+ const old=globalThis.fetch;let calls=0;
+ globalThis.fetch=async(url,opts)=>{
+  assert.equal(opts.redirect,"manual");
+  if(["kio5232000.github.io","raw.githubusercontent.com"].includes(new URL(url).hostname))return new Response(null,{status:302,headers:{Location:"https://untrusted.example/"}});
+  calls++;throw Error("unexpected model call");
+ };
+ t.after(()=>{globalThis.fetch=old});
+ const e=env();const res=await worker.fetch(req(verified),e);
+ assert.equal(res.status,409);assert.match((await res.json()).cache_reason,/redirect_rejected/);
+ assert.equal(calls,0);assert.equal(e.QUOTA_DB.counts.size,0);
 });
