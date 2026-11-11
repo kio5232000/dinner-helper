@@ -1,0 +1,41 @@
+{
+  "source": "school_website",
+  "source_url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-13",
+  "retrieved_at": "2026-11-11T23:33:40+00:00",
+  "first_seen_at": "2026-11-11T23:33:40+00:00",
+  "last_changed_at": "2026-11-11T23:33:40+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "73f1ea1812a2a7474e29da2b1f7d09fea1021e49ed4c03e45b7f7691393c3d19",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-13",
+  "school_code": "114758",
+  "school_name": "市立柳營國小",
+  "dishes": [
+    {
+      "name": "超纖穀豆飯",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1673921170065247"
+    },
+    {
+      "name": "梅筍扣肉",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1415326544229789"
+    },
+    {
+      "name": "番茄豆腐",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1516322165250935"
+    },
+    {
+      "name": "有機高麗菜",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1590725682365101"
+    },
+    {
+      "name": "味噌蘿蔔海帶湯",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1776989034021976"
+    }
+  ]
+}

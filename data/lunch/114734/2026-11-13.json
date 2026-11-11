@@ -1,0 +1,41 @@
+{
+  "source": "school_website",
+  "source_url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-13",
+  "retrieved_at": "2026-11-11T23:33:45+00:00",
+  "first_seen_at": "2026-11-11T23:33:45+00:00",
+  "last_changed_at": "2026-11-11T23:33:45+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "3a74bdf84a1b118d9264206564744647348166156258cdf8de6741cd3d66471f",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-13",
+  "school_code": "114734",
+  "school_name": "市立新生國小",
+  "dishes": [
+    {
+      "name": "燕麥飯",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1409540663157787"
+    },
+    {
+      "name": "咖哩豬肉",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1410507570104525"
+    },
+    {
+      "name": "豆芽肉絲",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1792635380036570"
+    },
+    {
+      "name": "有機蔬菜",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1456981149405289"
+    },
+    {
+      "name": "麥茶",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1410507570104462"
+    }
+  ]
+}

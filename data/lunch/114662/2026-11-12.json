@@ -1,0 +1,41 @@
+{
+  "source": "school_website",
+  "source_url": "https://dses.dses.tn.edu.tw/index.php?period=2026-11-12",
+  "retrieved_at": "2026-11-11T23:33:10+00:00",
+  "first_seen_at": "2026-11-11T23:33:10+00:00",
+  "last_changed_at": "2026-11-11T23:33:10+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "dfbe4b4130712f4c9a35d7712b57887907724aae209a9320f111221cf44a2a1d",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-12",
+  "school_code": "114662",
+  "school_name": "市立大山國小",
+  "dishes": [
+    {
+      "name": "麥片飯",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1409554707274404"
+    },
+    {
+      "name": "薑母鴨",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1451879273181783"
+    },
+    {
+      "name": "黃豆芽炒肉絲",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1793072904089543"
+    },
+    {
+      "name": "翠綠油菜",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1779863118063930"
+    },
+    {
+      "name": "洋芋排骨湯",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1779863015074369"
+    }
+  ]
+}
