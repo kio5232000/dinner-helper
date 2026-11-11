@@ -80,13 +80,12 @@ test("valid request produces three recipes without exposing key",async(t)=>{
  await mockOpenai(t);const result=await worker.fetch(req(),env());
  assert.equal(result.status,200);
  const body=await result.json();assert.equal(body.recipes.length,3);
- assert.equal(body.remaining,1);assert.equal(body.mode,"ai");
+ assert.equal(body.remaining,4);assert.equal(body.mode,"ai");
  assert.equal(JSON.stringify(body).includes("mock-server-only"),false);
 });
-test("per IP quota blocks third AI call",async(t)=>{
+test("per IP quota blocks sixth AI call",async(t)=>{
  await mockOpenai(t);const e=env();
- assert.equal((await worker.fetch(req(),e)).status,200);
- assert.equal((await worker.fetch(req(),e)).status,200);
+ for(let i=0;i<5;i++)assert.equal((await worker.fetch(req(),e)).status,200);
  const blocked=await worker.fetch(req(),e);
  assert.equal(blocked.status,429);
 });
@@ -163,4 +162,22 @@ test("public source redirects are rejected, not followed or charged",async(t)=>{
  const e=env();const res=await worker.fetch(req(verified),e);
  assert.equal(res.status,409);assert.match((await res.json()).cache_reason,/redirect_rejected/);
  assert.equal(calls,0);assert.equal(e.QUOTA_DB.counts.size,0);
+});
+
+test("site quota blocks 36th new generation while existing cache remains readable",async(t)=>{
+ const calls=await mockOpenai(t);const e=env();
+ assert.equal((await worker.fetch(req(verified,"203.0.113.1"),e)).status,200);
+ for(let i=2;i<=35;i++)assert.equal((await worker.fetch(req(sample,"203.0.113."+i),e)).status,200);
+ assert.equal((await worker.fetch(req(sample,"203.0.113.36"),e)).status,429);
+ const hit=await worker.fetch(req(verified,"203.0.113.36"),e);
+ assert.equal(hit.status,200);assert.equal((await hit.json()).cached,true);
+ assert.equal(calls(),35);
+});
+test("cache hit still works after same IP exhausts new-generation allowance",async(t)=>{
+ const calls=await mockOpenai(t);const e=env();
+ assert.equal((await worker.fetch(req(verified),e)).status,200);
+ for(let i=0;i<4;i++)assert.equal((await worker.fetch(req(),e)).status,200);
+ assert.equal((await worker.fetch(req(),e)).status,429);
+ const hit=await worker.fetch(req(verified),e);assert.equal(hit.status,200);
+ assert.equal((await hit.json()).cached,true);assert.equal(calls(),5);
 });
