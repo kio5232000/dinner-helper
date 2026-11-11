@@ -1,4 +1,4 @@
-// V2.1.1 AI dinner assistant: verified-menu cache diagnostics and fail-closed generation.
+// V2.1.2 AI dinner assistant: verified-menu cache diagnostics and fail-closed generation.
 // Never place API keys in this source. The frontend submits only lunch dish names.
 const ORIGIN = "https://kio5232000.github.io";
 const MAX_GLOBAL = 35;
@@ -72,7 +72,8 @@ async function verifiedKey(body,dishes,day) {
   for(const url of sources){
     const source=new URL(url).hostname;
     try{
-      const response=await fetch(url,{signal:AbortSignal.timeout(7000),redirect:"error",headers:{"Accept":"application/json","Cache-Control":"no-cache"}});
+      const response=await fetch(url,{signal:AbortSignal.timeout(7000),redirect:"manual",headers:{"Accept":"application/json","Cache-Control":"no-cache"}});
+      if(response.status>=300&&response.status<400){failures.push(source+":redirect_rejected");continue}
       if(!response.ok){failures.push(source+":http_"+response.status);continue}
       let publicMenu;
       try {publicMenu=await response.json()} catch(e){failures.push(source+":invalid_json");continue}
@@ -166,8 +167,8 @@ export default {
     if(url.pathname==="/cache-status"){
       try {
         const cached=cacheKey?!!(await readCache(db,cacheKey,Date.now())):false;
-        return json({version:"2.1.1",verified:!!cacheKey,cached,reason:verification.reason,source:verification.source||null,day},200,origin);
-      } catch(e){return json({error:"快取資料庫暫時不可用",version:"2.1.1"},503,origin)}
+        return json({version:"2.1.2",verified:!!cacheKey,cached,reason:verification.reason,source:verification.source||null,day},200,origin);
+      } catch(e){return json({error:"快取資料庫暫時不可用",version:"2.1.2"},503,origin)}
     }
     if(verification.requested&&!cacheKey){
       console.warn("Public lunch verification failed: "+verification.reason);
