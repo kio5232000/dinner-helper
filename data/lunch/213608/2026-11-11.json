@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.sses.tn.edu.tw/index.php?period=2026-11-11",
+  "retrieved_at": "2026-11-11T01:45:04+00:00",
+  "first_seen_at": "2026-11-11T01:45:04+00:00",
+  "last_changed_at": "2026-11-11T01:45:04+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "5132df92a4cc850cc7667fa7da5972da470aad58be97ac1ec22434247a5a920b",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-11",
+  "school_code": "213608",
+  "school_name": "市立南區新興國小",
+  "dishes": [
+    {
+      "name": "麵食",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "香酥魚塊",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "烤地瓜",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "醬拌海帶根",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "魚羹麵",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "乳品",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}
