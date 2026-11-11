@@ -203,7 +203,7 @@ $('cacheCheck').addEventListener('click',async()=>{
   const data=await res.json();
   if(id!==aiRequestSerial)return;
   if(!res.ok)throw Error(data.error||'尚未部署新版 Worker');
-  note.textContent=data.verified?(data.cached?'已核對菜單，有有效快取，可免費讀取。':'已核對菜單，但尚無有效快取。下一次成功生成後會保存。'):'菜單核對未通過：'+String(data.reason||'unknown');
+  note.textContent=data.verified?(data.cached?'已核對菜單，有有效快取，可免費讀取。':'已核對菜單，但尚無有效快取。下一次成功生成後會保存。'):'菜單核對未通過：'+String(data.reason||'unknown')+'（後端版本 '+String(data.version||'未知')+'）';
  }catch(e){if(id===aiRequestSerial)note.textContent='快取檢測失敗：'+String(e.message||'請確認 Worker 已更新')}
  finally{b.disabled=false}
 });
