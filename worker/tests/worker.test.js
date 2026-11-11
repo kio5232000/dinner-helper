@@ -114,9 +114,9 @@ test("verified reordered menus share a result across IPs, without quota or dupli
 test("manual and modified menus do not enter shared cache",async(t)=>{
  const calls=await mockOpenai(t);const e=env();
  const changed={...verified,dishes:[...sample.dishes.slice(0,2),{name:"高麗菜",category:"蔬菜"}]};
- assert.equal((await worker.fetch(req(changed),e)).status,200);
+ assert.equal((await worker.fetch(req(changed),e)).status,409);
  assert.equal((await worker.fetch(req(sample),e)).status,200);
- assert.equal(calls(),2);assert.equal(e.QUOTA_DB.cache.size,0);
+ assert.equal(calls(),1);assert.equal(e.QUOTA_DB.cache.size,0);
 });
 test("overlapping verified generation returns 409 without second model call",async(t)=>{
  let entered,finish;const enteredPromise=new Promise(r=>{entered=r});const hold=new Promise(r=>{finish=r});
@@ -134,4 +134,19 @@ test("invalid generated content is not cached but reported usage is counted",asy
  await mockOpenai(t,()=>Response.json({usage:{input_tokens:25,output_tokens:30},output:[{content:[{type:"output_text",text:"{}"}]}]}));
  const e=env();assert.equal((await worker.fetch(req(verified),e)).status,502);
  assert.equal(e.QUOTA_DB.cache.size,0);assert.equal([...e.QUOTA_DB.usage.values()][0].output,30);
+});
+
+test("cache-status inspects verified menu without consuming quota",async(t)=>{
+ const calls=await mockOpenai(t);const e=env();
+ const r=new Request("https://worker.example.workers.dev/cache-status",{method:"POST",headers:{"Origin":origin,"Content-Type":"application/json","CF-Connecting-IP":"203.0.113.5"},body:JSON.stringify(verified)});
+ const result=await worker.fetch(r,e);assert.equal(result.status,200);
+ const b=await result.json();assert.equal(b.verified,true);assert.equal(b.cached,false);
+ assert.equal(calls(),0);assert.equal(e.QUOTA_DB.counts.size,0);
+});
+test("source fallback verifies same repository menu without charging diagnostics",async(t)=>{
+ let calls=0;const old=globalThis.fetch;
+ globalThis.fetch=async(url)=>{const host=new URL(url).hostname;if(host==="kio5232000.github.io")return new Response("unavailable",{status:503});if(host==="raw.githubusercontent.com")return Response.json({source:"school_website",school_code:verified.school_code,date,dishes:sample.dishes});calls++;throw Error("unexpected paid call")};
+ t.after(()=>{globalThis.fetch=old});
+ const e=env();const r=new Request("https://worker.example.workers.dev/cache-status",{method:"POST",headers:{"Origin":origin,"Content-Type":"application/json","CF-Connecting-IP":"203.0.113.5"},body:JSON.stringify(verified)});
+ const b=await (await worker.fetch(r,e)).json();assert.equal(b.verified,true);assert.equal(b.source,"raw.githubusercontent.com");assert.equal(calls,0);assert.equal(e.QUOTA_DB.counts.size,0);
 });
