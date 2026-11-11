@@ -4,13 +4,24 @@
 
 **網站：** https://kio5232000.github.io/dinner-helper/
 
+## V2.1｜AI 成本優化版（2026-11-11）
+
+- 相同且經公開學校午餐 JSON 核對的菜單共用 AI 食譜，快取有效期為七天，內容或提示詞版本改變就會重新生成。
+- 快取命中不扣新生成額度；未命中仍限制每來源 IP 每臺灣日 2 次、全站 35 次。
+- 透過 D1 原子寫入取得 90 秒生成權，同菜單同時查詢不會重複呼叫模型；其他請求會收到稍後再試的提示。
+- 自行輸入或未通過公開學校資料核對的菜單不保存至共用快取，仍可在額度內請求 AI。
+- 每日按模型彙總 OpenAI Responses API 回傳的 input、cached input、output token 與有用量資訊的回應數。此為程式端觀測資料，不能取代 OpenAI Usage 官方帳務。
+- 手機食譜展開後，食材與料理步驟使用全寬條列，並清楚區分新生成及共用推薦。
+- **部署：** GitHub Pages 更新與 Cloudflare Worker 部署分開。必須先在既有 D1 執行 `worker/migrations/0002_cache_usage.sql`，再部署 `worker/src/index.js`，不用建立新資料庫或更換秘密。
+- 操作指南：[V2.1 快取升級與驗收](docs/ai-v2.1-upgrade.md)。
+
 ## V2.0｜AI 晚餐助手（已開發，待帳戶啟用）
 
 已完成：從學校午餐菜色分析可能的主要食材、生成三道晚餐、推薦原因、食材清單、簡明料理步驟與預估時間；原有規則式免費晚餐推薦仍保留。
 
 **安全架構：** GitHub Pages 不存放 OpenAI API Key；前端僅將午餐菜名與分類送至 Cloudflare Worker，由 Worker 使用 OpenAI Responses API。Cloudflare D1 設有每來源 IP 每臺灣日 2 次及全站每臺灣日 35 次請求配額，且不儲存原始 IP。
 
-**目前尚未啟用真實 AI：** 根目錄 `ai-config.js` 的 Worker 網址預設為空，使用者會看到「AI 尚未啟用」與可正常使用的免費基本推薦。待網站擁有者於 Cloudflare 建立 D1、設定 Worker secrets 與 OpenAI 專案金鑰，再填入公開 Worker URL，才能正式啟動。**不要將 API Key 放進 GitHub、前端或聊天中。**
+**V2.0 已啟用真實 AI：** 2026-11-10 網站擁有者完成 Cloudflare 帳戶、D1 與金鑰設定，並在手機成功驗收 AI 晚餐推薦。前端僅有公開 Worker URL。**不要將 API Key 放進 GitHub、前端或聊天中。**
 
 - 詳細操作：**[V2.0 安全部署與費用控制指南](docs/ai-v2-deployment.md)**
 - Worker 核心程式：`worker/src/index.js`
