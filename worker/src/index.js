@@ -1,4 +1,4 @@
-// V2.1 AI dinner assistant: Cloudflare Worker + D1 verified-menu cache.
+// V2.1.1 AI dinner assistant: verified-menu cache diagnostics and fail-closed generation.
 // Never place API keys in this source. The frontend submits only lunch dish names.
 const ORIGIN = "https://kio5232000.github.io";
 const MAX_GLOBAL = 35;
@@ -17,8 +17,10 @@ function json(value, status=200, origin=null) {
     "Vary":"Origin"
   }});
 }
-function tainanDay() {
-  return new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Taipei",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+function tainanDay(at=new Date()) {
+  const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Taipei",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(at);
+  const p=Object.fromEntries(parts.map(x=>[x.type,x.value]));
+  return p.year+"-"+p.month+"-"+p.day;
 }
 function validate(body) {
   if (!body || typeof body!=="object" || Array.isArray(body)) throw Error("格式不正確");
@@ -53,24 +55,42 @@ function canonical(dishes) {
     .sort((a,b)=>a.category<b.category?-1:a.category>b.category?1:a.name<b.name?-1:a.name>b.name?1:0));
 }
 async function verifiedKey(body,dishes,day) {
+  const requested=Object.hasOwn(body,"school_code") || Object.hasOwn(body,"date");
+  if(!requested) return {key:null,reason:"manual_or_demo",requested:false};
   if(typeof body.school_code!=="string" || !/^\d{6}$/.test(body.school_code) ||
-     typeof body.date!=="string" || !/^\d{4}-\d{2}-\d{2}$/.test(body.date)) return null;
+     typeof body.date!=="string" || !/^\d{4}-\d{2}-\d{2}$/.test(body.date)) return {key:null,reason:"invalid_school_or_date",requested:true};
   const today=new Date(day+"T00:00:00+08:00");
-  if(!Number.isFinite(today.getTime())) return null;
-  const tomorrow=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Taipei",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date(today.getTime()+86400000));
-  if(body.date!==day && body.date!==tomorrow) return null;
-  try {
-    const url=ORIGIN+"/dinner-helper/data/lunch/"+body.school_code+"/"+body.date+".json";
-    const response=await fetch(url,{signal:AbortSignal.timeout(5000),redirect:"error",headers:{"Accept":"application/json"}});
-    if(!response.ok) return null;
-    const publicMenu=await response.json();
-    if(publicMenu.school_code!==body.school_code || publicMenu.date!==body.date ||
-       !["official","school_website"].includes(publicMenu.source)) return null;
-    const verified=validate({dishes:publicMenu.dishes}).dishes;
-    if(canonical(verified)!==canonical(dishes)) return null;
-    const hash=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(CACHE_VERSION+"|"+MODEL+"|"+canonical(verified)));
-    return Array.from(new Uint8Array(hash),x=>x.toString(16).padStart(2,"0")).join("");
-  } catch(e) {return null}
+  const tomorrow=tainanDay(new Date(today.getTime()+86400000));
+  if(body.date!==day && body.date!==tomorrow) return {key:null,reason:"date_not_current_or_next",requested:true};
+  const suffix=body.school_code+"/"+body.date+".json";
+  // Fixed public sources from the same repository. No user-controlled host.
+  const sources=[
+    ORIGIN+"/dinner-helper/data/lunch/"+suffix,
+    "https://raw.githubusercontent.com/kio5232000/dinner-helper/refs/heads/main/data/lunch/"+suffix
+  ];
+  const failures=[];
+  for(const url of sources){
+    const source=new URL(url).hostname;
+    try{
+      const response=await fetch(url,{signal:AbortSignal.timeout(7000),redirect:"error",headers:{"Accept":"application/json","Cache-Control":"no-cache"}});
+      if(!response.ok){failures.push(source+":http_"+response.status);continue}
+      let publicMenu;
+      try {publicMenu=await response.json()} catch(e){failures.push(source+":invalid_json");continue}
+      if(publicMenu.school_code!==body.school_code || publicMenu.date!==body.date ||
+         !["official","school_website"].includes(publicMenu.source)) {
+        failures.push(source+":source_metadata_mismatch");continue
+      }
+      let verified;
+      try {verified=validate({dishes:publicMenu.dishes}).dishes} catch(e){failures.push(source+":invalid_menu");continue}
+      if(canonical(verified)!==canonical(dishes)){
+        // A published menu with different dishes must not be treated as a match.
+        return {key:null,reason:"menu_content_mismatch",requested:true,source};
+      }
+      const hash=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(CACHE_VERSION+"|"+MODEL+"|"+canonical(verified)));
+      return {key:Array.from(new Uint8Array(hash),x=>x.toString(16).padStart(2,"0")).join(""),reason:"verified",requested:true,source};
+    }catch(e){failures.push(source+":fetch_failed")}
+  }
+  return {key:null,reason:failures.join(";")||"source_unavailable",requested:true};
 }
 async function readCache(db,key,now) {
   const row=await db.prepare("SELECT result_json FROM ai_cache WHERE cache_key=? AND expires_at>? AND result_json IS NOT NULL").bind(key,now).first();
@@ -129,7 +149,7 @@ export default {
       "Access-Control-Allow-Origin":ORIGIN,"Access-Control-Allow-Methods":"POST, OPTIONS",
       "Access-Control-Allow-Headers":"Content-Type","Access-Control-Max-Age":"600","Vary":"Origin"
     }});
-    if(request.method!=="POST" || url.pathname!=="/recommend") return json({error:"找不到此服務"},404,origin);
+    if(request.method!=="POST" || !["/recommend","/cache-status"].includes(url.pathname)) return json({error:"找不到此服務"},404,origin);
     if(!env.OPENAI_API_KEY || !env.QUOTA_DB || !env.IP_HASH_PEPPER) return json({error:"AI 後端尚未完成設定"},503,origin);
     if(!request.headers.get("Content-Type")?.startsWith("application/json")) return json({error:"僅接受 JSON"},415,origin);
     if(Number(request.headers.get("Content-Length")||0)>5500) return json({error:"資料過大"},413,origin);
@@ -140,7 +160,19 @@ export default {
       body=JSON.parse(raw);({dishes}=validate(body));
     } catch(e){return json({error:e.message==="Unexpected end of JSON input"?"JSON 格式錯誤":"請檢查菜單內容"},400,origin)}
     const db=env.QUOTA_DB,day=tainanDay();
-    const cacheKey=await verifiedKey(body,dishes,day);
+    const verification=await verifiedKey(body,dishes,day);
+    const cacheKey=verification.key;
+    // This route never reserves quota, writes a generation lease or calls OpenAI.
+    if(url.pathname==="/cache-status"){
+      try {
+        const cached=cacheKey?!!(await readCache(db,cacheKey,Date.now())):false;
+        return json({version:"2.1.1",verified:!!cacheKey,cached,reason:verification.reason,source:verification.source||null,day},200,origin);
+      } catch(e){return json({error:"快取資料庫暫時不可用",version:"2.1.1"},503,origin)}
+    }
+    if(verification.requested&&!cacheKey){
+      console.warn("Public lunch verification failed: "+verification.reason);
+      return json({error:"學校午餐尚未通過快取核對，請更新午餐資料後再試。本次未扣除 AI 生成額度。",cache_reason:verification.reason},409,origin);
+    }
     const owner=crypto.randomUUID();
     let claimed=false;
     try {
@@ -189,10 +221,14 @@ export default {
     try {result=JSON.parse(output)} catch(e){return json({error:"AI 未產生完整回應，請使用基本料理推薦"},502,origin)}
     if(!validResult(result)) return json({error:"AI 產生的料理資料不完整，請使用基本料理推薦"},502,origin);
     if(cacheKey && claimed){
-      try {await saveCache(db,cacheKey,owner,result)} catch(e){console.warn("AI cache write failed")}
+      try {await saveCache(db,cacheKey,owner,result)} catch(e){
+        console.warn("AI cache write failed");
+        return json({analysis:result.analysis,recipes:result.recipes,disclaimer:result.disclaimer,
+          remaining:quota.remaining,mode:"ai",cached:false,cache_saved:false},200,origin);
+      }
     }
     return json({analysis:result.analysis,recipes:result.recipes,disclaimer:result.disclaimer,
-      remaining:quota.remaining,mode:"ai",cached:false},200,origin);
+      remaining:quota.remaining,mode:"ai",cached:false,cache_saved:!!cacheKey},200,origin);
     } catch(e){return json({error:"用量或快取資料庫暫時不可用，AI 已暫停以保護費用"},503,origin)}
     finally {
       if(claimed) {
