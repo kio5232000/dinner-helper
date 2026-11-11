@@ -1,8 +1,8 @@
-// V2.1.3 AI dinner assistant: verified-menu cache diagnostics and fail-closed generation.
+// V2.3.0 AI dinner assistant: verified-menu cache diagnostics and fail-closed generation.
 // Never place API keys in this source. The frontend submits only lunch dish names.
 const ORIGIN = "https://kio5232000.github.io";
 const MAX_GLOBAL = 35;
-const MAX_PER_IP = 2;
+const MAX_PER_IP = 5;
 const MODEL = "gpt-5-mini";
 const CACHE_VERSION = "v2.1";
 const CACHE_TTL = 7*24*60*60*1000;
@@ -44,9 +44,9 @@ async function reserve(db, day, hash) {
   // still consume a reservation, deliberately favoring cost protection.
   const upsert="INSERT INTO quota(day, key, used) VALUES (?, ?, 1) ON CONFLICT(day,key) DO UPDATE SET used=quota.used+1 WHERE quota.used < ? RETURNING used";
   const mine=await db.prepare(upsert).bind(day,"ip:"+hash,MAX_PER_IP).first();
-  if(!mine) return {allowed:false,message:"今天的 AI 免費體驗次數已用完，仍可使用基本料理推薦。"};
+  if(!mine) return {allowed:false,message:"今天的新推薦額度已用完，已有的共用推薦仍可使用。"};
   const all=await db.prepare(upsert).bind(day,"global",MAX_GLOBAL).first();
-  if(!all) return {allowed:false,message:"今日 AI 體驗總額度已用完，明天可再試。"};
+  if(!all) return {allowed:false,message:"今天的全站新推薦額度已用完，已有的共用推薦仍可使用。"};
   return {allowed:true,remaining:Math.max(0,MAX_PER_IP-mine.used)};
 }
 // Only public, verified school menus are eligible for shared caching.
@@ -167,8 +167,8 @@ export default {
     if(url.pathname==="/cache-status"){
       try {
         const cached=cacheKey?!!(await readCache(db,cacheKey,Date.now())):false;
-        return json({version:"2.1.3",verified:!!cacheKey,cached,reason:verification.reason,source:verification.source||null,day},200,origin);
-      } catch(e){return json({error:"快取資料庫暫時不可用",version:"2.1.3"},503,origin)}
+        return json({version:"2.3.0",verified:!!cacheKey,cached,reason:verification.reason,source:verification.source||null,day},200,origin);
+      } catch(e){return json({error:"快取資料庫暫時不可用",version:"2.3.0"},503,origin)}
     }
     if(verification.requested&&!cacheKey){
       console.warn("Public lunch verification failed: "+verification.reason);
