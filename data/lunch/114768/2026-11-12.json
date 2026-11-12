@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-12",
+  "retrieved_at": "2026-11-12T01:56:54+00:00",
+  "first_seen_at": "2026-11-12T01:56:54+00:00",
+  "last_changed_at": "2026-11-12T01:56:54+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "0b1315d285da245c53a507c42f35ac258ece00b022a1217a812d12f0ba013b96",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-12",
+  "school_code": "114768",
+  "school_name": "市立新嘉國小",
+  "dishes": [
+    {
+      "name": "紫米飯",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1418867391211737"
+    },
+    {
+      "name": "蘿蔔燒肉",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1773889194010065"
+    },
+    {
+      "name": "豆芽炒雞絲",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1773293447047483"
+    },
+    {
+      "name": "薑炒蚵白菜",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1791250788009237"
+    },
+    {
+      "name": "胡椒白菜雞湯",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1788483926048295"
+    },
+    {
+      "name": "火龍果",
+      "category": "附餐",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1507185345257826"
+    }
+  ]
+}

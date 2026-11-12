@@ -1,23 +1,27 @@
 {
   "timezone": "Asia/Taipei",
-  "generated_at": "2026-11-11T23:35:13+00:00",
+  "generated_at": "2026-11-12T01:58:52+00:00",
   "target_date": "2026-11-12",
   "pilot_schools": 30,
   "current_and_next": {
     "2026-11-12": {
       "school_count": 30,
-      "available": 26,
-      "unavailable": 4,
+      "available": 30,
+      "unavailable": 0,
       "available_codes": [
         "114758",
         "213601",
+        "114768",
         "114734",
         "213640",
         "213623",
         "114669",
         "213518",
         "114785",
+        "213615",
+        "213608",
         "213620",
+        "213637",
         "114776",
         "114638",
         "114624",
@@ -66,7 +70,7 @@
         "114659",
         "114660"
       ],
-      "checked_for_date": true
+      "checked_for_date": false
     }
   },
   "recent_school_days": [
@@ -105,8 +109,8 @@
     {
       "date": "2026-11-12",
       "observed_schools": 30,
-      "schools_with_menu_observed": 26,
-      "observation_rate_percent": 86.7,
+      "schools_with_menu_observed": 30,
+      "observation_rate_percent": 100.0,
       "last_observed_change_count": 0,
       "note": "Observed coverage only; not school-wide publishing reliability or attendance"
     }
@@ -136,8 +140,8 @@
       "level": "國小",
       "code": "114768",
       "observed_school_days": 5,
-      "menu_observed_days": 4,
-      "observed_rate_percent": 80.0
+      "menu_observed_days": 5,
+      "observed_rate_percent": 100.0
     },
     {
       "name": "新生國小",
@@ -199,8 +203,8 @@
       "level": "國小",
       "code": "213615",
       "observed_school_days": 5,
-      "menu_observed_days": 4,
-      "observed_rate_percent": 80.0
+      "menu_observed_days": 5,
+      "observed_rate_percent": 100.0
     },
     {
       "name": "新興國小",
@@ -208,8 +212,8 @@
       "level": "國小",
       "code": "213608",
       "observed_school_days": 3,
-      "menu_observed_days": 2,
-      "observed_rate_percent": 66.7
+      "menu_observed_days": 3,
+      "observed_rate_percent": 100.0
     },
     {
       "name": "成功國小",
@@ -226,8 +230,8 @@
       "level": "國小",
       "code": "213637",
       "observed_school_days": 3,
-      "menu_observed_days": 2,
-      "observed_rate_percent": 66.7
+      "menu_observed_days": 3,
+      "observed_rate_percent": 100.0
     },
     {
       "name": "崑山國小",
