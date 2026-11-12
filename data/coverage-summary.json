@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Taipei",
-  "generated_at": "2026-11-12T06:31:05+00:00",
+  "generated_at": "2026-11-12T12:08:43+00:00",
   "target_date": "2026-11-12",
   "pilot_schools": 30,
   "current_and_next": {
@@ -40,12 +40,12 @@
         "114660",
         "114501"
       ],
-      "checked_for_date": true
+      "checked_for_date": false
     },
     "2026-11-13": {
       "school_count": 30,
-      "available": 22,
-      "unavailable": 8,
+      "available": 24,
+      "unavailable": 6,
       "available_codes": [
         "114758",
         "213601",
@@ -58,11 +58,13 @@
         "213620",
         "213637",
         "114776",
+        "114638",
         "114624",
         "114635",
         "213612",
         "114522",
         "114509",
+        "114511",
         "114543",
         "114504",
         "213618",
@@ -70,7 +72,7 @@
         "114659",
         "114660"
       ],
-      "checked_for_date": false
+      "checked_for_date": true
     }
   },
   "recent_school_days": [
