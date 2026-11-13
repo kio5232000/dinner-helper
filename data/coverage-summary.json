@@ -1,13 +1,13 @@
 {
   "timezone": "Asia/Taipei",
-  "generated_at": "2026-11-12T23:27:27+00:00",
+  "generated_at": "2026-11-13T01:52:39+00:00",
   "target_date": "2026-11-13",
   "pilot_schools": 30,
   "current_and_next": {
     "2026-11-13": {
       "school_count": 30,
-      "available": 25,
-      "unavailable": 5,
+      "available": 29,
+      "unavailable": 1,
       "available_codes": [
         "114758",
         "213601",
@@ -17,6 +17,8 @@
         "114669",
         "213518",
         "114785",
+        "213615",
+        "213608",
         "213620",
         "213637",
         "114776",
@@ -24,6 +26,7 @@
         "114624",
         "114635",
         "213612",
+        "213616",
         "114522",
         "114509",
         "114511",
@@ -33,7 +36,8 @@
         "213618",
         "213629",
         "114659",
-        "114660"
+        "114660",
+        "114501"
       ],
       "checked_for_date": true
     },
@@ -42,7 +46,7 @@
       "available": 0,
       "unavailable": 30,
       "available_codes": [],
-      "checked_for_date": true
+      "checked_for_date": false
     }
   },
   "recent_school_days": [
@@ -81,9 +85,9 @@
     {
       "date": "2026-11-13",
       "observed_schools": 30,
-      "schools_with_menu_observed": 25,
-      "observation_rate_percent": 83.3,
-      "last_observed_change_count": 0,
+      "schools_with_menu_observed": 29,
+      "observation_rate_percent": 96.7,
+      "last_observed_change_count": 1,
       "note": "Observed coverage only; not school-wide publishing reliability or attendance"
     }
   ],
@@ -175,8 +179,8 @@
       "level": "國小",
       "code": "213615",
       "observed_school_days": 5,
-      "menu_observed_days": 4,
-      "observed_rate_percent": 80.0
+      "menu_observed_days": 5,
+      "observed_rate_percent": 100.0
     },
     {
       "name": "新興國小",
@@ -184,8 +188,8 @@
       "level": "國小",
       "code": "213608",
       "observed_school_days": 4,
-      "menu_observed_days": 3,
-      "observed_rate_percent": 75.0
+      "menu_observed_days": 4,
+      "observed_rate_percent": 100.0
     },
     {
       "name": "成功國小",
@@ -256,8 +260,8 @@
       "level": "國小",
       "code": "213616",
       "observed_school_days": 4,
-      "menu_observed_days": 3,
-      "observed_rate_percent": 75.0
+      "menu_observed_days": 4,
+      "observed_rate_percent": 100.0
     },
     {
       "name": "大內國中",
@@ -355,8 +359,8 @@
       "level": "國中",
       "code": "114501",
       "observed_school_days": 4,
-      "menu_observed_days": 3,
-      "observed_rate_percent": 75.0
+      "menu_observed_days": 4,
+      "observed_rate_percent": 100.0
     }
   ],
   "limitations": "Rates only indicate menus our system observed for checked school-days; they do not prove publication times or meals served. School closures and late publication may lower the rate."
