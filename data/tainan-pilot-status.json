@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-13T04:12:01+00:00",
+  "checked_at": "2026-11-13T06:28:27+00:00",
   "pilot_only": true,
   "checked_dates": [
     "2026-11-13"
@@ -40,9 +40,16 @@
       "name": "新嘉國小",
       "date": "2026-11-13",
       "school_code": "114768",
-      "status": "unavailable",
+      "status": "ok",
       "source_url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-13",
-      "last_check_note": "ValueError: Matching Tad Lunch3 section had no complete menu"
+      "dishes": [
+        "香鬆飯",
+        "香酥旗魚丁",
+        "咖哩洋芋",
+        "玉筍青花",
+        "甘藍蛋花湯"
+      ],
+      "first_seen_at": "2026-11-13T06:26:41+00:00"
     },
     {
       "name": "新生國小",
@@ -509,9 +516,16 @@
         "name": "新嘉國小",
         "date": "2026-11-13",
         "school_code": "114768",
-        "status": "unavailable",
+        "status": "ok",
         "source_url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-13",
-        "last_check_note": "ValueError: Matching Tad Lunch3 section had no complete menu"
+        "dishes": [
+          "香鬆飯",
+          "香酥旗魚丁",
+          "咖哩洋芋",
+          "玉筍青花",
+          "甘藍蛋花湯"
+        ],
+        "first_seen_at": "2026-11-13T06:26:41+00:00"
       },
       {
         "name": "新生國小",

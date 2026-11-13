@@ -1,16 +1,17 @@
 {
   "timezone": "Asia/Taipei",
-  "generated_at": "2026-11-13T04:12:01+00:00",
+  "generated_at": "2026-11-13T06:28:28+00:00",
   "target_date": "2026-11-13",
   "pilot_schools": 30,
   "current_and_next": {
     "2026-11-13": {
       "school_count": 30,
-      "available": 29,
-      "unavailable": 1,
+      "available": 30,
+      "unavailable": 0,
       "available_codes": [
         "114758",
         "213601",
+        "114768",
         "114734",
         "213640",
         "213623",
@@ -85,8 +86,8 @@
     {
       "date": "2026-11-13",
       "observed_schools": 30,
-      "schools_with_menu_observed": 29,
-      "observation_rate_percent": 96.7,
+      "schools_with_menu_observed": 30,
+      "observation_rate_percent": 100.0,
       "last_observed_change_count": 1,
       "note": "Observed coverage only; not school-wide publishing reliability or attendance"
     }
@@ -116,8 +117,8 @@
       "level": "國小",
       "code": "114768",
       "observed_school_days": 5,
-      "menu_observed_days": 4,
-      "observed_rate_percent": 80.0
+      "menu_observed_days": 5,
+      "observed_rate_percent": 100.0
     },
     {
       "name": "新生國小",
