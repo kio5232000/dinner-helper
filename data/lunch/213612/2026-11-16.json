@@ -1,0 +1,41 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.zhes.tn.edu.tw/index.php?period=2026-11-16",
+  "retrieved_at": "2026-11-15T11:51:23+00:00",
+  "first_seen_at": "2026-11-15T11:51:23+00:00",
+  "last_changed_at": "2026-11-15T11:51:23+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "a0a216895d5128ed0b35e12da7af873c692c9ff6a242abfeddfcd63234936c21",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-16",
+  "school_code": "213612",
+  "school_name": "市立日新國小",
+  "dishes": [
+    {
+      "name": "米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "蘿蔔燒肉",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "烘蛋",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "XO醬高麗菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "冬瓜薏仁湯",
+      "category": "湯品",
+      "photo_url": null
+    }
+  ]
+}

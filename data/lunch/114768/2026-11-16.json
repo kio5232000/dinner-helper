@@ -1,0 +1,41 @@
+{
+  "source": "school_website",
+  "source_url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-16",
+  "retrieved_at": "2026-11-15T11:50:22+00:00",
+  "first_seen_at": "2026-11-15T11:50:22+00:00",
+  "last_changed_at": "2026-11-15T11:50:22+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "5bfb026efb450d0985b71debe6ac73fe17a6befc986f5c5b3ce0a5050f14c94a",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-16",
+  "school_code": "114768",
+  "school_name": "市立新嘉國小",
+  "dishes": [
+    {
+      "name": "小米飯",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1409190389102628"
+    },
+    {
+      "name": "筍乾燜肉",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1701226774073641"
+    },
+    {
+      "name": "玉米四色",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1773889194010066"
+    },
+    {
+      "name": "蒜香油菜",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1777947600031637"
+    },
+    {
+      "name": "藥膳排骨湯",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1794548749073384"
+    }
+  ]
+}

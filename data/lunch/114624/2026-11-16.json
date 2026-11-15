@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.dwps.tn.edu.tw/index.php?period=2026-11-16",
+  "retrieved_at": "2026-11-15T11:51:16+00:00",
+  "first_seen_at": "2026-11-15T11:51:16+00:00",
+  "last_changed_at": "2026-11-15T11:51:16+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "1c93135e97848970efeec679e61f8533c91c106a5a0782d63aff3c30b382af9f",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-16",
+  "school_code": "114624",
+  "school_name": "市立大灣國小",
+  "dishes": [
+    {
+      "name": "胚芽米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "澄汁排骨",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "球花炒肉絲",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "蝦米高麗菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "味噌湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "林鳳營鮮奶",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}
