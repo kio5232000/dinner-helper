@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-17",
+  "retrieved_at": "2026-11-15T23:28:26+00:00",
+  "first_seen_at": "2026-11-15T23:28:26+00:00",
+  "last_changed_at": "2026-11-15T23:28:26+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "a61c883d6332cd5098a8327d51f03499a03d2ff44df5bc9a7cc76133909b08ee",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-17",
+  "school_code": "213601",
+  "school_name": "市立東區勝利國小",
+  "dishes": [
+    {
+      "name": "糙米飯",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1409635541165526"
+    },
+    {
+      "name": "奶香燉雞",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1503899227182558"
+    },
+    {
+      "name": "高麗菜蝦皮",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1760308694034363"
+    },
+    {
+      "name": "有機蔬菜",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1409635541165625"
+    },
+    {
+      "name": "豆豆排骨湯",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1575344743206427"
+    },
+    {
+      "name": "柳丁",
+      "category": "附餐",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1509432855147527"
+    }
+  ]
+}

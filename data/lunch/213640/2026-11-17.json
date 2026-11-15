@@ -1,0 +1,41 @@
+{
+  "source": "school_website",
+  "source_url": "https://old.cmes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-17",
+  "retrieved_at": "2026-11-15T23:28:32+00:00",
+  "first_seen_at": "2026-11-15T23:28:32+00:00",
+  "last_changed_at": "2026-11-15T23:28:32+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "7deed7be204419f06f42a833a68924e42de47895188a3b6b0959d1c7f5985bd4",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-17",
+  "school_code": "213640",
+  "school_name": "市立崇明國小",
+  "dishes": [
+    {
+      "name": "燕麥飯",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1409627020150992"
+    },
+    {
+      "name": "洋芋燒雞",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1793157520005946"
+    },
+    {
+      "name": "螞蟻上樹",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1430191589334769"
+    },
+    {
+      "name": "有機青松菜",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1479973079341578"
+    },
+    {
+      "name": "四神排骨湯",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1635388819080943"
+    }
+  ]
+}

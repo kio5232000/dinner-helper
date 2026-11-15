@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.gmjh.tn.edu.tw/index.php?period=2026-11-17",
+  "retrieved_at": "2026-11-15T23:29:39+00:00",
+  "first_seen_at": "2026-11-15T23:29:39+00:00",
+  "last_changed_at": "2026-11-15T23:29:39+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "e8bc681ca0f16813dc195fc7c0f3f1215770ebd6b24eb991d34a5bb0eaf9b278",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-17",
+  "school_code": "114504",
+  "school_name": "市立關廟國中",
+  "dishes": [
+    {
+      "name": "五穀飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "肉絲蛋炒飯",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "炒蝦仁",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "炒高麗菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "味噌湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "水果",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}
