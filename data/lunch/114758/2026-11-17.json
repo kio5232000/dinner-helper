@@ -1,11 +1,11 @@
 {
   "source": "school_website",
   "source_url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-17",
-  "retrieved_at": "2026-11-15T23:28:23+00:00",
+  "retrieved_at": "2026-11-16T23:25:42+00:00",
   "first_seen_at": "2026-11-15T23:28:23+00:00",
-  "last_changed_at": "2026-11-15T23:28:23+00:00",
-  "revision_count": 0,
-  "menu_fingerprint": "6352874afd2ef25c6febbacd75fced2fe6a9f3493b57d1ddfd2339c79d8d01ad",
+  "last_changed_at": "2026-11-16T23:25:42+00:00",
+  "revision_count": 1,
+  "menu_fingerprint": "96537273140c79c9ac0219cba6565484c541a76776fe0ba455f03204fdecb8dc",
   "menu_options": [],
   "menu_scope_note": "",
   "date": "2026-11-17",
@@ -28,9 +28,9 @@
       "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1763701386051382"
     },
     {
-      "name": "有機青江菜",
+      "name": "有機小松菜",
       "category": "蔬菜",
-      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1418007955127465"
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1415326440229603"
     },
     {
       "name": "花椰菜湯",

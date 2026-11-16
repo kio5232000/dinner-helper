@@ -1,0 +1,66 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.dcjh.tn.edu.tw/index.php?period=2026-11-18",
+  "retrieved_at": "2026-11-16T23:28:24+00:00",
+  "first_seen_at": "2026-11-16T23:28:24+00:00",
+  "last_changed_at": "2026-11-16T23:28:24+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "43ebcdee3691175410f5d3f1f8bc999aa65e2203e44d1210d207de445705e442",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-18",
+  "school_code": "114543",
+  "school_name": "市立大橋國中",
+  "dishes": [
+    {
+      "name": "麥片飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "京醬肉絲",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "玉米蒸蛋",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "麥片飯(素)",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "三杯豆干杏鮑菇(素)",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "刺瓜炒蛋(素)",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "耐隆菜(素)",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "青菜豆腐湯(素)",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "高麗菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "青菜豆腐湯",
+      "category": "湯品",
+      "photo_url": null
+    }
+  ]
+}

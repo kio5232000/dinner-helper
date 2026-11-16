@@ -1,13 +1,45 @@
 {
   "timezone": "Asia/Taipei",
-  "generated_at": "2026-11-16T12:24:08+00:00",
-  "target_date": "2026-11-16",
+  "generated_at": "2026-11-16T23:28:53+00:00",
+  "target_date": "2026-11-17",
   "pilot_schools": 30,
   "current_and_next": {
-    "2026-11-16": {
+    "2026-11-17": {
       "school_count": 30,
-      "available": 30,
-      "unavailable": 0,
+      "available": 24,
+      "unavailable": 6,
+      "available_codes": [
+        "114758",
+        "213601",
+        "114734",
+        "213640",
+        "213623",
+        "114669",
+        "213518",
+        "114785",
+        "213620",
+        "213637",
+        "114776",
+        "114638",
+        "114635",
+        "213612",
+        "213616",
+        "114509",
+        "114511",
+        "114543",
+        "114662",
+        "114504",
+        "213618",
+        "213629",
+        "114659",
+        "114660"
+      ],
+      "checked_for_date": true
+    },
+    "2026-11-18": {
+      "school_count": 30,
+      "available": 21,
+      "unavailable": 9,
       "available_codes": [
         "114758",
         "213601",
@@ -18,52 +50,12 @@
         "114669",
         "213518",
         "114785",
-        "213615",
-        "213608",
         "213620",
-        "213637",
         "114776",
-        "114638",
         "114624",
         "114635",
         "213612",
-        "213616",
-        "114522",
         "114509",
-        "114511",
-        "114543",
-        "114662",
-        "114504",
-        "213618",
-        "213629",
-        "114659",
-        "114660",
-        "114501"
-      ],
-      "checked_for_date": false
-    },
-    "2026-11-17": {
-      "school_count": 30,
-      "available": 23,
-      "unavailable": 7,
-      "available_codes": [
-        "114758",
-        "213601",
-        "114734",
-        "213640",
-        "213623",
-        "114669",
-        "213518",
-        "114785",
-        "213620",
-        "213637",
-        "114776",
-        "114638",
-        "114635",
-        "213612",
-        "213616",
-        "114509",
-        "114511",
         "114543",
         "114504",
         "213618",
@@ -75,14 +67,6 @@
     }
   },
   "recent_school_days": [
-    {
-      "date": "2026-11-10",
-      "observed_schools": 30,
-      "schools_with_menu_observed": 30,
-      "observation_rate_percent": 100.0,
-      "last_observed_change_count": 1,
-      "note": "Observed coverage only; not school-wide publishing reliability or attendance"
-    },
     {
       "date": "2026-11-11",
       "observed_schools": 30,
@@ -114,6 +98,14 @@
       "observation_rate_percent": 100.0,
       "last_observed_change_count": 1,
       "note": "Observed coverage only; not school-wide publishing reliability or attendance"
+    },
+    {
+      "date": "2026-11-17",
+      "observed_schools": 30,
+      "schools_with_menu_observed": 24,
+      "observation_rate_percent": 80.0,
+      "last_observed_change_count": 1,
+      "note": "Observed coverage only; not school-wide publishing reliability or attendance"
     }
   ],
   "by_school": [
@@ -141,8 +133,8 @@
       "level": "國小",
       "code": "114768",
       "observed_school_days": 5,
-      "menu_observed_days": 5,
-      "observed_rate_percent": 100.0
+      "menu_observed_days": 4,
+      "observed_rate_percent": 80.0
     },
     {
       "name": "新生國小",
@@ -204,8 +196,8 @@
       "level": "國小",
       "code": "213615",
       "observed_school_days": 5,
-      "menu_observed_days": 5,
-      "observed_rate_percent": 100.0
+      "menu_observed_days": 4,
+      "observed_rate_percent": 80.0
     },
     {
       "name": "新興國小",
@@ -213,8 +205,8 @@
       "level": "國小",
       "code": "213608",
       "observed_school_days": 5,
-      "menu_observed_days": 5,
-      "observed_rate_percent": 100.0
+      "menu_observed_days": 4,
+      "observed_rate_percent": 80.0
     },
     {
       "name": "成功國小",
@@ -258,8 +250,8 @@
       "level": "國小",
       "code": "114624",
       "observed_school_days": 5,
-      "menu_observed_days": 5,
-      "observed_rate_percent": 100.0
+      "menu_observed_days": 4,
+      "observed_rate_percent": 80.0
     },
     {
       "name": "山上國小",
@@ -294,8 +286,8 @@
       "level": "國中",
       "code": "114522",
       "observed_school_days": 5,
-      "menu_observed_days": 5,
-      "observed_rate_percent": 100.0
+      "menu_observed_days": 4,
+      "observed_rate_percent": 80.0
     },
     {
       "name": "新化國中",
@@ -384,8 +376,8 @@
       "level": "國中",
       "code": "114501",
       "observed_school_days": 5,
-      "menu_observed_days": 5,
-      "observed_rate_percent": 100.0
+      "menu_observed_days": 4,
+      "observed_rate_percent": 80.0
     }
   ],
   "limitations": "Rates only indicate menus our system observed for checked school-days; they do not prove publication times or meals served. School closures and late publication may lower the rate."

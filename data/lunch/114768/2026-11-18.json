@@ -1,0 +1,41 @@
+{
+  "source": "school_website",
+  "source_url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-18",
+  "retrieved_at": "2026-11-16T23:27:27+00:00",
+  "first_seen_at": "2026-11-16T23:27:27+00:00",
+  "last_changed_at": "2026-11-16T23:27:27+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "03e1797bddd35e16308f4dff8294feca54634ad9d04eb8f5cfadcd1ff4d51e8a",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-18",
+  "school_code": "114768",
+  "school_name": "市立新嘉國小",
+  "dishes": [
+    {
+      "name": "白油麵",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1668558897020886"
+    },
+    {
+      "name": "豬肉餡餅",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1644464467002742"
+    },
+    {
+      "name": "蒜香青江菜",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1776731181052832"
+    },
+    {
+      "name": "紅燒豬肉麵湯",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1672206427066629"
+    },
+    {
+      "name": "光泉豆漿",
+      "category": "附餐",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1773293450080756"
+    }
+  ]
+}

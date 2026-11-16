@@ -1,0 +1,31 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.cmjh.tn.edu.tw/index.php?period=2026-11-18",
+  "retrieved_at": "2026-11-16T23:27:38+00:00",
+  "first_seen_at": "2026-11-16T23:27:38+00:00",
+  "last_changed_at": "2026-11-16T23:27:38+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "247978f242534b8dfdd0ba8334d397dcb394d99a11a15f65378d20cbf27088a3",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-18",
+  "school_code": "213518",
+  "school_name": "市立崇明國中",
+  "dishes": [
+    {
+      "name": "日式海鮮烏龍湯麵",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "溏心蛋",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "優格",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}
