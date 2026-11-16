@@ -1,11 +1,11 @@
 {
   "source": "school_website",
   "source_url": "https://old.cmes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-16",
-  "retrieved_at": "2026-11-15T11:50:28+00:00",
+  "retrieved_at": "2026-11-16T02:06:17+00:00",
   "first_seen_at": "2026-11-15T11:50:28+00:00",
-  "last_changed_at": "2026-11-15T11:50:28+00:00",
-  "revision_count": 0,
-  "menu_fingerprint": "6f657cdad3d0a70c389907a608836169f68b3beb67979341754df88252aa417f",
+  "last_changed_at": "2026-11-16T02:06:17+00:00",
+  "revision_count": 1,
+  "menu_fingerprint": "3c96cedbbf764d3d1b40ce65914e91f0bb33bd7346a8591effe76a4c7272c88c",
   "menu_options": [],
   "menu_scope_note": "",
   "date": "2026-11-16",
@@ -38,9 +38,9 @@
       "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1411369447268054"
     },
     {
-      "name": "甘露梨",
+      "name": "葡萄",
       "category": "附餐",
-      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1793157519008677"
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1412553444122491"
     }
   ]
 }
