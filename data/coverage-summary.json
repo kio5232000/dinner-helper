@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Taipei",
-  "generated_at": "2026-11-17T06:30:26+00:00",
+  "generated_at": "2026-11-17T12:00:03+00:00",
   "target_date": "2026-11-17",
   "pilot_schools": 30,
   "current_and_next": {
@@ -38,7 +38,7 @@
         "114660",
         "114501"
       ],
-      "checked_for_date": true
+      "checked_for_date": false
     },
     "2026-11-18": {
       "school_count": 30,
@@ -67,7 +67,7 @@
         "114659",
         "114660"
       ],
-      "checked_for_date": false
+      "checked_for_date": true
     }
   },
   "recent_school_days": [
