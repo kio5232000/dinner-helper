@@ -1,11 +1,11 @@
 {
   "source": "school_website",
   "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-17",
-  "retrieved_at": "2026-11-15T23:28:26+00:00",
+  "retrieved_at": "2026-11-17T01:55:15+00:00",
   "first_seen_at": "2026-11-15T23:28:26+00:00",
-  "last_changed_at": "2026-11-15T23:28:26+00:00",
-  "revision_count": 0,
-  "menu_fingerprint": "a61c883d6332cd5098a8327d51f03499a03d2ff44df5bc9a7cc76133909b08ee",
+  "last_changed_at": "2026-11-17T01:55:15+00:00",
+  "revision_count": 1,
+  "menu_fingerprint": "c49343f15577f76f62bccbe44e08049cd702895edf46fa8804147f61b56d4e22",
   "menu_options": [],
   "menu_scope_note": "",
   "date": "2026-11-17",
@@ -33,9 +33,9 @@
       "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1409635541165625"
     },
     {
-      "name": "豆豆排骨湯",
+      "name": "昆布排骨湯",
       "category": "湯品",
-      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1575344743206427"
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1794872513064536"
     },
     {
       "name": "柳丁",
