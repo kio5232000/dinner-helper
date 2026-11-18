@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.jsps.tn.edu.tw/index.php?period=2026-11-20",
+  "retrieved_at": "2026-11-18T23:35:08+00:00",
+  "first_seen_at": "2026-11-18T23:35:08+00:00",
+  "last_changed_at": "2026-11-18T23:35:08+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "574699b654b7db72839f039ed8436f46f429a46cfcae05809d7d3aa78d47dac6",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-20",
+  "school_code": "114669",
+  "school_name": "市立佳興國小",
+  "dishes": [
+    {
+      "name": "芝麻飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "黑胡椒雞",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "嫩蛋鮑菇",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "蒜香空心菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "大黃瓜鮮菇湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "香蕉",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}

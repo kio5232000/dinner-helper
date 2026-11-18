@@ -1,0 +1,41 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.takes.tn.edu.tw/index.php?period=2026-11-20",
+  "retrieved_at": "2026-11-18T23:35:27+00:00",
+  "first_seen_at": "2026-11-18T23:35:27+00:00",
+  "last_changed_at": "2026-11-18T23:35:27+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "a336d407a2d885bd8cf97467a9d2e7813a05172a4d8e459422fc5be10c3faa0c",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-20",
+  "school_code": "213637",
+  "school_name": "市立大港國小",
+  "dishes": [
+    {
+      "name": "米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "味噌炒肉片",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "豆腐扒雙菇",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "燙尼龍白菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "黃瓜魚丸湯",
+      "category": "湯品",
+      "photo_url": null
+    }
+  ]
+}

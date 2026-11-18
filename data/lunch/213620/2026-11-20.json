@@ -1,0 +1,41 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.ckes.tn.edu.tw/index.php?period=2026-11-20",
+  "retrieved_at": "2026-11-18T23:35:25+00:00",
+  "first_seen_at": "2026-11-18T23:35:25+00:00",
+  "last_changed_at": "2026-11-18T23:35:25+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "06386d8dae9f217679f5d8971e9a380090b62ab1c8fbd9b8567dcf9f3e4a4c50",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-20",
+  "school_code": "213620",
+  "school_name": "市立中西區成功國小",
+  "dishes": [
+    {
+      "name": "蕎麥飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "瓜仔肉",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "麵輪滷蘿蔔",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "有機蔬菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "香菇雞湯",
+      "category": "湯品",
+      "photo_url": null
+    }
+  ]
+}
