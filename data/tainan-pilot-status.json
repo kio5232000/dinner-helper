@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-18T01:59:30+00:00",
+  "checked_at": "2026-11-18T04:13:48+00:00",
   "pilot_only": true,
   "checked_dates": [
     "2026-11-18"
@@ -73,6 +73,7 @@
       "dishes": [
         "日式海鮮烏龍湯麵",
         "溏心蛋",
+        "煎餃",
         "優格"
       ],
       "first_seen_at": "2026-11-16T23:27:31+00:00"
@@ -292,9 +293,16 @@
       "name": "大內國中",
       "date": "2026-11-18",
       "school_code": "114522",
-      "status": "unavailable",
+      "status": "ok",
       "source_url": "https://www.dnjh.tn.edu.tw/index.php?period=2026-11-18",
-      "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
+      "dishes": [
+        "牛排麵",
+        "炸魚丁",
+        "咖哩魚排麵",
+        "什錦火鍋湯",
+        "香蕉"
+      ],
+      "first_seen_at": "2026-11-18T04:13:07+00:00"
     },
     {
       "name": "新化國中",
@@ -528,6 +536,7 @@
         "dishes": [
           "日式海鮮烏龍湯麵",
           "溏心蛋",
+          "煎餃",
           "優格"
         ],
         "first_seen_at": "2026-11-16T23:27:31+00:00"
@@ -747,9 +756,16 @@
         "name": "大內國中",
         "date": "2026-11-18",
         "school_code": "114522",
-        "status": "unavailable",
+        "status": "ok",
         "source_url": "https://www.dnjh.tn.edu.tw/index.php?period=2026-11-18",
-        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
+        "dishes": [
+          "牛排麵",
+          "炸魚丁",
+          "咖哩魚排麵",
+          "什錦火鍋湯",
+          "香蕉"
+        ],
+        "first_seen_at": "2026-11-18T04:13:07+00:00"
       },
       {
         "name": "新化國中",

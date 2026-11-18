@@ -1,11 +1,11 @@
 {
   "source": "school_website",
   "source_url": "https://old.cmes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-18",
-  "retrieved_at": "2026-11-16T23:27:31+00:00",
+  "retrieved_at": "2026-11-18T04:12:18+00:00",
   "first_seen_at": "2026-11-16T23:27:31+00:00",
-  "last_changed_at": "2026-11-16T23:27:31+00:00",
-  "revision_count": 0,
-  "menu_fingerprint": "247978f242534b8dfdd0ba8334d397dcb394d99a11a15f65378d20cbf27088a3",
+  "last_changed_at": "2026-11-18T04:12:18+00:00",
+  "revision_count": 1,
+  "menu_fingerprint": "a7fd96814d4ce087409bb0b02425c874ae39761d84e4045f621406f35e09cc50",
   "menu_options": [],
   "menu_scope_note": "",
   "date": "2026-11-18",
@@ -21,6 +21,11 @@
       "name": "溏心蛋",
       "category": "主菜",
       "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1768891664035395"
+    },
+    {
+      "name": "煎餃",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1639538398053930"
     },
     {
       "name": "優格",
