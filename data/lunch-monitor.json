@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Taipei",
-  "checked_at": "2026-11-19T04:16:01+00:00",
+  "checked_at": "2026-11-19T06:28:32+00:00",
   "note": "first_seen_at is earliest OUR SYSTEM observed; not the school's publication time",
   "observations": {
     "114758:2026-11-05": {
@@ -3032,7 +3032,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:35:31+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:14:23+00:00",
+      "last_checked_at": "2026-11-19T06:26:30+00:00",
       "first_seen_at": "2026-11-17T23:35:31+00:00",
       "last_changed_at": "2026-11-17T23:35:31+00:00",
       "last_status": "ok"
@@ -3043,7 +3043,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:35:33+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:14:26+00:00",
+      "last_checked_at": "2026-11-19T06:26:33+00:00",
       "first_seen_at": "2026-11-17T23:35:33+00:00",
       "last_changed_at": "2026-11-17T23:35:33+00:00",
       "last_status": "ok"
@@ -3054,7 +3054,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:35:35+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:14:28+00:00",
+      "last_checked_at": "2026-11-19T06:26:36+00:00",
       "first_seen_at": "2026-11-17T23:35:35+00:00",
       "last_changed_at": "2026-11-17T23:35:35+00:00",
       "last_status": "ok"
@@ -3065,7 +3065,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:35:37+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:14:29+00:00",
+      "last_checked_at": "2026-11-19T06:26:39+00:00",
       "first_seen_at": "2026-11-17T23:35:37+00:00",
       "last_changed_at": "2026-11-17T23:35:37+00:00",
       "last_status": "ok"
@@ -3076,7 +3076,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:35:38+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:14:32+00:00",
+      "last_checked_at": "2026-11-19T06:26:42+00:00",
       "first_seen_at": "2026-11-17T23:35:38+00:00",
       "last_changed_at": "2026-11-17T23:35:38+00:00",
       "last_status": "ok"
@@ -3087,7 +3087,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:35:40+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:14:34+00:00",
+      "last_checked_at": "2026-11-19T06:26:45+00:00",
       "first_seen_at": "2026-11-17T23:35:40+00:00",
       "last_changed_at": "2026-11-17T23:35:40+00:00",
       "last_status": "ok"
@@ -3098,7 +3098,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:35:44+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:14:38+00:00",
+      "last_checked_at": "2026-11-19T06:26:50+00:00",
       "first_seen_at": "2026-11-17T23:35:44+00:00",
       "last_changed_at": "2026-11-17T23:35:44+00:00",
       "last_status": "ok"
@@ -3109,7 +3109,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:35:46+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:14:40+00:00",
+      "last_checked_at": "2026-11-19T06:26:53+00:00",
       "first_seen_at": "2026-11-17T23:35:46+00:00",
       "last_changed_at": "2026-11-17T23:35:46+00:00",
       "last_status": "ok"
@@ -3120,7 +3120,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:35:50+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:14:45+00:00",
+      "last_checked_at": "2026-11-19T06:26:57+00:00",
       "first_seen_at": "2026-11-17T23:35:50+00:00",
       "last_changed_at": "2026-11-17T23:35:50+00:00",
       "last_status": "ok"
@@ -3131,7 +3131,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:35:54+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:14:49+00:00",
+      "last_checked_at": "2026-11-19T06:27:03+00:00",
       "last_status": "ok",
       "first_seen_at": "2026-11-19T01:56:31+00:00",
       "last_changed_at": "2026-11-19T01:56:31+00:00"
@@ -3142,7 +3142,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:35:57+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:14:52+00:00",
+      "last_checked_at": "2026-11-19T06:27:06+00:00",
       "last_status": "ok",
       "first_seen_at": "2026-11-19T01:56:34+00:00",
       "last_changed_at": "2026-11-19T01:56:34+00:00"
@@ -3153,7 +3153,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:35:59+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:14:55+00:00",
+      "last_checked_at": "2026-11-19T06:27:10+00:00",
       "first_seen_at": "2026-11-17T23:35:59+00:00",
       "last_changed_at": "2026-11-17T23:35:59+00:00",
       "last_status": "ok"
@@ -3164,7 +3164,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:01+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:14:57+00:00",
+      "last_checked_at": "2026-11-19T06:27:13+00:00",
       "last_status": "ok",
       "first_seen_at": "2026-11-18T12:08:57+00:00",
       "last_changed_at": "2026-11-18T12:08:57+00:00"
@@ -3175,7 +3175,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:04+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:00+00:00",
+      "last_checked_at": "2026-11-19T06:27:16+00:00",
       "first_seen_at": "2026-11-17T23:36:04+00:00",
       "last_changed_at": "2026-11-17T23:36:04+00:00",
       "last_status": "ok"
@@ -3186,7 +3186,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:08+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:04+00:00",
+      "last_checked_at": "2026-11-19T06:27:21+00:00",
       "last_status": "ok",
       "first_seen_at": "2026-11-18T12:09:06+00:00",
       "last_changed_at": "2026-11-18T12:09:06+00:00"
@@ -3197,7 +3197,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:10+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:06+00:00",
+      "last_checked_at": "2026-11-19T06:27:24+00:00",
       "first_seen_at": "2026-11-17T23:36:10+00:00",
       "last_changed_at": "2026-11-17T23:36:10+00:00",
       "last_status": "ok"
@@ -3208,7 +3208,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:14+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:10+00:00",
+      "last_checked_at": "2026-11-19T06:27:29+00:00",
       "first_seen_at": "2026-11-17T23:36:14+00:00",
       "last_changed_at": "2026-11-17T23:36:14+00:00",
       "last_status": "ok"
@@ -3219,7 +3219,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:17+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:13+00:00",
+      "last_checked_at": "2026-11-19T06:27:33+00:00",
       "first_seen_at": "2026-11-17T23:36:17+00:00",
       "last_changed_at": "2026-11-17T23:36:17+00:00",
       "last_status": "ok"
@@ -3230,7 +3230,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:20+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:16+00:00",
+      "last_checked_at": "2026-11-19T06:27:37+00:00",
       "last_status": "ok",
       "first_seen_at": "2026-11-18T12:09:22+00:00",
       "last_changed_at": "2026-11-18T12:09:22+00:00"
@@ -3241,7 +3241,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:24+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:20+00:00",
+      "last_checked_at": "2026-11-19T06:27:42+00:00",
       "last_status": "ok",
       "first_seen_at": "2026-11-19T01:57:04+00:00",
       "last_changed_at": "2026-11-19T01:57:04+00:00"
@@ -3252,7 +3252,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:28+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:24+00:00",
+      "last_checked_at": "2026-11-19T06:27:46+00:00",
       "first_seen_at": "2026-11-17T23:36:28+00:00",
       "last_changed_at": "2026-11-17T23:36:28+00:00",
       "last_status": "ok"
@@ -3263,7 +3263,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:32+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:28+00:00",
+      "last_checked_at": "2026-11-19T06:27:51+00:00",
       "last_status": "ok",
       "first_seen_at": "2026-11-18T12:09:36+00:00",
       "last_changed_at": "2026-11-18T12:09:36+00:00"
@@ -3274,7 +3274,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:35+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:31+00:00",
+      "last_checked_at": "2026-11-19T06:27:54+00:00",
       "first_seen_at": "2026-11-17T23:36:35+00:00",
       "last_changed_at": "2026-11-17T23:36:35+00:00",
       "last_status": "ok"
@@ -3285,7 +3285,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:38+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:34+00:00",
+      "last_checked_at": "2026-11-19T06:27:58+00:00",
       "last_status": "ok",
       "first_seen_at": "2026-11-18T23:34:21+00:00",
       "last_changed_at": "2026-11-18T23:34:21+00:00"
@@ -3296,7 +3296,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:41+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:37+00:00",
+      "last_checked_at": "2026-11-19T06:28:02+00:00",
       "first_seen_at": "2026-11-17T23:36:41+00:00",
       "last_changed_at": "2026-11-17T23:36:41+00:00",
       "last_status": "ok"
@@ -3307,7 +3307,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:45+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:40+00:00",
+      "last_checked_at": "2026-11-19T06:28:07+00:00",
       "first_seen_at": "2026-11-17T23:36:45+00:00",
       "last_changed_at": "2026-11-17T23:36:45+00:00",
       "last_status": "ok"
@@ -3318,7 +3318,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:49+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:44+00:00",
+      "last_checked_at": "2026-11-19T06:28:12+00:00",
       "first_seen_at": "2026-11-17T23:36:49+00:00",
       "last_changed_at": "2026-11-17T23:36:49+00:00",
       "last_status": "ok"
@@ -3329,7 +3329,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:53+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:48+00:00",
+      "last_checked_at": "2026-11-19T06:28:16+00:00",
       "first_seen_at": "2026-11-17T23:36:53+00:00",
       "last_changed_at": "2026-11-17T23:36:53+00:00",
       "last_status": "ok"
@@ -3340,7 +3340,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:36:57+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:52+00:00",
+      "last_checked_at": "2026-11-19T06:28:21+00:00",
       "last_status": "ok",
       "first_seen_at": "2026-11-18T12:10:08+00:00",
       "last_changed_at": "2026-11-18T12:10:08+00:00"
@@ -3351,7 +3351,7 @@
       "date": "2026-11-19",
       "first_checked_at": "2026-11-17T23:37:02+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-19T04:15:57+00:00",
+      "last_checked_at": "2026-11-19T06:28:27+00:00",
       "last_status": "ok",
       "first_seen_at": "2026-11-18T23:34:47+00:00",
       "last_changed_at": "2026-11-18T23:34:47+00:00"
