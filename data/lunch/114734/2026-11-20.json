@@ -1,11 +1,11 @@
 {
   "source": "school_website",
   "source_url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-20",
-  "retrieved_at": "2026-11-18T23:35:01+00:00",
+  "retrieved_at": "2026-11-19T23:27:31+00:00",
   "first_seen_at": "2026-11-18T23:35:01+00:00",
-  "last_changed_at": "2026-11-18T23:35:01+00:00",
-  "revision_count": 0,
-  "menu_fingerprint": "732499d5a26f2cfd25813ba17b5d9645c0a5dab75e5ad059d0addd23ad8b5fad",
+  "last_changed_at": "2026-11-19T23:27:31+00:00",
+  "revision_count": 1,
+  "menu_fingerprint": "0d02cde0643165423244f1823deb394f0e1414afaa16272f86bff4f631400570",
   "menu_options": [],
   "menu_scope_note": "",
   "date": "2026-11-20",
@@ -23,9 +23,9 @@
       "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1591582909381904"
     },
     {
-      "name": "火腿炒玉米",
+      "name": "金黃玉米",
       "category": "副菜",
-      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1682665295071826"
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1569892595372680"
     },
     {
       "name": "有機蔬菜",
