@@ -1,11 +1,11 @@
 {
   "source": "school_website",
   "source_url": "https://www.chps.tn.edu.tw/index.php?period=2026-11-20",
-  "retrieved_at": "2026-11-18T23:35:04+00:00",
+  "retrieved_at": "2026-11-20T04:10:39+00:00",
   "first_seen_at": "2026-11-18T23:35:04+00:00",
-  "last_changed_at": "2026-11-18T23:35:04+00:00",
-  "revision_count": 0,
-  "menu_fingerprint": "1823341219174b514582748a74fa27ae2cef80eac88c3643c32add25dc74f539",
+  "last_changed_at": "2026-11-20T04:10:39+00:00",
+  "revision_count": 1,
+  "menu_fingerprint": "038db2cf872b6a7d36f72d75efffd76f6caf661437e0b469959c49957802815d",
   "menu_options": [],
   "menu_scope_note": "",
   "date": "2026-11-20",
@@ -35,11 +35,6 @@
     {
       "name": "紫菜蛋花湯",
       "category": "湯品",
-      "photo_url": null
-    },
-    {
-      "name": "香蕉",
-      "category": "附餐",
       "photo_url": null
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-20T01:55:23+00:00",
+  "checked_at": "2026-11-20T04:12:20+00:00",
   "pilot_only": true,
   "checked_dates": [
     "2026-11-20"
@@ -94,8 +94,7 @@
         "烤雞腿",
         "蜜汁豆乾杏鮑菇",
         "有機蔬菜",
-        "紫菜蛋花湯",
-        "香蕉"
+        "紫菜蛋花湯"
       ],
       "first_seen_at": "2026-11-18T23:35:04+00:00"
     },
@@ -304,9 +303,17 @@
       "name": "大內國中",
       "date": "2026-11-20",
       "school_code": "114522",
-      "status": "unavailable",
+      "status": "ok",
       "source_url": "https://www.dnjh.tn.edu.tw/index.php?period=2026-11-20",
-      "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
+      "dishes": [
+        "南瓜飯",
+        "蔥燒魚丁",
+        "黃瓜燴鳥蛋",
+        "有機黑葉白菜",
+        "蘿蔔魚丸湯",
+        "光泉豆漿"
+      ],
+      "first_seen_at": "2026-11-20T04:11:36+00:00"
     },
     {
       "name": "新化國中",
@@ -562,8 +569,7 @@
           "烤雞腿",
           "蜜汁豆乾杏鮑菇",
           "有機蔬菜",
-          "紫菜蛋花湯",
-          "香蕉"
+          "紫菜蛋花湯"
         ],
         "first_seen_at": "2026-11-18T23:35:04+00:00"
       },
@@ -772,9 +778,17 @@
         "name": "大內國中",
         "date": "2026-11-20",
         "school_code": "114522",
-        "status": "unavailable",
+        "status": "ok",
         "source_url": "https://www.dnjh.tn.edu.tw/index.php?period=2026-11-20",
-        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
+        "dishes": [
+          "南瓜飯",
+          "蔥燒魚丁",
+          "黃瓜燴鳥蛋",
+          "有機黑葉白菜",
+          "蘿蔔魚丸湯",
+          "光泉豆漿"
+        ],
+        "first_seen_at": "2026-11-20T04:11:36+00:00"
       },
       {
         "name": "新化國中",
