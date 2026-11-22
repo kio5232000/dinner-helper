@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://old.cmes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-23",
+  "retrieved_at": "2026-11-22T11:52:15+00:00",
+  "first_seen_at": "2026-11-22T11:52:15+00:00",
+  "last_changed_at": "2026-11-22T11:52:15+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "fe70f23f0041672ac642e1d3a7c2abc839d4e6659142e7b075da860ef59e9189",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-23",
+  "school_code": "213640",
+  "school_name": "市立崇明國小",
+  "dishes": [
+    {
+      "name": "胚芽飯",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1509074610361893"
+    },
+    {
+      "name": "咕咾肉",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1793157555009484"
+    },
+    {
+      "name": "魚丸炒大黃瓜",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1787807902007421"
+    },
+    {
+      "name": "枸杞高麗",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1760074644018677"
+    },
+    {
+      "name": "味噌豆腐湯",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1411369447268054"
+    },
+    {
+      "name": "甜柿",
+      "category": "附餐",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1542327576206444"
+    }
+  ]
+}

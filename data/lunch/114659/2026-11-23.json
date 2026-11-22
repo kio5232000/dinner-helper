@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.mdes.tn.edu.tw/index.php?period=2026-11-23",
+  "retrieved_at": "2026-11-22T11:53:51+00:00",
+  "first_seen_at": "2026-11-22T11:53:51+00:00",
+  "last_changed_at": "2026-11-22T11:53:51+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "42a451fa66a01462a13b5d172a3209e0d00b8b9ead1289e6cfee9daf4a305b8e",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-23",
+  "school_code": "114659",
+  "school_name": "市立麻豆國小",
+  "dishes": [
+    {
+      "name": "小米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "咖哩肉醬蛋",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "白花拌雙鮮",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "薑絲黑葉白菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "蘿蔔玉米湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "巨峰葡萄",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}

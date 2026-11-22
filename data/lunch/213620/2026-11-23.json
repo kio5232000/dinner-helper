@@ -1,0 +1,41 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.ckes.tn.edu.tw/index.php?period=2026-11-23",
+  "retrieved_at": "2026-11-22T11:52:43+00:00",
+  "first_seen_at": "2026-11-22T11:52:43+00:00",
+  "last_changed_at": "2026-11-22T11:52:43+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "87e8360fb6f057d397d21d2a19254511bc54b0ef4ac1d601e542536237ebdc32",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-23",
+  "school_code": "213620",
+  "school_name": "市立中西區成功國小",
+  "dishes": [
+    {
+      "name": "米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "洋蔥豬柳",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "蜜汁豆干",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "香菇小白菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "蓮藕排骨湯",
+      "category": "湯品",
+      "photo_url": null
+    }
+  ]
+}
