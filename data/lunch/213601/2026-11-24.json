@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-24",
+  "retrieved_at": "2026-11-22T23:28:21+00:00",
+  "first_seen_at": "2026-11-22T23:28:21+00:00",
+  "last_changed_at": "2026-11-22T23:28:21+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "0b24ca3e75b510ac8ef5e9d854a53063af28fd46179e7897b611aeee7d0c5244",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-24",
+  "school_code": "213601",
+  "school_name": "市立東區勝利國小",
+  "dishes": [
+    {
+      "name": "糙米飯",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1409635541165526"
+    },
+    {
+      "name": "香酥雞腿",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1482716136376016"
+    },
+    {
+      "name": "車輪滷蘿蔔",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1653541666042546"
+    },
+    {
+      "name": "有機蔬菜",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1409635541165625"
+    },
+    {
+      "name": "海帶芽蛋花湯",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1636440819067274"
+    },
+    {
+      "name": "原味優酪乳",
+      "category": "附餐",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1698805496031234"
+    }
+  ]
+}

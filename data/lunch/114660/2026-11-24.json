@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.pwes.tn.edu.tw/index.php?period=2026-11-24",
+  "retrieved_at": "2026-11-22T23:29:50+00:00",
+  "first_seen_at": "2026-11-22T23:29:50+00:00",
+  "last_changed_at": "2026-11-22T23:29:50+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "44daab513d110a63fab2b19637993e1a624512d12e6b0645fd6e464cd01fa5e6",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-24",
+  "school_code": "114660",
+  "school_name": "市立培文國小",
+  "dishes": [
+    {
+      "name": "糙米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "筍干滷肉",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "海帶芽炒蛋",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "蒜香高麗菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "黃瓜金針菇湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "鮮奶",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}

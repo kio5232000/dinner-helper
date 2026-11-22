@@ -1,11 +1,11 @@
 {
   "source": "school_website",
   "source_url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-23",
-  "retrieved_at": "2026-11-22T11:52:11+00:00",
+  "retrieved_at": "2026-11-22T23:26:33+00:00",
   "first_seen_at": "2026-11-22T11:52:11+00:00",
-  "last_changed_at": "2026-11-22T11:52:11+00:00",
-  "revision_count": 0,
-  "menu_fingerprint": "c3b03ddf0375ccdc80b2acb63c579f8a25876ffa695952733d1763b06f2d88ea",
+  "last_changed_at": "2026-11-22T23:26:33+00:00",
+  "revision_count": 1,
+  "menu_fingerprint": "ae9066ddc593920ea7b00836371eaef49918580b67ccd26ee4d8c86a49b690bd",
   "menu_options": [],
   "menu_scope_note": "",
   "date": "2026-11-23",
@@ -28,9 +28,9 @@
       "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1572246700332620"
     },
     {
-      "name": "炒臺灣A菜",
+      "name": "肉絲炒芥藍",
       "category": "蔬菜",
-      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1591582899380091"
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1795163111016676"
     },
     {
       "name": "海帶芽蛋花湯",
