@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-23T02:00:25+00:00",
+  "checked_at": "2026-11-23T04:28:14+00:00",
   "pilot_only": true,
   "checked_dates": [
     "2026-11-23"
@@ -12,7 +12,7 @@
       "status": "ok",
       "source_url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-23",
       "dishes": [
-        "白飯",
+        "麥片飯",
         "麻婆豆腐",
         "玉米炒蛋",
         "黃瓜三絲",
@@ -479,7 +479,7 @@
         "status": "ok",
         "source_url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-23",
         "dishes": [
-          "白飯",
+          "麥片飯",
           "麻婆豆腐",
           "玉米炒蛋",
           "黃瓜三絲",

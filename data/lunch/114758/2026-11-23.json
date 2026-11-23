@@ -1,11 +1,11 @@
 {
   "source": "school_website",
   "source_url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-23",
-  "retrieved_at": "2026-11-22T11:52:03+00:00",
+  "retrieved_at": "2026-11-23T04:26:19+00:00",
   "first_seen_at": "2026-11-22T11:52:03+00:00",
-  "last_changed_at": "2026-11-22T11:52:03+00:00",
-  "revision_count": 0,
-  "menu_fingerprint": "98b5050bba92111e1cd60d7024ed8ea0497a2e97067bff94f0ce3bab0d0b3053",
+  "last_changed_at": "2026-11-23T04:26:19+00:00",
+  "revision_count": 1,
+  "menu_fingerprint": "44e369b6fbb78a4478196af81ae01086b722caa187a91880357c115d03a38dd1",
   "menu_options": [],
   "menu_scope_note": "",
   "date": "2026-11-23",
@@ -13,9 +13,9 @@
   "school_name": "市立柳營國小",
   "dishes": [
     {
-      "name": "白飯",
+      "name": "麥片飯",
       "category": "主食",
-      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1409712794151269"
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1416554821125283"
     },
     {
       "name": "麻婆豆腐",

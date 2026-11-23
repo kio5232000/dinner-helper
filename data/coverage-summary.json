@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Taipei",
-  "generated_at": "2026-11-23T02:00:25+00:00",
+  "generated_at": "2026-11-23T04:28:15+00:00",
   "target_date": "2026-11-23",
   "pilot_schools": 30,
   "current_and_next": {
@@ -110,7 +110,7 @@
       "observed_schools": 30,
       "schools_with_menu_observed": 29,
       "observation_rate_percent": 96.7,
-      "last_observed_change_count": 1,
+      "last_observed_change_count": 2,
       "note": "Observed coverage only; not school-wide publishing reliability or attendance"
     }
   ],
