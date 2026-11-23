@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-23T04:28:14+00:00",
+  "checked_at": "2026-11-23T06:41:15+00:00",
   "pilot_only": true,
   "checked_dates": [
     "2026-11-23"
@@ -11,6 +11,7 @@
       "school_code": "114758",
       "status": "ok",
       "source_url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-23",
+      "last_check_note": "TimeoutError: The read operation timed out",
       "dishes": [
         "麥片飯",
         "麻婆豆腐",
@@ -26,6 +27,7 @@
       "school_code": "213601",
       "status": "ok",
       "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-23",
+      "last_check_note": "TimeoutError: The read operation timed out",
       "dishes": [
         "小米飯",
         "蒜泥白肉",
@@ -41,6 +43,7 @@
       "school_code": "114768",
       "status": "ok",
       "source_url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-23",
+      "last_check_note": "TimeoutError: The read operation timed out",
       "dishes": [
         "藜麥飯",
         "照燒雞丁",
@@ -89,6 +92,7 @@
       "school_code": "213623",
       "status": "ok",
       "source_url": "https://www.chps.tn.edu.tw/index.php?period=2026-11-23",
+      "last_check_note": "TimeoutError: The read operation timed out",
       "dishes": [
         "米飯",
         "瓜仔雞",
@@ -478,6 +482,7 @@
         "school_code": "114758",
         "status": "ok",
         "source_url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-23",
+        "last_check_note": "TimeoutError: The read operation timed out",
         "dishes": [
           "麥片飯",
           "麻婆豆腐",
@@ -493,6 +498,7 @@
         "school_code": "213601",
         "status": "ok",
         "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-23",
+        "last_check_note": "TimeoutError: The read operation timed out",
         "dishes": [
           "小米飯",
           "蒜泥白肉",
@@ -508,6 +514,7 @@
         "school_code": "114768",
         "status": "ok",
         "source_url": "https://www2.hces.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-23",
+        "last_check_note": "TimeoutError: The read operation timed out",
         "dishes": [
           "藜麥飯",
           "照燒雞丁",
@@ -556,6 +563,7 @@
         "school_code": "213623",
         "status": "ok",
         "source_url": "https://www.chps.tn.edu.tw/index.php?period=2026-11-23",
+        "last_check_note": "TimeoutError: The read operation timed out",
         "dishes": [
           "米飯",
           "瓜仔雞",
