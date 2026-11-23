@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.hnps.tn.edu.tw/index.php?period=2026-11-23",
+  "retrieved_at": "2026-11-23T01:59:07+00:00",
+  "first_seen_at": "2026-11-23T01:59:07+00:00",
+  "last_changed_at": "2026-11-23T01:59:07+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "7e7106282bbf3de19d9813c38545cde04fedaee5a5773b5f6d4434c5b05bec3a",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-23",
+  "school_code": "213615",
+  "school_name": "市立新南國小",
+  "dishes": [
+    {
+      "name": "糙米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "東山鴨肉",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "蕃茄燒豆腐",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "金絲油菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "冬菜冬粉湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "梨子",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}
