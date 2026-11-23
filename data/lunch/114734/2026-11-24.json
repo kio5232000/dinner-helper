@@ -1,11 +1,11 @@
 {
   "source": "school_website",
   "source_url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-24",
-  "retrieved_at": "2026-11-22T23:28:25+00:00",
+  "retrieved_at": "2026-11-23T23:34:22+00:00",
   "first_seen_at": "2026-11-22T23:28:25+00:00",
-  "last_changed_at": "2026-11-22T23:28:25+00:00",
-  "revision_count": 0,
-  "menu_fingerprint": "a4e95c713629678ca9f11c9f02a8d3d7046ee27c669498f31b927d235b32e88f",
+  "last_changed_at": "2026-11-23T23:34:22+00:00",
+  "revision_count": 1,
+  "menu_fingerprint": "d7b2353136dd11a61199271b52b644fff98cbb24b09232ad20ab95a3d16f85c1",
   "menu_options": [],
   "menu_scope_note": "",
   "date": "2026-11-24",
@@ -33,9 +33,9 @@
       "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1414131519200065"
     },
     {
-      "name": "玉米排骨湯",
+      "name": "大頭菜排骨湯",
       "category": "湯品",
-      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1521591749315102"
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1520227247325234"
     },
     {
       "name": "乳飲品",

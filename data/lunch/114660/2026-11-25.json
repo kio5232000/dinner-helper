@@ -1,0 +1,41 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.pwes.tn.edu.tw/index.php?period=2026-11-25",
+  "retrieved_at": "2026-11-23T23:38:16+00:00",
+  "first_seen_at": "2026-11-23T23:38:16+00:00",
+  "last_changed_at": "2026-11-23T23:38:16+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "dfc9c5206a006ceb0819e3e9c96282c22d371da64972d32015b55328eef11194",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-25",
+  "school_code": "114660",
+  "school_name": "市立培文國小",
+  "dishes": [
+    {
+      "name": "沙茶麵疙瘩(麵疙瘩)",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "沙茶麵疙瘩",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "滷蛋",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "小卷花椰菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "椪柑",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}

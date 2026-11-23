@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://schoolweb.tn.edu.tw/~aces_www/index.php?period=2026-11-25",
+  "retrieved_at": "2026-11-23T23:38:07+00:00",
+  "first_seen_at": "2026-11-23T23:38:07+00:00",
+  "last_changed_at": "2026-11-23T23:38:07+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "1759015453084e49a58b2487ac513a78cbbb86b33259119f56cffc95ba81b8e4",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-25",
+  "school_code": "213629",
+  "school_name": "市立安慶國小",
+  "dishes": [
+    {
+      "name": "牛排麵",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "意式肉醬",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "新感覺草莓",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "雪白青花菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "玉米濃湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "養樂多鮮奶",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}

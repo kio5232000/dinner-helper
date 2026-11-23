@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.kses.tn.edu.tw/index.php?period=2026-11-25",
+  "retrieved_at": "2026-11-23T23:37:18+00:00",
+  "first_seen_at": "2026-11-23T23:37:18+00:00",
+  "last_changed_at": "2026-11-23T23:37:18+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "86f42773b4147639c5273e02150cf772bbef427e7b8af124b3ed2dc6e08e16c8",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-25",
+  "school_code": "114776",
+  "school_name": "市立崑山國小",
+  "dishes": [
+    {
+      "name": "糯米米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "米糕肉燥",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "花生蘿蔔拌黃瓜",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "昆布高麗菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "四神湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "魚鬆",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}

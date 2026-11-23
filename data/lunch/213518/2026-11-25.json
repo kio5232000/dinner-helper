@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.cmjh.tn.edu.tw/index.php?period=2026-11-25",
+  "retrieved_at": "2026-11-23T23:36:52+00:00",
+  "first_seen_at": "2026-11-23T23:36:52+00:00",
+  "last_changed_at": "2026-11-23T23:36:52+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "fad62f932c4b85f2b05645936bea13b2af2d3d370178a8e09742ada469f38b57",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-25",
+  "school_code": "213518",
+  "school_name": "市立崇明國中",
+  "dishes": [
+    {
+      "name": "小米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "節筍福菜扣肉",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "三杯日式滷味",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "紅綠花椰",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "小白菜魚丸湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "優酪乳",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}

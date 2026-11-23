@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://web.sisps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-25",
+  "retrieved_at": "2026-11-23T23:36:40+00:00",
+  "first_seen_at": "2026-11-23T23:36:40+00:00",
+  "last_changed_at": "2026-11-23T23:36:40+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "d8f20b42efd688478f600e8df5f5cd4fcc04d0392328c90e735254d2197d092f",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-25",
+  "school_code": "114734",
+  "school_name": "市立新生國小",
+  "dishes": [
+    {
+      "name": "米飯",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1417668470292033"
+    },
+    {
+      "name": "雞肉飯",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1414998992214696"
+    },
+    {
+      "name": "雞肉飯醬汁",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1733277720060353"
+    },
+    {
+      "name": "有機蔬菜",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1456981149405289"
+    },
+    {
+      "name": "蘿蔔黑輪湯",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1713423557019300"
+    },
+    {
+      "name": "乳飲品",
+      "category": "附餐",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1662085178023262"
+    }
+  ]
+}
