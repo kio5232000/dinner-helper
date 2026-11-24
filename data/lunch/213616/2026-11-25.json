@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.lines.tn.edu.tw/index.php?period=2026-11-25",
+  "retrieved_at": "2026-11-24T12:08:49+00:00",
+  "first_seen_at": "2026-11-24T12:08:49+00:00",
+  "last_changed_at": "2026-11-24T12:08:49+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "f096210803a69d000aa674d7b41fa57cd3f877c90c5809712b78187d0329d7ab",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-25",
+  "school_code": "213616",
+  "school_name": "市立立人國小",
+  "dishes": [
+    {
+      "name": "米食",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "海鮮粥",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "筍乾豬腳",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "蒜炒油菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "葡萄",
+      "category": "附餐",
+      "photo_url": null
+    },
+    {
+      "name": "鍋貼",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
-  "checked_at": "2026-11-24T06:25:10+00:00",
+  "checked_at": "2026-11-24T12:09:43+00:00",
   "pilot_only": true,
   "checked_dates": [
-    "2026-11-24"
+    "2026-11-25"
   ],
   "results": [
     {
@@ -1113,14 +1113,16 @@
         "date": "2026-11-25",
         "school_code": "213615",
         "status": "unavailable",
-        "source_url": "https://www.hnps.tn.edu.tw/index.php?period=2026-11-25"
+        "source_url": "https://www.hnps.tn.edu.tw/index.php?period=2026-11-25",
+        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
       },
       {
         "name": "新興國小",
         "date": "2026-11-25",
         "school_code": "213608",
         "status": "unavailable",
-        "source_url": "https://www.sses.tn.edu.tw/index.php?period=2026-11-25"
+        "source_url": "https://www.sses.tn.edu.tw/index.php?period=2026-11-25",
+        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
       },
       {
         "name": "成功國小",
@@ -1143,7 +1145,8 @@
         "date": "2026-11-25",
         "school_code": "213637",
         "status": "unavailable",
-        "source_url": "https://www.takes.tn.edu.tw/index.php?period=2026-11-25"
+        "source_url": "https://www.takes.tn.edu.tw/index.php?period=2026-11-25",
+        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
       },
       {
         "name": "崑山國小",
@@ -1165,8 +1168,17 @@
         "name": "楠西國小",
         "date": "2026-11-25",
         "school_code": "114638",
-        "status": "unavailable",
-        "source_url": "https://www.nsps.tn.edu.tw/index.php?period=2026-11-25"
+        "status": "ok",
+        "source_url": "https://www.nsps.tn.edu.tw/index.php?period=2026-11-25",
+        "dishes": [
+          "白油麵",
+          "麻醬乾麵醬汁",
+          "玉米炒蛋",
+          "脆炒小黃瓜",
+          "關東煮湯",
+          "全脂保久乳"
+        ],
+        "first_seen_at": "2026-11-24T12:08:38+00:00"
       },
       {
         "name": "大灣國小",
@@ -1219,15 +1231,25 @@
         "name": "立人國小",
         "date": "2026-11-25",
         "school_code": "213616",
-        "status": "unavailable",
-        "source_url": "https://www.lines.tn.edu.tw/index.php?period=2026-11-25"
+        "status": "ok",
+        "source_url": "https://www.lines.tn.edu.tw/index.php?period=2026-11-25",
+        "dishes": [
+          "米食",
+          "海鮮粥",
+          "筍乾豬腳",
+          "蒜炒油菜",
+          "葡萄",
+          "鍋貼"
+        ],
+        "first_seen_at": "2026-11-24T12:08:49+00:00"
       },
       {
         "name": "大內國中",
         "date": "2026-11-25",
         "school_code": "114522",
         "status": "unavailable",
-        "source_url": "https://www.dnjh.tn.edu.tw/index.php?period=2026-11-25"
+        "source_url": "https://www.dnjh.tn.edu.tw/index.php?period=2026-11-25",
+        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
       },
       {
         "name": "新化國中",
@@ -1249,8 +1271,17 @@
         "name": "玉井國中",
         "date": "2026-11-25",
         "school_code": "114511",
-        "status": "unavailable",
-        "source_url": "https://www.yjjh.tn.edu.tw/index.php?period=2026-11-25"
+        "status": "ok",
+        "source_url": "https://www.yjjh.tn.edu.tw/index.php?period=2026-11-25",
+        "dishes": [
+          "白油麵",
+          "麻醬乾麵醬汁",
+          "玉米炒蛋",
+          "脆炒小黃瓜",
+          "關東煮湯",
+          "全脂保久乳"
+        ],
+        "first_seen_at": "2026-11-24T12:09:05+00:00"
       },
       {
         "name": "大橋國中",
@@ -1278,7 +1309,8 @@
         "date": "2026-11-25",
         "school_code": "114662",
         "status": "unavailable",
-        "source_url": "https://dses.dses.tn.edu.tw/index.php?period=2026-11-25"
+        "source_url": "https://dses.dses.tn.edu.tw/index.php?period=2026-11-25",
+        "last_check_note": "ValueError: No matching school/date lunch heading on this page"
       },
       {
         "name": "關廟國中",
@@ -1363,7 +1395,8 @@
         "date": "2026-11-25",
         "school_code": "114501",
         "status": "unavailable",
-        "source_url": "https://www.rdjh.tn.edu.tw/index.php?period=2026-11-25"
+        "source_url": "https://www.rdjh.tn.edu.tw/index.php?period=2026-11-25",
+        "last_check_note": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
       }
     ]
   },
