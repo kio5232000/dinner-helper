@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://dses.dses.tn.edu.tw/index.php?period=2026-11-25",
+  "retrieved_at": "2026-11-24T23:34:09+00:00",
+  "first_seen_at": "2026-11-24T23:34:09+00:00",
+  "last_changed_at": "2026-11-24T23:34:09+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "9b8f0ae92a1225790df7736aaa61c061c08f3fa6ab8118316dac2866112c1955",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-25",
+  "school_code": "114662",
+  "school_name": "市立大山國小",
+  "dishes": [
+    {
+      "name": "紅燒豬肉麵",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1419923798208699"
+    },
+    {
+      "name": "高麗菜捲",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1793073015098936"
+    },
+    {
+      "name": "綜合堅果",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1778024466088034"
+    },
+    {
+      "name": "芝麻海芽拌豆芽",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1787722426077849"
+    },
+    {
+      "name": "紅燒豬肉麵料",
+      "category": "湯品",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1666742836056077"
+    },
+    {
+      "name": "橘子",
+      "category": "附餐",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1414636341252645"
+    }
+  ]
+}

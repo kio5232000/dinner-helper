@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.kyes.tn.edu.tw/index.php?period=2026-11-26",
+  "retrieved_at": "2026-11-24T23:36:09+00:00",
+  "first_seen_at": "2026-11-24T23:36:09+00:00",
+  "last_changed_at": "2026-11-24T23:36:09+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "9568c87ca27adb24b7e3bb5b76afa4c8b1c4d411604fc619b6c8e561adde936a",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-26",
+  "school_code": "213618",
+  "school_name": "市立開元國小",
+  "dishes": [
+    {
+      "name": "糙米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "海帶結燒肉",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "珊瑚炒蛋",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "蒜香芥藍菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "白菜豆腐湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "香蕉",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}
