@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.chps.tn.edu.tw/index.php?period=2026-11-27",
+  "retrieved_at": "2026-11-25T23:35:18+00:00",
+  "first_seen_at": "2026-11-25T23:35:18+00:00",
+  "last_changed_at": "2026-11-25T23:35:18+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "0e6da2c00aacca45a68395c04e5179add7499de2843cbff695c958a81355c394",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-27",
+  "school_code": "213623",
+  "school_name": "市立進學國小",
+  "dishes": [
+    {
+      "name": "米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "梅子雞",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "玉米芹香炒蛋",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "有機蔬菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "四神湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "全脂凝態發酵乳",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://web.slps.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-27",
+  "retrieved_at": "2026-11-25T23:35:12+00:00",
+  "first_seen_at": "2026-11-25T23:35:12+00:00",
+  "last_changed_at": "2026-11-25T23:35:12+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "f950b403213dd10a0ce255cf72ee0fd43ef5421470ad74c22ac7f80e81e5ac7c",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-27",
+  "school_code": "213601",
+  "school_name": "市立東區勝利國小",
+  "dishes": [
+    {
+      "name": "糙米飯",
+      "category": "主食",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1409635541165526"
+    },
+    {
+      "name": "樹子蒸魚",
+      "category": "主菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1693361101012646"
+    },
+    {
+      "name": "玉米炒蛋",
+      "category": "副菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1414633662431668"
+    },
+    {
+      "name": "有機蔬菜",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1409635541165625"
+    },
+    {
+      "name": "田園蔬菜湯",
+      "category": "蔬菜",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1554252292214794"
+    },
+    {
+      "name": "橘子",
+      "category": "附餐",
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1478756116350169"
+    }
+  ]
+}

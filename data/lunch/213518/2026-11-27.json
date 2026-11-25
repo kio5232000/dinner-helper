@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.cmjh.tn.edu.tw/index.php?period=2026-11-27",
+  "retrieved_at": "2026-11-25T23:35:25+00:00",
+  "first_seen_at": "2026-11-25T23:35:25+00:00",
+  "last_changed_at": "2026-11-25T23:35:25+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "288987a4060adc9aa4882a3586d69f567096193921100571cd7cb8f16de6e2ca",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-27",
+  "school_code": "213518",
+  "school_name": "市立崇明國中",
+  "dishes": [
+    {
+      "name": "小米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "白味噌煨肉絲",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "大頭菜雜匯",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "扁魚蒜爆白菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "香菇肉粳湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "綠葡萄",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}
