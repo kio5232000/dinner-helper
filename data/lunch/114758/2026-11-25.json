@@ -1,11 +1,11 @@
 {
   "source": "school_website",
   "source_url": "https://new.lyes.tn.edu.tw/modules/tad_lunch3/index.php?period=2026-11-25",
-  "retrieved_at": "2026-11-23T23:36:32+00:00",
+  "retrieved_at": "2026-11-25T06:23:22+00:00",
   "first_seen_at": "2026-11-23T23:36:32+00:00",
-  "last_changed_at": "2026-11-23T23:36:32+00:00",
-  "revision_count": 0,
-  "menu_fingerprint": "b286bcce57e6ce83cd5dc01c1df5c5016377dfcdfac424478b96b7db2e76f4cd",
+  "last_changed_at": "2026-11-25T06:23:22+00:00",
+  "revision_count": 1,
+  "menu_fingerprint": "058a5226d103824cbd919da0eceaa47e973e7bc0818004fe0e2f0f9b63526889",
   "menu_options": [],
   "menu_scope_note": "",
   "date": "2026-11-25",
@@ -28,9 +28,9 @@
       "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1794890735097819"
     },
     {
-      "name": "刺瓜龍骨湯",
+      "name": "大白菜湯",
       "category": "湯品",
-      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1409712794151367"
+      "photo_url": "https://fatraceschool.k12ea.gov.tw/dish/pic/1415326544229745"
     },
     {
       "name": "橘子",
