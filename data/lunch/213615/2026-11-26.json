@@ -1,0 +1,41 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.hnps.tn.edu.tw/index.php?period=2026-11-26",
+  "retrieved_at": "2026-11-26T02:00:29+00:00",
+  "first_seen_at": "2026-11-26T02:00:29+00:00",
+  "last_changed_at": "2026-11-26T02:00:29+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "e45199bdba0c80f3c63c86d50c64f6f841956f00d39bde5274d4d7e73af26e1b",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-26",
+  "school_code": "213615",
+  "school_name": "市立新南國小",
+  "dishes": [
+    {
+      "name": "小米紅藜飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "豉汁排骨",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "糖醋百葉",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "有機菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "海帶玉米湯",
+      "category": "湯品",
+      "photo_url": null
+    }
+  ]
+}
