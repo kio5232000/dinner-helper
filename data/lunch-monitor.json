@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Taipei",
-  "checked_at": "2026-11-26T06:25:28+00:00",
+  "checked_at": "2026-11-26T12:12:49+00:00",
   "note": "first_seen_at is earliest OUR SYSTEM observed; not the school's publication time",
   "observations": {
     "114758:2026-11-05": {
@@ -5315,7 +5315,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:10+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:10+00:00",
+      "last_checked_at": "2026-11-26T12:10:44+00:00",
       "first_seen_at": "2026-11-25T23:35:10+00:00",
       "last_changed_at": "2026-11-25T23:35:10+00:00",
       "last_status": "ok"
@@ -5326,7 +5326,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:12+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:12+00:00",
+      "last_checked_at": "2026-11-26T12:10:47+00:00",
       "first_seen_at": "2026-11-25T23:35:12+00:00",
       "last_changed_at": "2026-11-25T23:35:12+00:00",
       "last_status": "ok"
@@ -5337,7 +5337,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:13+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:13+00:00",
+      "last_checked_at": "2026-11-26T12:10:50+00:00",
       "first_seen_at": "2026-11-25T23:35:13+00:00",
       "last_changed_at": "2026-11-25T23:35:13+00:00",
       "last_status": "ok"
@@ -5348,7 +5348,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:15+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:15+00:00",
+      "last_checked_at": "2026-11-26T12:10:53+00:00",
       "first_seen_at": "2026-11-25T23:35:15+00:00",
       "last_changed_at": "2026-11-25T23:35:15+00:00",
       "last_status": "ok"
@@ -5359,7 +5359,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:17+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:17+00:00",
+      "last_checked_at": "2026-11-26T12:10:56+00:00",
       "first_seen_at": "2026-11-25T23:35:17+00:00",
       "last_changed_at": "2026-11-25T23:35:17+00:00",
       "last_status": "ok"
@@ -5370,7 +5370,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:18+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:18+00:00",
+      "last_checked_at": "2026-11-26T12:10:58+00:00",
       "first_seen_at": "2026-11-25T23:35:18+00:00",
       "last_changed_at": "2026-11-25T23:35:18+00:00",
       "last_status": "ok"
@@ -5381,7 +5381,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:22+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:22+00:00",
+      "last_checked_at": "2026-11-26T12:11:03+00:00",
       "first_seen_at": "2026-11-25T23:35:22+00:00",
       "last_changed_at": "2026-11-25T23:35:22+00:00",
       "last_status": "ok"
@@ -5392,7 +5392,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:25+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:25+00:00",
+      "last_checked_at": "2026-11-26T12:11:07+00:00",
       "first_seen_at": "2026-11-25T23:35:25+00:00",
       "last_changed_at": "2026-11-25T23:35:25+00:00",
       "last_status": "ok"
@@ -5403,7 +5403,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:29+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:29+00:00",
+      "last_checked_at": "2026-11-26T12:11:13+00:00",
       "first_seen_at": "2026-11-25T23:35:29+00:00",
       "last_changed_at": "2026-11-25T23:35:29+00:00",
       "last_status": "ok"
@@ -5414,7 +5414,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:33+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:33+00:00",
+      "last_checked_at": "2026-11-26T12:11:18+00:00",
       "last_status": "unavailable",
       "last_error": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
     },
@@ -5424,7 +5424,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:36+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:36+00:00",
+      "last_checked_at": "2026-11-26T12:11:21+00:00",
       "last_status": "unavailable",
       "last_error": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
     },
@@ -5434,7 +5434,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:39+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:39+00:00",
+      "last_checked_at": "2026-11-26T12:11:26+00:00",
       "first_seen_at": "2026-11-25T23:35:39+00:00",
       "last_changed_at": "2026-11-25T23:35:39+00:00",
       "last_status": "ok"
@@ -5445,7 +5445,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:41+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:41+00:00",
+      "last_checked_at": "2026-11-26T12:11:29+00:00",
       "last_status": "unavailable",
       "last_error": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
     },
@@ -5455,7 +5455,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:44+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:44+00:00",
+      "last_checked_at": "2026-11-26T12:11:33+00:00",
       "first_seen_at": "2026-11-25T23:35:44+00:00",
       "last_changed_at": "2026-11-25T23:35:44+00:00",
       "last_status": "ok"
@@ -5466,7 +5466,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:48+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:48+00:00",
+      "last_checked_at": "2026-11-26T12:11:37+00:00",
       "first_seen_at": "2026-11-25T23:35:48+00:00",
       "last_changed_at": "2026-11-25T23:35:48+00:00",
       "last_status": "ok"
@@ -5477,7 +5477,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:50+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:50+00:00",
+      "last_checked_at": "2026-11-26T12:11:40+00:00",
       "first_seen_at": "2026-11-25T23:35:50+00:00",
       "last_changed_at": "2026-11-25T23:35:50+00:00",
       "last_status": "ok"
@@ -5488,7 +5488,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:53+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:53+00:00",
+      "last_checked_at": "2026-11-26T12:11:43+00:00",
       "first_seen_at": "2026-11-25T23:35:53+00:00",
       "last_changed_at": "2026-11-25T23:35:53+00:00",
       "last_status": "ok"
@@ -5499,7 +5499,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:56+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:56+00:00",
+      "last_checked_at": "2026-11-26T12:11:48+00:00",
       "first_seen_at": "2026-11-25T23:35:56+00:00",
       "last_changed_at": "2026-11-25T23:35:56+00:00",
       "last_status": "ok"
@@ -5510,7 +5510,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:35:59+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:35:59+00:00",
+      "last_checked_at": "2026-11-26T12:11:52+00:00",
       "last_status": "unavailable",
       "last_error": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
     },
@@ -5520,7 +5520,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:36:04+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:36:04+00:00",
+      "last_checked_at": "2026-11-26T12:11:57+00:00",
       "first_seen_at": "2026-11-25T23:36:04+00:00",
       "last_changed_at": "2026-11-25T23:36:04+00:00",
       "last_status": "ok"
@@ -5531,7 +5531,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:36:07+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:36:07+00:00",
+      "last_checked_at": "2026-11-26T12:12:03+00:00",
       "first_seen_at": "2026-11-25T23:36:07+00:00",
       "last_changed_at": "2026-11-25T23:36:07+00:00",
       "last_status": "ok"
@@ -5542,7 +5542,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:36:11+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:36:11+00:00",
+      "last_checked_at": "2026-11-26T12:12:07+00:00",
       "first_seen_at": "2026-11-25T23:36:11+00:00",
       "last_changed_at": "2026-11-25T23:36:11+00:00",
       "last_status": "ok"
@@ -5553,7 +5553,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:36:15+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:36:15+00:00",
+      "last_checked_at": "2026-11-26T12:12:11+00:00",
       "first_seen_at": "2026-11-25T23:36:15+00:00",
       "last_changed_at": "2026-11-25T23:36:15+00:00",
       "last_status": "ok"
@@ -5564,7 +5564,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:36:18+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:36:18+00:00",
+      "last_checked_at": "2026-11-26T12:12:15+00:00",
       "last_status": "unavailable",
       "last_error": "ValueError: No matching school/date lunch heading on this page"
     },
@@ -5574,7 +5574,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:36:21+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:36:21+00:00",
+      "last_checked_at": "2026-11-26T12:12:18+00:00",
       "first_seen_at": "2026-11-25T23:36:21+00:00",
       "last_changed_at": "2026-11-25T23:36:21+00:00",
       "last_status": "ok"
@@ -5585,7 +5585,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:36:25+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:36:25+00:00",
+      "last_checked_at": "2026-11-26T12:12:26+00:00",
       "first_seen_at": "2026-11-25T23:36:25+00:00",
       "last_changed_at": "2026-11-25T23:36:25+00:00",
       "last_status": "ok"
@@ -5596,7 +5596,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:36:29+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:36:29+00:00",
+      "last_checked_at": "2026-11-26T12:12:29+00:00",
       "first_seen_at": "2026-11-25T23:36:29+00:00",
       "last_changed_at": "2026-11-25T23:36:29+00:00",
       "last_status": "ok"
@@ -5607,7 +5607,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:36:32+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:36:32+00:00",
+      "last_checked_at": "2026-11-26T12:12:32+00:00",
       "first_seen_at": "2026-11-25T23:36:32+00:00",
       "last_changed_at": "2026-11-25T23:36:32+00:00",
       "last_status": "ok"
@@ -5618,7 +5618,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:36:36+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:36:36+00:00",
+      "last_checked_at": "2026-11-26T12:12:39+00:00",
       "first_seen_at": "2026-11-25T23:36:36+00:00",
       "last_changed_at": "2026-11-25T23:36:36+00:00",
       "last_status": "ok"
@@ -5629,7 +5629,7 @@
       "date": "2026-11-27",
       "first_checked_at": "2026-11-25T23:36:39+00:00",
       "change_count": 0,
-      "last_checked_at": "2026-11-25T23:36:39+00:00",
+      "last_checked_at": "2026-11-26T12:12:44+00:00",
       "last_status": "unavailable",
       "last_error": "ValueError: Incomplete menu: neither image cards nor dated text lunch block were valid"
     }
