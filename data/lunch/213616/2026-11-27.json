@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.lines.tn.edu.tw/index.php?period=2026-11-27",
+  "retrieved_at": "2026-11-27T02:03:05+00:00",
+  "first_seen_at": "2026-11-27T02:03:05+00:00",
+  "last_changed_at": "2026-11-27T02:03:05+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "50d972bc5116c78cb4a6aad8d8e10b4d40e045e092950849227c0fea06dc9c4e",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-27",
+  "school_code": "213616",
+  "school_name": "市立立人國小",
+  "dishes": [
+    {
+      "name": "香鬆飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "宮保豆腐",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "香菇炒蛋",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "薑絲青江",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "佛跳牆",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "香蕉",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}

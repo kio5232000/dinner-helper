@@ -1,0 +1,46 @@
+{
+  "source": "school_website",
+  "source_url": "https://www.sses.tn.edu.tw/index.php?period=2026-11-27",
+  "retrieved_at": "2026-11-27T02:02:34+00:00",
+  "first_seen_at": "2026-11-27T02:02:34+00:00",
+  "last_changed_at": "2026-11-27T02:02:34+00:00",
+  "revision_count": 0,
+  "menu_fingerprint": "52afd4e1e73ce112593be01f48fa4dd4f09ab6a49a51f9685e2b603dd6f273f3",
+  "menu_options": [],
+  "menu_scope_note": "",
+  "date": "2026-11-27",
+  "school_code": "213608",
+  "school_name": "市立南區新興國小",
+  "dishes": [
+    {
+      "name": "米飯",
+      "category": "主食",
+      "photo_url": null
+    },
+    {
+      "name": "義式烤雞胸",
+      "category": "主菜",
+      "photo_url": null
+    },
+    {
+      "name": "紅燒獅子頭",
+      "category": "副菜",
+      "photo_url": null
+    },
+    {
+      "name": "有機葉菜",
+      "category": "蔬菜",
+      "photo_url": null
+    },
+    {
+      "name": "黃瓜排骨湯",
+      "category": "湯品",
+      "photo_url": null
+    },
+    {
+      "name": "全脂保久乳",
+      "category": "附餐",
+      "photo_url": null
+    }
+  ]
+}
